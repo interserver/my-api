@@ -22,6 +22,7 @@
   "homepage": "https://github.com/interserver/my-api#readme",
   "dependencies": {
     "@redocly/cli": "*",
+    "vm2": ">=3.9.19",
     "@stoplight/spectral": "*"
   }
 }
