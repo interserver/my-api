@@ -1,4 +1,4 @@
-Copyright (c) 2019-present David Garcia (@dgarcia360).
+Copyright (c) 2019-present David Garcia (@interserver).
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

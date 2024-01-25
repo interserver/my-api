@@ -4,7 +4,7 @@
   </div>
 </h1>
 
-[![OpenAPI linter](https://github.com/dgarcia360/openapi-boilerplate/actions/workflows/linter.yaml/badge.svg)](https://github.com/dgarcia360/openapi-boilerplate/actions/workflows/linter.yaml)
+[![OpenAPI linter](https://github.com/interserver/my-api/actions/workflows/linter.yaml/badge.svg)](https://github.com/interserver/my-api/actions/workflows/linter.yaml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # OpenAPI boilerplate
@@ -41,7 +41,7 @@ Properly organizing your project comes with great advantages. By splitting a lar
 1. Clone the repository.
 
     ```
-    git clone https://github.com/dgarcia360/openapi-boilerplate.git
+    git clone https://github.com/interserver/my-api.git
     ```
 
 2. Install the project dependencies.
@@ -85,7 +85,7 @@ npm run preview
 The server starts on http://127.0.0.1:8080.
 
 The site is generated with [ReDoc](https://github.com/Redocly/redoc).
-Here's a preview of a site generated with this command: [Swagger Petstore Reference Documentation](https://dgarcia360.github.io/openapi-boilerplate/).
+Here's a preview of a site generated with this command: [Swagger Petstore Reference Documentation](https://interserver.github.io/my-api/).
 
 ## Ready-to-use workflows
 
@@ -104,6 +104,6 @@ If you want to enhance the boilerplate, please read [CONTRIBUTING.md](CONTRIBUTI
 
 ## License
 
-Copyright (c) 2019-present David Garcia ([@dgarcia360](https://davidgarcia.dev)). Licensed under the [MIT License](LICENSE.md).
+Copyright (c) 2019-present David Garcia ([@interserver](https://davidgarcia.dev)). Licensed under the [MIT License](LICENSE.md).
 
 The PetStore example used is derived from [OAI/OpenAPI-Specification](https://github.com/OAI/OpenAPI-Specification/blob/master/examples/v3.0/petstore.yaml), Copyright The Linux Foundation, Licensed under the [Apache License, Version 2.0](https://github.com/OAI/OpenAPI-Specification/blob/master/LICENSE).
