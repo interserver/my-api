@@ -1,0 +1,22 @@
+type: object
+properties:
+  service_last_invoice_date:
+    type: string
+  service_payment_status:
+    type: string
+  service_frequency:
+    type: string
+  next_date:
+    type: string
+  service_next_invoice_date:
+    type: string
+  service_currency:
+    type: string
+  service_currency_symbol:
+    type: string
+  service_cost_info:
+    type: string
+  service_extra:
+    $ref: ./DomainBillingExtra.yaml
+  service_extra_json:
+    type: string

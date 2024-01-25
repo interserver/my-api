@@ -1,0 +1,35 @@
+title: BackupRow
+description: A result row from the `Backups` `GET` request.
+type: object
+properties:
+  backup_id:
+    description: The id of the backup.
+    type: string
+    example: '2414'
+  backup_name:
+    description: The name of the backup.
+    type: string
+    example: storage-nj.interserver.net
+  backup_cost:
+    description: The cost of the backup.
+    type: string
+    example: '5.99'
+  backup_username:
+    description: The username of the backup.
+    type: string
+    example: detainin2414
+  backup_status:
+    description: The status of the backup.
+    type: string
+    example: pending-setup
+  services_name:
+    description: The services name of the backup.
+    type: string
+    example: Swift Storage
+example:
+  backup_id: '2414'
+  backup_name: storage-nj.interserver.net
+  backup_cost: '5.99'
+  backup_username: detainin2414
+  backup_status: pending-setup
+  services_name: Swift Storage

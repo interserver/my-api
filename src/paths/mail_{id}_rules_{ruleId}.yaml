@@ -1,0 +1,36 @@
+delete:
+  tags:
+    - Mail
+  parameters:
+    - examples:
+        RuleIdExample:
+          value: '34'
+      name: ruleId
+      description: The ID of the Rules entry.
+      schema:
+        type: integer
+      in: path
+      required: true
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/GenericResponse.yaml
+      description: search results matching criteria
+    '400':
+      $ref: ../components/responses/BadInput.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '404':
+      $ref: ../components/responses/NotFound.yaml
+  operationId: deleteRule
+  summary: Removes an deny mail rule.
+  description: Removes one of the configured deny mail rules from the system.
+parameters:
+  - name: id
+    description: Mail ID number
+    schema:
+      type: integer
+    in: path
+    required: true

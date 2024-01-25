@@ -1,0 +1,25 @@
+type: object
+properties:
+  label:
+    description: Link label
+    type: string
+    example: Invoices
+  link:
+    description: Link
+    type: string
+    example: invoices
+  icon:
+    description: Icon class
+    type: string
+    example: fas fa-file-invoice-dollar fa-w-12
+  icon_text:
+    description: Icon text
+    type: string
+    example: ''
+  help_text:
+    description: Help text
+    type: string
+    example: Invoice History
+  other_attr:
+    description: Other attribute
+    type: string

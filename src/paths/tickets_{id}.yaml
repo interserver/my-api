@@ -1,0 +1,36 @@
+get:
+  tags:
+    - Tickets
+  parameters:
+    - name: id
+      description: The order ID number.
+      schema:
+        type: string
+      in: path
+      required: true
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: getTicketInfo
+  summary: Get Ticket Information
+  description: ''
+post:
+  tags:
+    - Tickets
+  parameters:
+    - name: id
+      description: The order ID number.
+      schema:
+        type: string
+      in: path
+      required: true
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: updateTicketInfo
+  summary: Update Ticket
+  description: ''

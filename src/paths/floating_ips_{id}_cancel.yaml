@@ -1,0 +1,18 @@
+get:
+  tags:
+    - Floating_IPs
+  responses:
+    '200':
+      $ref: ../components/responses/TextResponse.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: floating_ipsCancelGet
+  summary: Cancel Floating IP
+  description: Cancels a service in our system.
+parameters:
+  - name: id
+    description: Floating IPs ID number
+    schema:
+      type: integer
+    in: path
+    required: true

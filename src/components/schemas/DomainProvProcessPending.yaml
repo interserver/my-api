@@ -1,0 +1,27 @@
+type: object
+properties:
+  _OPS_version:
+    type: string
+  response_text:
+    type: string
+  protocol:
+    type: string
+  response_code:
+    type: string
+  action:
+    type: string
+  object:
+    type: string
+  is_success:
+    type: string
+  attributes:
+    type: object
+    properties:
+      id:
+        type: string
+      order_id:
+        type: string
+      registration expiration date:
+        type: string
+      f_auto_renew:
+        type: string

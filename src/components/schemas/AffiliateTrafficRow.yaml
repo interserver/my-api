@@ -1,0 +1,24 @@
+title: AffiliateTrafficRow
+description: Affiliate Web Traffic Entry
+type: object
+properties:
+  traffic_id:
+    type: string
+  traffic_ip:
+    type: string
+  traffic_url:
+    type: string
+  traffic_affiliate:
+    type: string
+  traffic_referrer:
+    type: string
+  traffic_timestamp:
+    format: date-time
+    type: string
+example:
+  traffic_id: '91839913'
+  traffic_ip: '2a06:98c0:3600::'
+  traffic_url: https://www.interserver.net/webhosting/?id=8
+  traffic_affiliate: '8'
+  traffic_referrer: ''
+  traffic_timestamp: '2023-09-30 06:30:27'

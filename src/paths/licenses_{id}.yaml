@@ -1,0 +1,47 @@
+get:
+  tags:
+    - Licenses
+  parameters:
+    - name: id
+      description: The order ID number.
+      schema:
+        type: integer
+      in: path
+      required: true
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/License.yaml
+      description: License information.
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getLicenseInfo
+  summary: Get License
+  description: ''
+post:
+  tags:
+    - Licenses
+  parameters:
+    - name: id
+      description: The order ID number.
+      schema:
+        type: string
+      in: path
+      required: true
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: updateLicenseInfo
+  summary: Update License
+  description: ''
+parameters:
+  - name: id
+    description: License ID number
+    schema:
+      type: integer
+    in: path
+    required: true

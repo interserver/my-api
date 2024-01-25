@@ -1,0 +1,8 @@
+type: object
+properties:
+  sortorder:
+    type: string
+  name:
+    type: string
+  ipaddress:
+    type: string

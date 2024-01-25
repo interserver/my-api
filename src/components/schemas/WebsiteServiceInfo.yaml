@@ -1,0 +1,60 @@
+type: object
+properties:
+  website_id:
+    description: Website ID
+    type: string
+    example: '1196829'
+  website_server:
+    description: Website server
+    type: string
+    example: '543'
+  website_type:
+    description: Website type
+    type: string
+    example: '11363'
+  website_currency:
+    description: Currency of the website
+    type: string
+    example: USD
+  website_order_date:
+    description: Order date of the website
+    type: string
+    example: '2023-03-16T22:51:54.000Z'
+  website_custid:
+    description: Customer ID of the website
+    type: string
+    example: '85872'
+  website_ip:
+    description: IP address of the website
+    type: string
+    example: 74.50.80.15
+  website_status:
+    description: Status of the website
+    type: string
+    example: active
+  website_invoice:
+    description: Invoice of the website
+    type: string
+    example: '20261994'
+  website_coupon:
+    description: Coupon for the website
+    type: string
+    example: '1690'
+  website_extra:
+    description: Extra information in JSON format for the website
+    type: string
+    example: '[]'
+  website_hostname:
+    description: Hostname of the website
+    type: string
+    example: vintagevultures.com
+  website_comment:
+    description: Comment for the website
+    type: string
+  website_username:
+    description: Username for the website
+    type: string
+    example: vintagev
+  website_server_status:
+    description: Server status of the website
+    type: string

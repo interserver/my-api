@@ -1,0 +1,28 @@
+title: MailOrder
+description: A mail order record
+required:
+  - status
+  - id
+  - username
+type: object
+properties:
+  id:
+    format: int32
+    description: The ID of the order.
+    type: integer
+    example: '21472'
+  status:
+    description: The order status.
+    type: string
+    example: active
+  username:
+    description: The username to use for this order.
+    type: string
+    example: mb21472
+  comment:
+    description: Optional order comment.
+    type: string
+example:
+  id: 21472
+  status: active
+  username: mb21472

@@ -1,0 +1,27 @@
+type: object
+properties:
+  serviceInfo:
+    $ref: ./BackupServiceInfo.yaml
+  client_links:
+    type: array
+    items:
+      $ref: ./BackupClientLink.yaml
+  billingDetails:
+    $ref: ./BackupBillingDetails.yaml
+  custCurrency:
+    description: Customer's currency.
+    type: string
+    example: USD
+  custCurrencySymbol:
+    description: Customer's currency symbol.
+    type: string
+    example: $
+  serviceMaster:
+    $ref: ./BackupServiceMaster.yaml
+  package:
+    description: Package information.
+    type: string
+  serviceExtra:
+    $ref: ./BackupServiceExtra.yaml
+  extraInfoTables:
+    $ref: ./BackupExtraInfoTables.yaml

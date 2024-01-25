@@ -1,0 +1,33 @@
+title: AccountInfoOauthConfigProviders
+description: ''
+type: object
+additionalProperties:
+  type: object
+  properties:
+    enabled:
+      type: boolean
+    linked:
+      type: boolean
+    account:
+      type: string
+    url:
+      type: string
+example:
+  Twitter:
+    enabled: false
+    linked: false
+  Facebook:
+    enabled: true
+    account: '10204015683980049'
+    url: https://www.facebook.com/10204015683980049
+    linked: true
+  Google:
+    enabled: true
+    account: '103826860529802474211'
+    url: https://plus.google.com/+JoeHuss
+    linked: true
+  GitHub:
+    enabled: true
+    account: '1364504'
+    url: https://github.com/detain
+    linked: true

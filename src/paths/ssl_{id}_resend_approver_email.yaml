@@ -1,0 +1,7 @@
+parameters:
+  - name: id
+    description: SSL Cert ID number
+    schema:
+      type: integer
+    in: path
+    required: true

@@ -1,0 +1,35 @@
+required:
+  - vlans
+  - vlans6
+  - assets
+  - switchports
+type: object
+properties:
+  vlans:
+    description: List of VLANs.
+    type: array
+    items:
+      type: string
+    example: []
+  vlans6:
+    description: List of IPv6 VLANs.
+    type: array
+    items:
+      type: string
+    example: []
+  assets:
+    description: Object containing asset information.
+    required:
+      - '3497'
+    type: object
+    properties:
+      '3497':
+        $ref: ./ServerAsset.yaml
+  switchports:
+    description: Object containing switchport information.
+    required:
+      - '10414'
+    type: object
+    properties:
+      '10414':
+        $ref: ./ServerSwitchport.yaml

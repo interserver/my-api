@@ -1,0 +1,109 @@
+type: object
+properties:
+  vps_id:
+    description: VPS ID
+    type: string
+    example: '85872'
+  vps_custid:
+    description: Customer ID
+    type: string
+    example: '223513'
+  vps_server:
+    description: Server ID
+    type: string
+    example: '2439'
+  vps_ip:
+    description: IP address of the VPS
+    type: string
+    example: 1.2.3.4
+  vps_ipv6:
+    description: IPv6 address of the VPS
+  vps_vzid:
+    description: VPS Virtuozzo ID
+    type: string
+    example: vps85872
+  vps_currency:
+    description: Currency used for billing
+    type: string
+    example: USD
+  vps_type:
+    description: VPS type
+    type: string
+    example: '33'
+  vps_order_date:
+    description: Date of VPS order
+    type: string
+    example: '2022-12-26T20:14:59.000Z'
+  vps_status:
+    description: VPS status
+    type: string
+    example: active
+  vps_invoice:
+    description: VPS invoice number
+    type: string
+    example: '20130799'
+  vps_coupon:
+    description: VPS coupon code
+    type: string
+    example: '3646'
+  vps_extra:
+    description: Additional information about the VPS
+    type: string
+    example: >-
+      {"spice":5903,"snapshots":[{"name":"third","used":36490445,"date":1692095220},{"name":"second","used":40894464,"date":1692181620},{"name":"first","used":54735668,"date":1692268020}]}
+  vps_hostname:
+    description: VPS hostname
+    type: string
+    example: vps85872
+  vps_server_status:
+    description: Status of the VPS server
+    type: string
+    example: running
+  vps_comment:
+    description: Comment associated with the VPS
+    type: string
+    example: my-web-2
+  vps_slices:
+    description: Number of VPS slices
+    type: string
+    example: '16'
+  vps_vnc:
+    description: VNC address
+    type: string
+    example: 8.7.6.5
+  vps_vnc_port:
+    description: VNC port
+    type: string
+    example: '5902'
+  vps_rootpass:
+    description: Root password of the VPS
+    type: string
+    example: mypassword
+  vps_mac:
+    description: MAC address of the VPS
+    type: string
+    example: 00:16:3e:27:59:b2
+  vps_os:
+    description: Operating system of the VPS
+    type: string
+    example: ubuntu-22.04
+  vps_version:
+    description: Version of the operating system
+    type: string
+    example: ubuntu
+  vps_location:
+    description: Location of the VPS
+    type: string
+    example: '1'
+  vps_platform:
+    description: Virtualization platform
+    type: string
+    example: kvm
+  vps_diskused:
+    description: Amount of disk space used
+    type: string
+    example: '0'
+  vps_diskmax:
+    description: Maximum disk space available
+    type: string
+    example: '0'

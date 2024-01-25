@@ -1,0 +1,37 @@
+get:
+  tags:
+    - Licenses
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/LicensesOrder.yaml
+      description: License ordering information.
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getNewLicense
+  summary: Get License Order Information
+  description: ''
+put:
+  tags:
+    - Licenses
+  responses:
+    '200':
+      description: Validate Licenses order response
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: putLicenses
+  summary: Validate License Order
+  description: ''
+post:
+  tags:
+    - Licenses
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: addLicense
+  summary: Place License Order
+  description: ''

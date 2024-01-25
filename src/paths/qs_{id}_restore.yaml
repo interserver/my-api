@@ -1,0 +1,18 @@
+get:
+  tags:
+    - QuickServers
+  responses:
+    '200':
+      description: Get QuickServer Restore info response
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getQsRestore
+  summary: Restore QS
+  description: ''
+parameters:
+  - name: id
+    description: QuickServer ID number
+    schema:
+      type: integer
+    in: path
+    required: true

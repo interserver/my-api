@@ -1,0 +1,26 @@
+type: object
+properties:
+  label:
+    description: The label of the client link.
+    type: string
+    example: Invoices
+  link:
+    description: The link URL of the client link.
+    type: string
+    example: invoices
+  icon:
+    description: The icon class of the client link.
+    type: string
+    example: fas fa-file-invoice-dollar fa-w-12
+  icon_text:
+    description: The text for the icon of the client link.
+    type: string
+    example: ''
+  help_text:
+    description: Help text for the client link.
+    type: string
+    example: Invoice History
+  other_attr:
+    description: Additional attributes for the client link.
+    type: string
+    example: ''

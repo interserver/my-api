@@ -1,0 +1,61 @@
+required:
+  - license_id
+  - license_type
+  - license_currency
+  - license_order_date
+  - license_custid
+  - license_ip
+  - license_status
+  - license_invoice
+  - license_coupon
+type: object
+properties:
+  license_id:
+    description: License ID
+    type: string
+    example: '386522'
+  license_type:
+    description: License type
+    type: string
+    example: '5034'
+  license_currency:
+    description: License currency
+    type: string
+    example: USD
+  license_order_date:
+    format: date-time
+    description: License order date
+    type: string
+    example: '2020-01-14T10:48:14.000Z'
+  license_custid:
+    description: Customer ID
+    type: string
+    example: '771282'
+  license_ip:
+    description: License IP
+    type: string
+    example: 1.2.3.4
+  license_status:
+    description: License status
+    type: string
+    example: active
+  license_hostname:
+    description: License hostname
+    type: string
+    example: ''
+  license_key:
+    description: License key
+    type: string
+    example: ''
+  license_invoice:
+    description: License invoice
+    type: string
+    example: '18704419'
+  license_coupon:
+    description: License coupon
+    type: string
+    example: '1836'
+  license_extra:
+    description: Additional license information
+    type: string
+    example: ''

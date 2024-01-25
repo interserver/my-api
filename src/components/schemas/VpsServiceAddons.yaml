@@ -1,0 +1,46 @@
+type: object
+properties:
+  has_cpanel:
+    type: boolean
+  has_directadmin:
+    type: boolean
+  has_fantastico:
+    type: boolean
+  has_softaculous:
+    type: boolean
+  has_hdspace:
+    type: boolean
+  dedicated_ip:
+    type: boolean
+  extra_ips:
+    type: array
+    items:
+      type: string
+  extra_ips6:
+    type: array
+    items:
+      type: string
+  unpaid_ips:
+    type: array
+    items:
+      type: string
+  ips:
+    type: array
+    items:
+      type: string
+  ips6:
+    type: array
+    items:
+      type: string
+  cpanel_id:
+    type: integer
+  cost:
+    type: integer
+  ids:
+    type: array
+    items:
+      type: string
+  rdata:
+    type: array
+    items:
+      type: string

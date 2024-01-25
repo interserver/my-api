@@ -1,0 +1,7 @@
+parameters:
+  - name: id
+    description: Server ID number
+    schema:
+      type: integer
+    in: path
+    required: true

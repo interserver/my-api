@@ -1,0 +1,25 @@
+title: Root Type for ServerIpmiPowerRequest
+description: IPMI Power command for servers
+required:
+  - action
+  - asset
+type: object
+properties:
+  asset:
+    format: int32
+    description: The Asset ID
+    type: integer
+    example: '5432'
+  action:
+    description: The power action to send to the ipmi controller.
+    enum:
+      - cycle
+      - reset
+      - 'on'
+      - 'off'
+      - soft
+    type: string
+    example: 'on'
+example:
+  asset: 5432
+  action: reset

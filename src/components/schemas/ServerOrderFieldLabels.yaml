@@ -1,0 +1,24 @@
+description: Field labels for the server order.
+type: object
+properties:
+  bandwidth:
+    $ref: ./ServerOrderFieldLabel.yaml
+    description: Bandwidth field label.
+  ips:
+    $ref: ./ServerOrderFieldLabel.yaml
+    description: IPs field label.
+  os:
+    $ref: ./ServerOrderFieldLabel.yaml
+    description: Operating System field label.
+  cp:
+    $ref: ./ServerOrderFieldLabel.yaml
+    description: Control Panel field label.
+  raid:
+    $ref: ./ServerOrderFieldLabel.yaml
+    description: RAID field label.
+  memory:
+    $ref: ./ServerOrderFieldLabel.yaml
+    description: Memory field label.
+  hd:
+    $ref: ./ServerOrderFieldLabel.yaml
+    description: Hard Drives field label

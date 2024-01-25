@@ -1,0 +1,22 @@
+type: object
+properties:
+  icon:
+    description: The icon for dedicated servers.
+    type: string
+    example: server
+  view_link:
+    description: Link to view server.
+    type: string
+    example: view_server
+  heading:
+    description: Heading for dedicated servers.
+    type: string
+    example: Dedicated Servers
+  buy_link:
+    description: Link to order server.
+    type: string
+    example: order_server
+  list_link:
+    description: Link to view servers list.
+    type: string
+    example: view_servers_list

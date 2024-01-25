@@ -1,0 +1,10 @@
+description: A listing of the OS Templates available for use.
+required:
+  - templates
+type: object
+properties:
+  templates:
+    description: A listing of the templates.
+    type: array
+    items:
+      $ref: ./VpsTemplateRow.yaml

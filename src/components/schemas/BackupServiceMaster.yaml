@@ -1,0 +1,42 @@
+type: object
+properties:
+  backup_id:
+    description: Backup ID of the service master.
+    type: string
+    example: 38
+  backup_name:
+    description: Name of the backup service.
+    type: string
+    example: storage1400.is.cc
+  backup_ip:
+    description: IP address of the backup service.
+    type: string
+    example: 44.22.11.88
+  backup_type:
+    description: Type of the backup service.
+    type: string
+    example: 703
+  backup_hdsize:
+    description: Size of the backup service's hard drive.
+    type: string
+    example: 156448
+  backup_hdfree:
+    description: Amount of free space on the backup service's hard drive.
+    type: string
+    example: 61374
+  backup_last_update:
+    description: Last update timestamp of the backup service.
+    type: string
+    example: '2023-08-17T23:20:02.000Z'
+  backup_available:
+    description: Availability status of the backup service.
+    type: string
+    example: 0
+  backup_iowait:
+    description: I/O wait status of the backup service.
+    type: string
+    example: 0
+  backup_order:
+    description: Order associated with the backup service.
+    type: string
+    example: 21359

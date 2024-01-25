@@ -1,0 +1,18 @@
+get:
+  tags:
+    - VPS
+  responses:
+    '200':
+      $ref: ../components/responses/TextResponse.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: vpsCancelGet
+  summary: Cancel a service
+  description: Cancels a service in our system.
+parameters:
+  - name: id
+    description: VPS ID number
+    schema:
+      type: integer
+    in: path
+    required: true

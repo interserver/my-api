@@ -1,0 +1,22 @@
+type: object
+properties:
+  icon:
+    description: The icon for VPS.
+    type: string
+    example: cloud-meatball
+  view_link:
+    description: Link to view VPS.
+    type: string
+    example: view_vps
+  heading:
+    description: Heading for VPS.
+    type: string
+    example: VPS
+  buy_link:
+    description: Link to order VPS.
+    type: string
+    example: order_vps
+  list_link:
+    description: Link to view VPS list.
+    type: string
+    example: view_vps_list

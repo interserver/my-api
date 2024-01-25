@@ -1,0 +1,12 @@
+title: TimezoneUpdate
+description: The request to update the time zone of a vps.
+required:
+  - timezone
+type: object
+properties:
+  timezone:
+    description: The time zone
+    type: string
+    example: America/New_York
+example:
+  timezone: America/New_York

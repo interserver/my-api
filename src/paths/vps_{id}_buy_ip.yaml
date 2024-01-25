@@ -1,0 +1,29 @@
+get:
+  tags:
+    - VPS
+  responses:
+    '200':
+      description: VPS Buy IP information
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getVpsBuyIp
+  summary: Additional IP Addon Info
+  description: ''
+post:
+  tags:
+    - VPS
+  responses:
+    '200':
+      description: Submit VPS Buy IP form response
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: postVpsBuyIp
+  summary: Purchase Additional IP
+  description: ''
+parameters:
+  - name: id
+    description: VPS ID number
+    schema:
+      type: integer
+    in: path
+    required: true

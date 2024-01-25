@@ -1,0 +1,12 @@
+title: ReverseDnsEntries
+description: The Reverse DNS entries.
+type: object
+properties:
+  ips:
+    description: The IPs you have access to and their current reverse dns mapping.
+    type: object
+    additionalProperties: true
+example:
+  ips:
+    1.2.3.4: yourhost.com
+    1.2.3.5: anotherhost.com

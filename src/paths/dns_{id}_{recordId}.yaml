@@ -1,0 +1,73 @@
+summary: DNS Record Management
+description: Manage a DNS Record for the given Domain.
+post:
+  requestBody:
+    description: The request data to update a dns record.
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/DnsUpdateRecord.yaml
+      multipart/form-data:
+        schema:
+          $ref: ../components/schemas/DnsUpdateRecord.yaml
+    required: true
+  tags:
+    - DNS
+  parameters:
+    - name: recordId
+      description: The domain record ID number.
+      schema:
+        type: integer
+      in: path
+      required: true
+    - name: id
+      description: The domain ID number
+      schema:
+        type: integer
+      in: path
+      required: true
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: updateDnsRecord
+  summary: Update DNS Record
+  description: Updates a DNS record with the supplied information.
+delete:
+  tags:
+    - DNS
+  parameters:
+    - name: recordId
+      description: The domain record ID number.
+      schema:
+        type: integer
+      in: path
+      required: true
+    - name: id
+      description: The domain ID number.
+      schema:
+        type: integer
+      in: path
+      required: true
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: deleteDnsRecord
+  summary: Delete DNS Record
+  description: Removes a DNS Record from the specified domain.
+parameters:
+  - name: id
+    description: The Domain ID number.
+    schema:
+      type: integer
+    in: path
+    required: true
+  - name: recordId
+    description: The Record ID number for the given domain.
+    schema:
+      type: integer
+    in: path
+    required: true

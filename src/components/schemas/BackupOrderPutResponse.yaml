@@ -1,0 +1,38 @@
+title: Root Type for BackupOrderPutResponse
+description: Backup Order validation response
+type: object
+properties:
+  continue:
+    type: boolean
+  errors:
+    type: array
+    items: {}
+  serviceType:
+    format: int32
+    type: integer
+  serviceCost:
+    type: string
+  originalCost:
+    type: string
+  repeatServiceCost:
+    type: string
+  hostname:
+    type: string
+  password:
+    type: string
+  coupon:
+    type: string
+  couponCode:
+    format: int32
+    type: integer
+example:
+  continue: true
+  errors: []
+  serviceType: 10831
+  serviceCost: '3.00'
+  originalCost: '3.00'
+  repeatServiceCost: '3.00'
+  hostname: ''
+  password: m13dxi6K
+  coupon: ''
+  couponCode: 0

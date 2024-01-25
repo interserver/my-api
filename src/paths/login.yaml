@@ -1,0 +1,69 @@
+summary: Log In to the system and create a session.
+description: >-
+  Submit your login credentials to generate a session id which can be used for
+  validating requests.
+get:
+  tags:
+    - Public
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/LoginInfo.yaml
+          examples:
+            LoginInfoExample:
+              value:
+                logo: //my.interserver.net/images/logos/mystaging.png
+                captcha: data:image/jpeg;base64,/9j/
+                language: en-US
+                counts:
+                  vps: 290201
+                  websites: 205172
+                  servers: 27940
+      description: Various pieces of information useful for rendering a login page.
+    '403':
+      $ref: ../components/responses/LoginResponseError.yaml
+  security:
+    - {}
+  operationId: getLoginInfo
+  summary: Get Login Info
+  description: Gets the various pieces of information useful for generating a login page.
+post:
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/LoginSubmissionExample.yaml
+        examples:
+          LoginSubmissionExampleExample:
+            value:
+              login: user@domain.com
+              passwd: mypassword
+              remember: 'true'
+              g-recaptcha-response:
+                __v_isShallow: false
+                dep:
+                  w: 0
+                  'n': 0
+                __v_isRef: true
+                _rawValue: zzzzz
+                _value: zzzzz
+      multipart/form-data:
+        schema:
+          $ref: ../components/schemas/LoginSubmissionExample.yaml
+    required: true
+  tags:
+    - Public
+  responses:
+    '200':
+      $ref: ../components/responses/LoginSuccessResponse.yaml
+    '402':
+      $ref: ../components/responses/LoginResponseError.yaml
+    default:
+      description: Default response
+  security:
+    - {}
+  operationId: submitLogin
+  summary: Submit Login Information
+  description: Tries to authenticate without system using the provided login credentials.

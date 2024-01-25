@@ -1,0 +1,22 @@
+get:
+  tags:
+    - Domains
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getDomainOrderFields
+  summary: Get Domain Order Fields
+  description: >-
+    Get fields for placing a domain order for the given domain name and
+    registration type.
+parameters:
+  - name: domain
+    schema:
+      type: string
+    in: path
+    required: true
+  - name: regType
+    schema:
+      type: string
+    in: path
+    required: true

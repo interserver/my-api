@@ -1,0 +1,62 @@
+title: DnsRecord
+description: A single DNS Record row for a Domain
+required:
+  - type
+  - ttl
+  - ordername
+  - id
+  - auth
+  - content
+  - disabled
+  - domain_id
+  - name
+  - prio
+type: object
+properties:
+  id:
+    description: The ID of the DNS Record.
+    type: string
+    example: '472'
+  domain_id:
+    description: The ID of the Domain this is a record of.
+    type: string
+    example: '68'
+  name:
+    type: string
+    example: hussfamily.com
+  type:
+    description: The type fo DNS record such as A, MX, NS.
+    type: string
+    example: NS
+  content:
+    description: The content of the record, such as the IP address or hsotname.
+    type: string
+    example: cdns1.interserver.net
+  ttl:
+    description: Time To Live (seconds)
+    type: string
+    example: '86400'
+  prio:
+    description: Priority
+    type: string
+    example: '0'
+  disabled:
+    type: string
+    example: '0'
+  ordername:
+    description: Alternate name to use for sorting
+    type: string
+  auth:
+    type: string
+    example: '1'
+example:
+  id: '473'
+  domain_id: '68'
+  name: hussfamily.com
+  type: NS
+  content: cdns1.interserver.net
+  ttl: '86400'
+  prio: '0'
+  disabled: '0'
+  ordername: ''
+  auth: '1'

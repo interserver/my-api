@@ -1,0 +1,18 @@
+post:
+  tags:
+    - QuickServers
+  responses:
+    '200':
+      $ref: ../components/responses/QueueResponse.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: postQsBackup
+  summary: Create QuickServer Backup
+  description: creates a backup of the server which can be downloaded or restored.
+parameters:
+  - name: id
+    description: QuickServer ID number
+    schema:
+      type: integer
+    in: path
+    required: true

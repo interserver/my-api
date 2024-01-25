@@ -1,0 +1,38 @@
+get:
+  tags:
+    - Billing
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/AffiliateBannerRow.yaml
+          examples:
+            AffiliateBannerExample:
+              value:
+                - image: 12946798.gif
+                  width: '125'
+                  height: '125'
+                - image: 12946800.gif
+                  width: '160'
+                  height: '90'
+                - image: 12946802.gif
+                  width: '160'
+                  height: '190'
+                - image: 12946806.gif
+                  width: '200'
+                  height: '200'
+                - image: 12946808.gif
+                  width: '250'
+                  height: '250'
+                - image: 12946811.gif
+                  width: '300'
+                  height: '250'
+      description: Affiliate Banners Array
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getAffiliateBanners
+  summary: Get Affiliate Banners
+  description: An array of affiliate banner images.

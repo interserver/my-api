@@ -1,0 +1,10 @@
+type: object
+properties:
+  desc:
+    description: Description
+    type: string
+    example: Additional IP Address
+  value:
+    description: Value
+    type: string
+    example: ''

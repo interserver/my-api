@@ -1,0 +1,6 @@
+type: object
+properties:
+  '16058':
+    description: Link to a server.
+    type: string
+    example: anotherserver.com

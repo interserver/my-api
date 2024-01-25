@@ -1,0 +1,12 @@
+type: object
+properties:
+  name:
+    type: string
+  sub_name:
+    type: string
+  cost:
+    type: integer
+  img_disabled:
+    type: string
+  img_active:
+    type: string

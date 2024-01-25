@@ -1,0 +1,47 @@
+get:
+  tags:
+    - Servers
+  parameters:
+    - name: id
+      description: The order ID number.
+      schema:
+        type: integer
+      in: path
+      required: true
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Server.yaml
+      description: Server details
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getServerInfo
+  summary: Get Server Order
+  description: ''
+post:
+  tags:
+    - Servers
+  parameters:
+    - name: id
+      description: The order ID number.
+      schema:
+        type: string
+      in: path
+      required: true
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: updateServerInfo
+  summary: Update Server Order
+  description: ''
+parameters:
+  - name: id
+    description: Server ID number
+    schema:
+      type: integer
+    in: path
+    required: true

@@ -1,0 +1,22 @@
+get:
+  tags:
+    - SSL-Certificates
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ChargeInvoiceRows.yaml
+      description: Get Invoices response
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getSslInvoices
+  summary: Get SSL Cert Invoices
+  description: ''
+parameters:
+  - name: id
+    description: SSL Cert ID number
+    schema:
+      type: integer
+    in: path
+    required: true

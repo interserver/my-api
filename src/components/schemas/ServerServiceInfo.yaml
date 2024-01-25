@@ -1,0 +1,138 @@
+type: object
+properties:
+  server_id:
+    description: The ID of the server.
+    type: string
+    example: '16058'
+  server_hostname:
+    description: The hostname of the server.
+    type: string
+    example: myserver.host.com
+  server_custid:
+    description: The customer ID associated with the server.
+    type: string
+    example: '771282'
+  server_type:
+    description: The type of the server.
+    type: string
+    example: '600'
+  server_currency:
+    description: The currency used for billing.
+    type: string
+    example: USD
+  server_order_date:
+    description: The date when the server was ordered.
+    type: string
+    example: '2020-05-08T17:22:36.000Z'
+  server_invoice:
+    description: The invoice number for the server.
+    type: string
+    example: '18738142'
+  server_coupon:
+    description: The coupon associated with the server.
+    type: string
+    example: '0'
+  server_status:
+    description: The status of the server.
+    type: string
+    example: active
+  server_root:
+    description: The root of the server.
+    type: string
+    example: ''
+  server_dedicated_tag:
+    description: The dedicated tag of the server.
+    type: string
+    example: '0'
+  server_custom_tag:
+    description: The custom tag of the server.
+    type: string
+    example: ''
+  server_comment:
+    description: Comments related to the server.
+    type: string
+    example: ''
+  server_initial_bill:
+    description: The initial billing amount for the server.
+    type: string
+    example: '0'
+  server_hardware:
+    description: The hardware information of the server.
+    type: string
+    example: '0'
+  server_ips:
+    description: The number of IPs associated with the server.
+    type: string
+    example: '0'
+  server_monthly_bill:
+    description: The monthly billing amount for the server.
+    type: string
+    example: '0'
+  server_setup:
+    description: The setup status of the server.
+    type: string
+    example: '0'
+  server_discount:
+    description: Discount information for the server.
+  server_rep:
+    description: The reputation of the server.
+    type: string
+    example: '0'
+  server_date:
+    description: The date related to the server.
+    type: string
+    example: '1588972956'
+  server_total_cost:
+    description: The total cost of the server.
+    type: string
+    example: '230'
+  server_location:
+    description: The location of the server.
+  server_hardware_ordered:
+    description: The ordered hardware for the server.
+    type: string
+    example: '0'
+  server_billed:
+    description: The billed amount for the server.
+    type: string
+    example: '0'
+  server_welcome_email:
+    description: Indicates whether a welcome email was sent.
+    type: string
+    example: '1'
+  server_dedicated_cpu:
+    description: The number of dedicated CPUs for the server.
+    type: string
+    example: '38'
+  server_dedicated_memory:
+    description: The amount of dedicated memory for the server.
+    type: string
+    example: '22'
+  server_dedicated_hd1:
+    description: The size of the first dedicated hard drive.
+    type: string
+    example: '20'
+  server_dedicated_hd2:
+    description: The size of the second dedicated hard drive.
+  server_dedicated_bandwidth:
+    description: The bandwidth of the server.
+    type: string
+    example: '3'
+  server_dedicated_ips:
+    description: The number of dedicated IPs for the server.
+    type: string
+    example: '5'
+  server_dedicated_os:
+    description: The operating system of the server.
+    type: string
+    example: '30'
+  server_dedicated_cp:
+    description: The control panel of the server.
+  server_dedicated_raid:
+    description: The RAID configuration of the server.
+    type: string
+    example: '0'
+  server_extra:
+    description: Additional information about the server.
+    type: string
+    example: '[]'

@@ -1,0 +1,24 @@
+get:
+  tags:
+    - VPS
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/VpsBackupRows.yaml
+      description: The listing of the available backups
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getVpsBackups
+  summary: Get VPS Backups List
+  description: >-
+    Gets a list of the available backups for your service over our backup
+    systems such as XFS stsorag and Swift
+parameters:
+  - name: id
+    description: VPS ID number
+    schema:
+      type: integer
+    in: path
+    required: true

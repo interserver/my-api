@@ -1,0 +1,39 @@
+title: VpsBackupRow
+description: A single backed-up item and information about it.
+required:
+  - type
+  - size
+  - date
+  - name
+  - service
+type: object
+properties:
+  type:
+    description: Backup Type
+    type: string
+    example: zfs
+  service:
+    format: int32
+    description: The service id such as vps  id.
+    type: integer
+    example: '12343'
+  name:
+    description: The name of the backup.
+    type: string
+    example: automated_backup
+  size:
+    format: int32
+    description: Size of the file in bytes
+    type: integer
+    example: '132412343124213'
+  date:
+    format: int32
+    description: The creation date of the backup in a unix timestamp.
+    type: integer
+    example: '1693996140'
+example:
+  type: zfs
+  service: 242828
+  name: third
+  size: 514850816
+  date: 1693909500

@@ -1,0 +1,10 @@
+title: EmailAddress
+description: an email address
+type: object
+properties:
+  email:
+    description: an email address
+    type: string
+    example: user@domain.com
+example:
+  email: user@domain.com

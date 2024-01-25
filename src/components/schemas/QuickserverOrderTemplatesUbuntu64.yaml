@@ -1,0 +1,8 @@
+description: Ubuntu template details.
+type: array
+items:
+  type: array
+  items:
+    description: Name of the Ubuntu template.
+    type: string
+    example: ubuntu-22.04

@@ -1,0 +1,13 @@
+get:
+  tags:
+    - SSL-Certificates
+  responses:
+    '200':
+      description: The listing of `SSL` services on your account.
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: getSslList
+  summary: List SSL Certs
+  description: ''

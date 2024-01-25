@@ -1,0 +1,10 @@
+description: Schema for the jsonServiceOffers field in WebsitesOrder
+required:
+  - '1026'
+type: object
+properties:
+  '1026':
+    description: Array of service offers
+    type: array
+    items:
+      $ref: ./WebsitesOrderJsonServiceOffersItem.yaml

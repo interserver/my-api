@@ -1,0 +1,18 @@
+get:
+  tags:
+    - VPS
+  responses:
+    '200':
+      $ref: ../components/responses/QueueResponse.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: postVpsBackup
+  summary: Start a VPS Backup
+  description: creates a backup of the vps which can be downloaded or restored.
+parameters:
+  - name: id
+    description: VPS ID number
+    schema:
+      type: integer
+    in: path
+    required: true

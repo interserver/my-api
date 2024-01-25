@@ -1,0 +1,8 @@
+required:
+  - '11006'
+type: object
+properties:
+  '11006':
+    description: The cost associated with package 11006.
+    type: integer
+    example: 84

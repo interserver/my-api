@@ -1,0 +1,13 @@
+title: Root Type for AffiliatePaymentSetup
+description: >-
+  Affiliate Payment Setup.  Here you can set if you want the payments to go to
+  `prepay` or `paypal` and the PayPal email address.
+type: object
+properties:
+  affiliate_paypal:
+    type: string
+  affiliate_payment_method:
+    type: string
+example:
+  affiliate_paypal: paypal@email.com
+  affiliate_payment_method: prepay

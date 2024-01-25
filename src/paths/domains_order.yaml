@@ -1,0 +1,48 @@
+get:
+  tags:
+    - Domains
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/DomainOrder.yaml
+      description: Domain registration order information.
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getNewDomain
+  summary: Get Domain Ordering Information
+  description: ''
+put:
+  tags:
+    - Domains
+  responses:
+    '200':
+      description: Validate Domain Order response
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: putDomains
+  summary: Domain Order Search
+  description: ''
+post:
+  tags:
+    - Domains
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: addDomain
+  summary: Place Domain Order
+  description: ''
+patch:
+  tags:
+    - Domains
+  responses:
+    '200':
+      description: Validate Domain order response
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: patchDomains
+  summary: Validate Domain Order
+  description: ''

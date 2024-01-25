@@ -1,0 +1,32 @@
+get:
+  tags:
+    - Billing
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/AffiliateTrafficRow.yaml
+          examples:
+            AffiliateWebTrafficResponseExample:
+              value:
+                - traffic_id: '91839913'
+                  traffic_ip: '2a06:98c0:3600::'
+                  traffic_url: https://www.interserver.net/webhosting/?id=8
+                  traffic_affiliate: '8'
+                  traffic_referrer: ''
+                  traffic_timestamp: '2023-09-30 06:30:27'
+                - traffic_id: '91831932'
+                  traffic_ip: '2a06:98c0:3600::'
+                  traffic_url: https://www.interserver.net/webhosting/?id=8
+                  traffic_affiliate: '8'
+                  traffic_referrer: ''
+                  traffic_timestamp: '2023-09-30 03:15:13'
+      description: The recent affiliate web traffic
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: affiliateGetWebTraffic
+  summary: Get Affiliate Web Traffic
+  description: Gets the recent affiliate web traffic.

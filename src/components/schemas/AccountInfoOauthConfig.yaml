@@ -1,0 +1,73 @@
+title: AccountInfoOauthConfig
+description: ''
+required:
+  - providers
+  - callback
+type: object
+properties:
+  callback:
+    type: string
+  providers:
+    $ref: ./AccountInfoOauthConfigProviders.yaml
+    properties:
+      Twitter:
+        type: object
+        properties:
+          enabled:
+            type: boolean
+          linked:
+            type: boolean
+      Facebook:
+        type: object
+        properties:
+          enabled:
+            type: boolean
+          account:
+            type: string
+          url:
+            type: string
+          linked:
+            type: boolean
+      Google:
+        type: object
+        properties:
+          enabled:
+            type: boolean
+          account:
+            type: string
+          url:
+            type: string
+          linked:
+            type: boolean
+      GitHub:
+        type: object
+        properties:
+          enabled:
+            type: boolean
+          account:
+            type: string
+          url:
+            type: string
+          linked:
+            type: boolean
+example:
+  callback: https://my.interserver.net/oauth/callback.php
+  providers:
+    Twitter:
+      enabled: false
+      linked: false
+    Facebook:
+      enabled: true
+      account: '10204015683980049'
+      url: https://www.facebook.com/10204015683980049
+      linked: true
+    Google:
+      enabled: true
+      account: '103826860529802474211'
+      url: https://plus.google.com/+JoeHuss
+      linked: true
+    GitHub:
+      enabled: true
+      account: '1364504'
+      url: https://github.com/detain
+      linked: true

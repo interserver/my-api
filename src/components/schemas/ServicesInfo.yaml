@@ -1,0 +1,223 @@
+description: ''
+required:
+  - modules
+  - services
+  - serviceTypes
+  - serviceCategories
+type: object
+properties:
+  modules:
+    $ref: ./Modules.yaml
+    description: ''
+    example: |-
+      {
+          "domains": {
+            "SERVICE_ID_OFFSET": 10000,
+            "USE_REPEAT_INVOICE": true,
+            "USE_PACKAGES": true,
+            "BILLING_DAYS_OFFSET": 45,
+            "IMGNAME": "domain.png",
+            "REPEAT_BILLING_METHOD": 2,
+            "DELETE_PENDING_DAYS": 45,
+            "SUSPEND_DAYS": 14,
+            "SUSPEND_WARNING_DAYS": 7,
+            "TITLE": "Domain Registrations",
+            "MENUNAME": "Domains",
+            "EMAIL_FROM": "support@interserver.net",
+            "TBLNAME": "Domains",
+            "TABLE": "domains",
+            "TITLE_FIELD": "domain_hostname",
+            "PREFIX": "domain"
+          },
+          "vps": {
+            "SERVICE_ID_OFFSET": 0,
+            "USE_REPEAT_INVOICE": true,
+            "USE_PACKAGES": true,
+            "BILLING_DAYS_OFFSET": 0,
+            "IMGNAME": "root-server.png",
+            "REPEAT_BILLING_METHOD": 2,
+            "DELETE_PENDING_DAYS": 45,
+            "SUSPEND_DAYS": 14,
+            "SUSPEND_WARNING_DAYS": 7,
+            "TITLE": "VPS",
+            "MENUNAME": "VPS",
+            "EMAIL_FROM": "support@interserver.net",
+            "TBLNAME": "VPS",
+            "TABLE": "vps",
+            "TITLE_FIELD": "vps_hostname",
+            "TITLE_FIELD2": "vps_ip",
+            "TITLE_FIELD3": "vps_vzid",
+            "PREFIX": "vps"
+          }
+      }
+  services:
+    $ref: ./Services.yaml
+    description: ''
+    example: |-
+      {
+          "31": {
+            "services_id": 31,
+            "services_name": "OpenVZ VPS Slice",
+            "services_cost": 6,
+            "services_currency": "USD",
+            "services_category": 1,
+            "services_buyable": true,
+            "services_type": 6,
+            "services_field1": "slice",
+            "services_field2": "",
+            "services_module": "vps"
+          },
+          "32": {
+            "services_id": 32,
+            "services_name": "KVM Windows VPS Slice",
+            "services_cost": 10,
+            "services_currency": "USD",
+            "services_category": 2,
+            "services_buyable": true,
+            "services_type": 1,
+            "services_field1": "slice",
+            "services_field2": "",
+            "services_module": "vps"
+          }
+       }
+  serviceTypes:
+    $ref: ./ServiceTypes.yaml
+    description: ''
+    example: |-
+      {
+          "1": {
+            "st_id": 1,
+            "st_name": "KVM Windows",
+            "st_category": 2,
+            "st_module": "vps"
+          },
+          "2": {
+            "st_id": 2,
+            "st_name": "KVM Linux",
+            "st_category": 2,
+            "st_module": "vps"
+          },
+          "3": {
+            "st_id": 3,
+            "st_name": "Cloud KVM Windows",
+            "st_category": 3,
+            "st_module": "vps"
+          }
+        }
+  serviceCategories:
+    $ref: ./ServiceCategories.yaml
+    description: ''
+    example: |-
+      {
+              "1": {
+                  "category_id": 1,
+                  "category_name": "OpenVZ Virtual Servers",
+                  "category_tag": "openvz",
+                  "category_module": "vps"
+              },
+              "2": {
+                  "category_id": 2,
+                  "category_name": "KVM Virtual Servers",
+                  "category_tag": "kvm",
+                  "category_module": "vps"
+              },
+              "3": {
+                  "category_id": 3,
+                  "category_name": "Xen Virtual Servers",
+                  "category_tag": "xen",
+                  "category_module": "vps"
+              }
+          }
+example:
+  modules:
+    domains:
+      SERVICE_ID_OFFSET: 10000
+      USE_REPEAT_INVOICE: true
+      USE_PACKAGES: true
+      BILLING_DAYS_OFFSET: 45
+      IMGNAME: domain.png
+      REPEAT_BILLING_METHOD: 2
+      DELETE_PENDING_DAYS: 45
+      SUSPEND_DAYS: 14
+      SUSPEND_WARNING_DAYS: 7
+      TITLE: Domain Registrations
+      MENUNAME: Domains
+      EMAIL_FROM: support@interserver.net
+      TBLNAME: Domains
+      TABLE: domains
+      TITLE_FIELD: domain_hostname
+      PREFIX: domain
+    vps:
+      SERVICE_ID_OFFSET: 0
+      USE_REPEAT_INVOICE: true
+      USE_PACKAGES: true
+      BILLING_DAYS_OFFSET: 0
+      IMGNAME: root-server.png
+      REPEAT_BILLING_METHOD: 2
+      DELETE_PENDING_DAYS: 45
+      SUSPEND_DAYS: 14
+      SUSPEND_WARNING_DAYS: 7
+      TITLE: VPS
+      MENUNAME: VPS
+      EMAIL_FROM: support@interserver.net
+      TBLNAME: VPS
+      TABLE: vps
+      TITLE_FIELD: vps_hostname
+      TITLE_FIELD2: vps_ip
+      TITLE_FIELD3: vps_vzid
+      PREFIX: vps
+  services:
+    '31':
+      services_id: 31
+      services_name: OpenVZ VPS Slice
+      services_cost: 6
+      services_currency: USD
+      services_category: 1
+      services_buyable: true
+      services_type: 6
+      services_field1: slice
+      services_field2: ''
+      services_module: vps
+    '32':
+      services_id: 32
+      services_name: KVM Windows VPS Slice
+      services_cost: 10
+      services_currency: USD
+      services_category: 2
+      services_buyable: true
+      services_type: 1
+      services_field1: slice
+      services_field2: ''
+      services_module: vps
+  serviceTypes:
+    '1':
+      st_id: 1
+      st_name: KVM Windows
+      st_category: 2
+      st_module: vps
+    '2':
+      st_id: 2
+      st_name: KVM Linux
+      st_category: 2
+      st_module: vps
+    '3':
+      st_id: 3
+      st_name: Cloud KVM Windows
+      st_category: 3
+      st_module: vps
+  serviceCategories:
+    '1':
+      category_id: 1
+      category_name: OpenVZ Virtual Servers
+      category_tag: openvz
+      category_module: vps
+    '2':
+      category_id: 2
+      category_name: KVM Virtual Servers
+      category_tag: kvm
+      category_module: vps
+    '3':
+      category_id: 3
+      category_name: Xen Virtual Servers
+      category_tag: xen
+      category_module: vps

@@ -1,0 +1,41 @@
+type: object
+properties:
+  services_id:
+    description: Service ID
+    type: string
+    example: '11482'
+  services_name:
+    description: Service Name
+    type: string
+    example: DirectAdmin Standard
+  services_cost:
+    description: Service Cost
+    type: string
+    example: '21.75'
+  services_category:
+    description: Service Category
+    type: string
+    example: '506'
+  services_buyable:
+    description: Buyable flag for Service
+    type: string
+    example: '1'
+  services_type:
+    description: Service Type
+    type: string
+    example: '506'
+  services_field1:
+    description: Field 1 of Service
+    type: string
+    example: 2704,Standard
+  services_field2:
+    description: Field 2 of Service
+    type: string
+    example: >-
+      Unlimited Accounts & Domains<br><br>The DirectAdmin standard license is
+      best for medium to large shared-hosting and/or reseller-hosting companies.
+      No limit on accounts or domains.
+  services_module:
+    description: Module of Service
+    type: string
+    example: licenses

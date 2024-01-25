@@ -1,0 +1,13 @@
+post:
+  tags:
+    - Account
+  responses:
+    '200':
+      $ref: ../components/responses/TextResponse.yaml
+    '400':
+      $ref: ../components/responses/BadInput.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: postAccountUsername
+  summary: Change Username
+  description: Changes the login/user name on the account.

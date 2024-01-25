@@ -1,0 +1,46 @@
+title: LicenseRow
+description: A result row from the `Licenses` `GET` request.
+type: object
+properties:
+  license_id:
+    description: The id of the license.
+    type: string
+    example: '386111'
+  license_hostname:
+    description: The hostname of the license.
+    type: string
+    example: ''
+  license_ip:
+    description: The ip of the license.
+    type: string
+    example: 66.45.228.100
+  services_name:
+    description: The services name of the license.
+    type: string
+    example: Imunify360 up to 30 users
+  cost:
+    description: The cost of the license.
+    type: string
+    example: '25.00'
+  license_status:
+    description: The status of the license.
+    type: string
+    example: canceled
+  invoices_paid:
+    description: The invoices paid of the license.
+    type: string
+    example: '1'
+  invoices_date:
+    format: date-time
+    description: The invoices date of the license.
+    type: string
+    example: '2019-08-28T14:27:22.000Z'
+example:
+  license_id: '386111'
+  license_hostname: ''
+  license_ip: 66.45.228.100
+  services_name: Imunify360 up to 30 users
+  cost: '25.00'
+  license_status: canceled
+  invoices_paid: '1'
+  invoices_date: '2019-08-28T14:27:22.000Z'

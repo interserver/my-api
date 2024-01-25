@@ -1,0 +1,13 @@
+content:
+  application/json:
+    schema:
+      required:
+        - code
+        - message
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+description: The specified resource was not found

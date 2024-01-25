@@ -1,0 +1,24 @@
+get:
+  tags:
+    - Public
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            type: string
+          examples:
+            pingResponse:
+              value: '"pong"'
+      description: >-
+        A simple response of "pong" for use with simple tests to see if a
+        service is up. 
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Something is wrong
+  security:
+    - {}
+  operationId: pingServer
+  summary: Ping Server
+  description: Performs a single ping/pong request to let you know if the server is up.

@@ -1,0 +1,18 @@
+get:
+  tags:
+    - Domains
+  responses:
+    '200':
+      $ref: ../components/responses/SuccessTextResponse.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getDomainsWelcomeEmail
+  summary: Resend Domain Welcome Email
+  description: Resends the welcome email for the order.
+parameters:
+  - name: id
+    description: Domain ID number
+    schema:
+      type: integer
+    in: path
+    required: true

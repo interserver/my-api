@@ -1,0 +1,28 @@
+title: ServiceType
+description: A general grouping of services within a category.
+required:
+  - st_name
+  - st_module
+  - st_id
+  - st_category
+type: object
+properties:
+  st_id:
+    format: int32
+    type: integer
+    example: '600'
+  st_name:
+    type: string
+    example: Dedicated Server
+  st_category:
+    format: int32
+    type: integer
+    example: '600'
+  st_module:
+    type: string
+    example: servers
+example:
+  st_id: 600
+  st_name: Dedicated Server
+  st_category: 600
+  st_module: servers

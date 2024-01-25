@@ -1,0 +1,27 @@
+post:
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/IpObject.yaml
+      multipart/form-data:
+        schema:
+          $ref: ../components/schemas/IpObject.yaml
+    required: true
+  tags:
+    - Floating_IPs
+  responses:
+    '200':
+      $ref: ../components/responses/SuccessTextResponse.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: postFloatingIpsChangeIp
+  summary: Change Floating IP Target
+  description: This will change the IP address that  your floating ip points to.
+parameters:
+  - name: id
+    description: Floating IPs ID number
+    schema:
+      type: integer
+    in: path
+    required: true

@@ -1,0 +1,14 @@
+title: MailBlockRspamd
+description: This is a block entry from the rspamd block list.
+required:
+  - subject
+  - from
+type: object
+properties:
+  from:
+    type: string
+  subject:
+    type: string
+example:
+  from: user@domain.com
+  subject: Test email

@@ -1,0 +1,36 @@
+type: object
+properties:
+  id:
+    description: Operating System ID.
+    type: string
+    example: '51'
+  price:
+    description: Operating System price.
+    type: integer
+    example: 0
+  img:
+    description: Operating System image.
+    type: string
+  short_desc:
+    description: Short description of the OS.
+    type: string
+    example: AlmaLinux
+  long_desc:
+    description: Long description of the OS.
+    type: string
+  monthly_price:
+    description: Monthly price.
+    type: integer
+    example: 0
+  active:
+    description: Active status.
+    type: string
+    example: '1'
+  price_display:
+    description: Display of OS price.
+    type: string
+    example: $0.00
+  monthly_price_display:
+    description: Display of monthly OS price.
+    type: string
+    example: $0.00

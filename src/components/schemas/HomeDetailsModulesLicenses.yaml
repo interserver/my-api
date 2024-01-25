@@ -1,0 +1,22 @@
+type: object
+properties:
+  icon:
+    description: The icon for licenses.
+    type: string
+    example: id-card
+  view_link:
+    description: Link to view license.
+    type: string
+    example: view_license
+  heading:
+    description: Heading for licenses.
+    type: string
+    example: Licenses
+  buy_link:
+    description: Link to order license.
+    type: string
+    example: order_license
+  list_link:
+    description: Link to view licenses list.
+    type: string
+    example: view_licenses_list

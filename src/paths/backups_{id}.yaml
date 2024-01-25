@@ -1,0 +1,47 @@
+get:
+  tags:
+    - Backups
+  parameters:
+    - name: id
+      description: The order ID number.
+      schema:
+        type: integer
+      in: path
+      required: true
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Backup.yaml
+      description: The Backup Information
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getBackupInfo
+  summary: View Backup Order
+  description: ''
+post:
+  tags:
+    - Backups
+  parameters:
+    - name: id
+      description: The order ID number.
+      schema:
+        type: string
+      in: path
+      required: true
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: updateBackupInfo
+  summary: Update Backup Information
+  description: ''
+parameters:
+  - name: id
+    description: Backup ID number
+    schema:
+      type: integer
+    in: path
+    required: true

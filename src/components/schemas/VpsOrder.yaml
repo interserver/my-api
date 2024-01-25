@@ -1,0 +1,242 @@
+required:
+  - vpsSliceSsdOvzCost
+  - vpsSliceOvzCost
+  - vpsSliceSsdVirtuozzoCost
+  - vpsSliceVirtuozzoCost
+  - vpsSliceHypervCost
+  - vpsSliceVmwareCost
+  - vpsSliceLxcCost
+  - vpsSliceXenCost
+  - vpsSliceKvmLCost
+  - vpsSliceKvmStorageCost
+  - vpsNyCost
+  - vpsSliceKvmWCost
+  - cpanelCost
+  - daCost
+  - ramSlice
+  - hdSlice
+  - hdStorageSlice
+  - bwSlice
+  - bwType
+  - bwTotal
+  - maxSlices
+  - platformPackages
+  - platformNames
+  - packageCosts
+  - locationStock
+  - locationNames
+  - osNames
+  - templates
+  - serviceTypes
+  - currency
+  - currencySymbol
+type: object
+properties:
+  vpsSliceSsdOvzCost:
+    description: Cost of VPS Slice SSD OVZ
+    type: number
+    example: 9
+  vpsSliceOvzCost:
+    description: Cost of VPS Slice OVZ
+    type: number
+    example: 6
+  vpsSliceSsdVirtuozzoCost:
+    description: Cost of VPS Slice SSD Virtuozzo
+    type: number
+    example: 9
+  vpsSliceVirtuozzoCost:
+    description: Cost of VPS Slice Virtuozzo
+    type: number
+    example: 6
+  vpsSliceHypervCost:
+    description: Cost of VPS Slice HyperV
+    type: number
+    example: 10
+  vpsSliceVmwareCost:
+    description: Cost of VPS Slice VMware
+    type: number
+    example: 10
+  vpsSliceLxcCost:
+    description: Cost of VPS Slice LXC
+    type: number
+    example: 6
+  vpsSliceXenCost:
+    description: Cost of VPS Slice Xen
+    type: number
+    example: 6
+  vpsSliceKvmLCost:
+    description: Cost of VPS Slice KVM L
+    type: number
+    example: 6
+  vpsSliceKvmStorageCost:
+    description: Cost of VPS Slice KVM Storage
+    type: number
+    example: 6
+  vpsNyCost:
+    description: Cost of VPS in NY
+    type: number
+    example: 3
+  vpsSliceKvmWCost:
+    description: Cost of VPS Slice KVM Windows
+    type: number
+    example: 10
+  cpanelCost:
+    description: Cost of cPanel
+    type: number
+    example: 22
+  daCost:
+    description: Cost of DirectAdmin (DA)
+    type: number
+    example: 8
+  ramSlice:
+    description: RAM for VPS Slice
+    type: string
+    example: '2048'
+  hdSlice:
+    description: Hard Disk for VPS Slice
+    type: string
+    example: '30'
+  hdStorageSlice:
+    description: Storage Hard Disk for VPS Slice
+    type: string
+    example: '1000'
+  bwSlice:
+    description: Bandwidth for VPS Slice
+    type: string
+    example: '2000'
+  bwType:
+    description: Bandwidth Type
+    type: string
+    example: '2'
+  bwTotal:
+    description: Total Bandwidth
+    type: number
+    example: 2
+  maxSlices:
+    description: Maximum Slices
+    type: string
+    example: '16'
+  platformPackages:
+    description: Platform Packages
+    type: object
+    properties:
+      kvm:
+        type: number
+        example: 32
+      kvmstorage:
+        type: number
+        example: 57
+      hyperv:
+        type: number
+        example: 54
+  platformNames:
+    description: Platform Names
+    type: object
+    properties:
+      kvm:
+        type: string
+        example: KVM
+      kvmstorage:
+        type: string
+        example: KVM Storage
+      hyperv:
+        type: string
+        example: HyperV
+  packageCosts:
+    description: Package Costs
+    type: object
+    properties:
+      '57':
+        type: number
+        example: 6
+  locationStock:
+    description: Location Stock
+    type: object
+    properties:
+      '1':
+        type: object
+        properties:
+          kvm:
+            type: boolean
+            example: true
+          kvmstorage:
+            type: boolean
+            example: true
+          hyperv:
+            type: boolean
+            example: true
+  locationNames:
+    description: Location Names
+    type: object
+    properties:
+      '3':
+        type: string
+        example: Equinix NY4
+  osNames:
+    description: OS Names
+    type: object
+    properties:
+      opensuse:
+        type: string
+        example: OpenSUSE
+      ubuntu:
+        type: string
+        example: Ubuntu
+  templates:
+    description: Templates
+    type: object
+    properties:
+      hyperv:
+        type: object
+        properties:
+          windows:
+            type: object
+            properties:
+              Windows2019Standard:
+                type: string
+                example: 2019 Standard
+              Windows2022:
+                type: string
+                example: '2022'
+  serviceTypes:
+    description: Service Types
+    type: object
+    properties:
+      '32':
+        type: object
+        properties:
+          services_id:
+            type: string
+            example: '32'
+          services_name:
+            type: string
+            example: KVM Windows VPS Slice
+          services_cost:
+            type: string
+            example: '10.00'
+          services_category:
+            type: string
+            example: '2'
+          services_buyable:
+            type: string
+            example: '1'
+          services_type:
+            type: string
+            example: '1'
+          services_field1:
+            type: string
+            example: slice
+          services_field2:
+            type: string
+            example: ''
+          services_module:
+            type: string
+            example: vps
+  currency:
+    description: Currency
+    type: string
+    example: USD
+  currencySymbol:
+    description: Currency Symbol
+    type: string
+    example: $

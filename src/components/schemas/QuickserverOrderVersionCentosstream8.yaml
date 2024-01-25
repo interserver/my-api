@@ -1,0 +1,6 @@
+type: object
+properties:
+  centosstream-8:
+    description: Version details of CentOS Stream 8.
+    type: string
+    example: 8 Stream (64 bits)

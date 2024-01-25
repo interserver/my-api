@@ -1,0 +1,8 @@
+title: AccountSshKey
+description: SSH Keys
+type: object
+properties:
+  ssh_key:
+    type: string
+example:
+  ssh_key: ''

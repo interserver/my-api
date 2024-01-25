@@ -1,0 +1,47 @@
+get:
+  tags:
+    - Billing
+  parameters:
+    - name: searchString
+      description: pass an optional search string for looking up inventory
+      schema:
+        type: string
+      in: query
+      required: false
+    - name: skip
+      description: number of records to skip for pagination
+      schema:
+        format: int32
+        minimum: 0
+        type: integer
+      in: query
+    - name: limit
+      description: maximum number of records to return
+      schema:
+        format: int32
+        maximum: 50
+        minimum: 0
+        type: integer
+      in: query
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/Invoice.yaml
+      description: search results matching criteria
+    '400':
+      description: bad input parameter
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '404':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getInvoices
+  summary: Get Invoices
+  description: >-
+    The "Get User Invoices" API endpoint allows users to retrieve a list of
+    their invoices. By making a GET request to this endpoint, users can access
+    their individual invoice information, including details such as invoice
+    number, date, amount, and paid status.

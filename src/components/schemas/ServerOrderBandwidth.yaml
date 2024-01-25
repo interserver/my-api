@@ -1,0 +1,46 @@
+type: object
+properties:
+  id:
+    description: Bandwidth ID.
+    type: string
+    example: '15'
+  price:
+    description: Bandwidth price.
+    type: integer
+    example: 0
+  img:
+    description: Bandwidth image.
+    type: string
+    example: bandwidth.jpg
+  short_desc:
+    description: Short description of the bandwidth.
+    type: string
+    example: 150TB (10Gb Port)
+  long_desc:
+    description: Long description of the bandwidth.
+    type: string
+    example: ' - 2000GB Bandwidth...'
+  type:
+    description: Bandwidth type.
+    type: string
+    example: Standard
+  qty:
+    description: Quantity of bandwidth.
+    type: string
+    example: '4000'
+  active:
+    description: Active status.
+    type: string
+    example: '1'
+  monthly_price:
+    description: Monthly price.
+    type: integer
+    example: 15
+  price_display:
+    description: Display of bandwidth price.
+    type: string
+    example: $0.00
+  monthly_price_display:
+    description: Display of monthly bandwidth price.
+    type: string
+    example: $15.00

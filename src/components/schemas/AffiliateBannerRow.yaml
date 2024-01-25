@@ -1,0 +1,14 @@
+title: AffiliateBannerRow
+description: An affiliate banner image details.
+type: object
+properties:
+  image:
+    type: string
+  width:
+    type: string
+  height:
+    type: string
+example:
+  image: 12946798.gif
+  width: '125'
+  height: '125'

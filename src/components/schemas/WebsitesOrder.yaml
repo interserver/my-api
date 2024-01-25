@@ -1,0 +1,66 @@
+description: Schema for the WebsitesOrder object
+required:
+  - serviceTypes
+  - serviceOffers
+  - packages
+  - step
+  - website
+  - period
+  - serviceOfferId
+  - enableDomainRegistering
+  - jsonServices
+  - jsonServiceOffers
+type: object
+properties:
+  step:
+    description: Step description
+    type: string
+    example: order_form
+  website:
+    description: Website description
+    type: string
+    example: ''
+  period:
+    description: Period description
+    type: integer
+    example: 1
+  serviceOfferId:
+    description: Service offer ID description
+    type: integer
+    example: 0
+  packages:
+    $ref: ./WebsitesOrderPackages.yaml
+  enableDomainRegistering:
+    description: Enable domain registering description
+    type: boolean
+    example: false
+  jsonServices:
+    $ref: ./WebsitesOrderJsonServices.yaml
+  jsonServiceOffers:
+    $ref: ./WebsitesOrderJsonServiceOffers.yaml
+  serviceTypes:
+    description: The service types data.
+    required:
+      - '11447'
+    type: object
+    properties:
+      '11447':
+        $ref: ./WebsitesOrderServiceTypes.yaml
+  serviceOffers:
+    description: The service offers data.
+    required:
+      - '1026'
+    type: object
+    properties:
+      '1026':
+        type: array
+        items:
+          $ref: ./WebsitesOrderServiceOffer.yaml
+  packges:
+    description: The packages data.
+    required:
+      - '11440'
+    type: object
+    properties:
+      '11440':
+        $ref: ./WebsitesOrderPackagesInfo.yaml

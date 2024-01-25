@@ -1,0 +1,8 @@
+title: TemplateRequest
+description: VPS OS Template Request
+type: object
+properties:
+  template:
+    type: string
+example:
+  template: ubuntu-22.04

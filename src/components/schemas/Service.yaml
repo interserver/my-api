@@ -1,0 +1,59 @@
+title: Service
+description: An individual package tied to one of our services.
+required:
+  - services_type
+  - services_name
+  - services_module
+  - services_id
+  - services_field2
+  - services_buyable
+  - services_cost
+  - services_category
+  - services_field1
+  - services_currency
+type: object
+properties:
+  services_id:
+    format: int32
+    type: integer
+    example: '31'
+  services_name:
+    type: string
+    example: OpenVZ VPS Slice
+  services_cost:
+    format: int32
+    type: integer
+    example: '6.00'
+  services_currency:
+    type: string
+    example: USD
+  services_category:
+    format: int32
+    type: integer
+    example: '1'
+  services_buyable:
+    type: boolean
+    example: 'true'
+  services_type:
+    format: int32
+    type: integer
+    example: '6'
+  services_field1:
+    type: string
+    example: slice
+  services_field2:
+    type: string
+  services_module:
+    type: string
+    example: vps
+example:
+  services_id: 31
+  services_name: OpenVZ VPS Slice
+  services_cost: 6
+  services_currency: USD
+  services_category: 1
+  services_buyable: true
+  services_type: 6
+  services_field1: slice
+  services_field2: ''
+  services_module: vps

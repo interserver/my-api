@@ -1,0 +1,32 @@
+title: BillingAddCcRequest
+description: Request to add a new creditcard into the system.
+type: object
+properties:
+  name:
+    type: string
+  address:
+    type: string
+  city:
+    type: string
+  state:
+    type: string
+  country:
+    type: string
+  zip:
+    type: string
+  cc:
+    type: string
+  cc_exp:
+    type: string
+  cc_ccv2:
+    type: string
+example:
+  name: John Doe
+  address: 1 Somewhere St.
+  city: Secaucus
+  state: NJ
+  country: US
+  zip: '07013'
+  cc: '1234556781923121'
+  cc_exp: 12/2023
+  cc_ccv2: '123'

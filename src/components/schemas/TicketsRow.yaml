@@ -1,0 +1,59 @@
+title: TicketsRow
+description: Information about a single ticket.
+required:
+  - attachments
+  - total_replies
+  - title
+  - ticketmaskid
+  - ticketid
+  - status_text
+  - status
+  - priority
+  - lastreplier
+  - lastactivity
+  - departmenttitle
+  - checked
+  - can_close
+type: object
+properties:
+  title:
+    type: string
+  ticketmaskid:
+    type: string
+  lastreplier:
+    type: string
+  status:
+    type: string
+  priority:
+    type: string
+  total_replies:
+    format: int32
+    type: integer
+  lastactivity:
+    type: string
+  departmenttitle:
+    type: string
+  ticketid:
+    format: int32
+    type: integer
+  can_close:
+    type: string
+  attachments: {}
+  status_text:
+    type: string
+  checked:
+    type: boolean
+example:
+  title: fix reprocessing of messages on (re)connect
+  ticketmaskid: TLT-898-78119
+  lastreplier: Joe
+  status: <span class="badge badge-danger">Closed</span>
+  priority: Standard - 1 to 3 hour resolution
+  total_replies: 2
+  lastactivity: 3 years ago
+  departmenttitle: Bugs
+  ticketid: 704185
+  can_close: 'no'
+  attachments: []
+  status_text: Closed
+  checked: false

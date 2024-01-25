@@ -1,0 +1,8 @@
+type: object
+properties:
+  admin:
+    $ref: ./VpsPleskLicense.yaml
+  pro:
+    $ref: ./VpsPleskLicense.yaml
+  host:
+    $ref: ./VpsPleskLicense.yaml

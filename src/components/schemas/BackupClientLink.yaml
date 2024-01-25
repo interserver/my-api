@@ -1,0 +1,20 @@
+type: object
+properties:
+  label:
+    description: Label of the client link.
+    type: string
+  link:
+    description: Link URL of the client link.
+    type: string
+  icon:
+    description: Icon of the client link.
+    type: string
+  icon_text:
+    description: Icon text of the client link.
+    type: string
+  help_text:
+    description: Help text of the client link.
+    type: string
+  other_attr:
+    description: Other attributes of the client link.
+    type: string

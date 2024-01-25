@@ -1,0 +1,42 @@
+get:
+  tags:
+    - VPS
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/VpsTemplatesList.yaml
+      description: VPS Reinstall OS info response
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getVpsReinstallOs
+  summary: VPS Reinstall OS Options
+  description: ''
+post:
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/TemplateRequest.yaml
+      multipart/form-data:
+        schema:
+          $ref: ../components/schemas/TemplateRequest.yaml
+    required: true
+  tags:
+    - VPS
+  responses:
+    '200':
+      $ref: ../components/responses/QueueResponse.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: postVpsReinstallOs
+  summary: Reinstall VPS OS
+  description: ''
+parameters:
+  - name: id
+    description: VPS ID number
+    schema:
+      type: integer
+    in: path
+    required: true

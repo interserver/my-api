@@ -1,0 +1,8 @@
+title: UrlRequest
+description: URL
+type: object
+properties:
+  url:
+    type: string
+example:
+  url: https://templates.is.cc/systemrescuecd/systemrescue-7.01-amd64.iso

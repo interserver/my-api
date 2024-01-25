@@ -1,0 +1,11 @@
+post:
+  tags:
+    - Account
+  responses:
+    '200':
+      $ref: ../components/responses/SuccessTextResponse.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: updateAccountTfa
+  summary: Two-Factor Authorization
+  description: ''

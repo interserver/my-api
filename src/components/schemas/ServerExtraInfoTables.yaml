@@ -1,0 +1,6 @@
+required:
+  - assets
+type: object
+properties:
+  assets:
+    $ref: ./ServerAssets.yaml

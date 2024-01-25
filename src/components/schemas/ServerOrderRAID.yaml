@@ -1,0 +1,38 @@
+type: object
+properties:
+  id:
+    description: RAID ID.
+    type: string
+    example: '7'
+  price:
+    description: RAID price.
+    type: integer
+    example: 50
+  img:
+    description: RAID image.
+    type: string
+    example: raid.png
+  short_desc:
+    description: Short description of the RAID.
+    type: string
+    example: Hardware Raid 5
+  long_desc:
+    description: Long description of the RAID.
+    type: string
+    example: Hardware Raid 5
+  monthly_price:
+    description: Monthly price.
+    type: integer
+    example: 50
+  active:
+    description: Active status.
+    type: string
+    example: '1'
+  price_display:
+    description: Display of RAID price.
+    type: string
+    example: $50.00
+  monthly_price_display:
+    description: Display of monthly RAID price.
+    type: string
+    example: $50.00

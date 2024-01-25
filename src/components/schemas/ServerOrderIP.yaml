@@ -1,0 +1,38 @@
+type: object
+properties:
+  id:
+    description: IP ID.
+    type: string
+    example: '9'
+  price:
+    description: IP price.
+    type: integer
+    example: 0
+  img:
+    description: IP image.
+    type: string
+    example: ips.jpg
+  short_desc:
+    description: Short description of the IP.
+    type: string
+    example: 1 Vlan Ip (/30)
+  long_desc:
+    description: Long description of the IP.
+    type: string
+    example: 1 IP In personal Vlan
+  qty:
+    description: Quantity of IPs.
+    type: string
+    example: '1'
+  monthly_price:
+    description: Monthly price.
+    type: integer
+    example: 0
+  price_display:
+    description: Display of IP price.
+    type: string
+    example: $0.00
+  monthly_price_display:
+    description: Display of monthly IP price.
+    type: string
+    example: $0.00

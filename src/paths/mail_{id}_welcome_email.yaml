@@ -1,0 +1,18 @@
+get:
+  tags:
+    - Mail
+  responses:
+    '200':
+      $ref: ../components/responses/SuccessTextResponse.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getMailWelcomeEmail
+  summary: Resend Mail Welcome Email
+  description: Resends the welcome email for the order.
+parameters:
+  - name: id
+    description: Mail ID number
+    schema:
+      type: integer
+    in: path
+    required: true

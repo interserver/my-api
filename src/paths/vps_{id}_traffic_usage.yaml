@@ -1,0 +1,22 @@
+get:
+  tags:
+    - VPS
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/VpsTrafficResponse.yaml
+      description: Get VPS Traffic usage
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getVpsTrafficUsage
+  summary: Get Traffic Usage
+  description: ''
+parameters:
+  - name: id
+    description: VPS ID number
+    schema:
+      type: integer
+    in: path
+    required: true

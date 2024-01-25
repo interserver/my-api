@@ -1,0 +1,30 @@
+type: object
+properties:
+  serviceInfo:
+    $ref: ./WebsiteServiceInfo.yaml
+  client_links:
+    type: array
+    items:
+      $ref: ./WebsiteClientLink.yaml
+  billingDetails:
+    $ref: ./WebsiteBillingDetails.yaml
+  custCurrency:
+    description: Customer's currency
+    type: string
+    example: USD
+  custCurrencySymbol:
+    description: Customer currency symbol
+    type: string
+    example: $
+  serviceMaster:
+    $ref: ./WebsiteServiceMaster.yaml
+  package:
+    description: Package information
+    type: string
+    example: Web Hosting Direct Admin
+  serviceExtra:
+    type: array
+    items:
+      $ref: ./WebsiteServiceExtra.yaml
+  extraInfoTables:
+    $ref: ./WebsiteExtraInfoTables.yaml

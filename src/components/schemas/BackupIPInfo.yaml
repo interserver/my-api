@@ -1,0 +1,10 @@
+type: object
+properties:
+  title:
+    description: Title of the IP information table.
+    type: string
+    example: IP Information
+  rows:
+    type: array
+    items:
+      $ref: ./BackupIPInfoRow.yaml

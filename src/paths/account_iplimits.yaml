@@ -1,0 +1,51 @@
+post:
+  requestBody:
+    description: The lower and upper bounds of an ip range.
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/IpLimitRange.yaml
+        examples:
+          IpLimitRangeJsonExample:
+            value:
+              start: 1.2.3.0
+              end: 1.2.3.255
+      multipart/form-data:
+        schema:
+          $ref: ../components/schemas/IpLimitRange.yaml
+        examples:
+          IpLimitRangeFormExample:
+            value:
+              start: 1.2.3.0
+              end: 1.2.3.255
+    required: true
+  tags:
+    - Account
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: updateAccountIpLimits
+  summary: Add IP Limit
+  description: Add an IP range into the IP Limiting IP ranges.
+patch:
+  requestBody:
+    content:
+      application/json: {}
+  tags:
+    - Account
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/GenericResponse.yaml
+      description: IP Range removed.
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: deleteIpLimit
+  summary: Delete IP Limit
+  description: >-
+    This will remove an IP range from the ranges of IPs for limiting your
+    account to specific IPs.

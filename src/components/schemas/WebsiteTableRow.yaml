@@ -1,0 +1,8 @@
+type: object
+properties:
+  desc:
+    description: Description for the row
+    type: string
+  value:
+    description: Value for the row
+    type: string

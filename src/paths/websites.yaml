@@ -1,0 +1,22 @@
+get:
+  tags:
+    - Webhosting
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/WebsiteRow.yaml
+        multipart/form-data:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/WebsiteRow.yaml
+      description: The listing of `Websites` services on your account.
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getWebsiteList
+  summary: Get Website Listing
+  description: Gets a listing of your webhosting orders and service details.

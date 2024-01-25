@@ -1,0 +1,12 @@
+title: TextResponse
+description: Text Response Object
+required:
+  - text
+type: object
+properties:
+  text:
+    description: Response text
+    type: string
+    example: '"You were successfull."'
+example:
+  text: You were successfull.

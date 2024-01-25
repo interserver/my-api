@@ -1,0 +1,9 @@
+description: Schema for the packages field in WebsitesOrder
+required:
+  - '11447'
+type: object
+properties:
+  '11447':
+    description: Package description
+    type: string
+    example: Web Hosting Direct Admin (PriceLock)

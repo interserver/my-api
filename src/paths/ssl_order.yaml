@@ -1,0 +1,33 @@
+get:
+  tags:
+    - SSL-Certificates
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: getNewSsl
+  summary: SSL Cert Ordering Information
+  description: ''
+put:
+  tags:
+    - SSL-Certificates
+  responses:
+    '200':
+      description: Validate SSL Order response
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: putSsl
+  summary: Validate SSL Cert Order
+  description: ''
+post:
+  tags:
+    - SSL-Certificates
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: addSsl
+  summary: Placer SSL Cert Order
+  description: ''

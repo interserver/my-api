@@ -1,0 +1,27 @@
+post:
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/UrlRequest.yaml
+      multipart/form-data:
+        schema:
+          $ref: ../components/schemas/UrlRequest.yaml
+    required: true
+  tags:
+    - VPS
+  responses:
+    '200':
+      $ref: ../components/responses/QueueResponse.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: postVpsInsertCd
+  summary: Insert CD in VPS
+  description: ''
+parameters:
+  - name: id
+    description: VPS ID number
+    schema:
+      type: integer
+    in: path
+    required: true

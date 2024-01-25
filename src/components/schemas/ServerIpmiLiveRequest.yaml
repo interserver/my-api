@@ -1,0 +1,19 @@
+title: Root Type for ServerIpmiLiveRequest
+description: Request body to setup an IPMI Live connection.
+required:
+  - ip
+  - asset
+type: object
+properties:
+  asset:
+    format: int32
+    description: Asset ID
+    type: integer
+    example: '5431'
+  ip:
+    description: IP Address
+    type: string
+    example: 1.2.3.4
+example:
+  asset: 5431
+  ip: 1.2.3.4

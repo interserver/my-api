@@ -1,0 +1,33 @@
+title: LoginServiceCounts
+description: Order counts per module.
+required:
+  - websites
+  - vps
+  - servers
+type: object
+properties:
+  vps:
+    format: int32
+    description: >-
+      The number of total VPS orders that have been placed in our billing
+      system.
+    type: integer
+    example: '205172'
+  websites:
+    format: int32
+    description: >-
+      The number of total website orders that have been placed in our billing
+      system.
+    type: integer
+    example: '205172'
+  servers:
+    format: int32
+    description: >-
+      The number of total server orders that have been placed in our billing
+      system.
+    type: integer
+    example: '205172'
+example:
+  vps: 290201
+  websites: 205172
+  servers: 27940

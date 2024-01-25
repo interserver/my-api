@@ -1,0 +1,47 @@
+get:
+  tags:
+    - Domains
+  parameters:
+    - name: id
+      description: The order ID number.
+      schema:
+        type: integer
+      in: path
+      required: true
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Domain.yaml
+      description: Domain Information.
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getDomainInfo
+  summary: Get Domain Order
+  description: ''
+post:
+  tags:
+    - Domains
+  parameters:
+    - name: id
+      description: The order ID number.
+      schema:
+        type: string
+      in: path
+      required: true
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: updateDomainInfo
+  summary: Update Domain Order
+  description: ''
+parameters:
+  - name: id
+    description: Domain ID number
+    schema:
+      type: integer
+    in: path
+    required: true

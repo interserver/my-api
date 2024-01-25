@@ -1,0 +1,9 @@
+type: object
+properties:
+  title:
+    description: Title of the table
+    type: string
+  rows:
+    type: array
+    items:
+      $ref: ./WebsiteTableRow.yaml

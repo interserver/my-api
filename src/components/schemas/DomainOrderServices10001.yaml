@@ -1,0 +1,46 @@
+type: object
+properties:
+  services_id:
+    description: Service ID
+    type: string
+    example: '10001'
+  services_name:
+    description: Service Name
+    type: string
+    example: .asia Domain Name Registration
+  services_cost:
+    description: Service Cost
+    type: string
+    example: '19.00'
+  services_currency:
+    description: Currency of Service Cost
+    type: string
+    example: USD
+  services_category:
+    description: Service Category
+    type: string
+    example: '100'
+  services_buyable:
+    description: Buyable flag for Service
+    type: string
+    example: '1'
+  services_type:
+    description: Service Type
+    type: string
+    example: '100'
+  services_field1:
+    description: Field 1 of Service
+    type: string
+    example: .asia
+  services_field2:
+    description: Field 2 of Service
+    type: string
+    example: ''
+  services_module:
+    description: Module of Service
+    type: string
+    example: domains
+  services_hidden:
+    description: Hidden flag for Service
+    type: string
+    example: '0'

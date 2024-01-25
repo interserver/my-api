@@ -1,0 +1,21 @@
+title: VpsTrafficUsageAverageSectionResponse
+description: VPS Traffic Usage Average Section Response
+required:
+  - value
+  - total
+  - count
+type: object
+properties:
+  total:
+    format: int32
+    type: integer
+  count:
+    format: int32
+    type: integer
+  value:
+    format: int32
+    type: integer
+example:
+  total: 949688
+  count: 261
+  value: 3639

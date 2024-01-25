@@ -1,0 +1,31 @@
+description: Configuration IDs for the server order.
+type: object
+properties:
+  memory:
+    description: Memory configuration ID for the server order.
+    type: integer
+    example: 22
+  bandwidth:
+    description: Bandwidth configuration ID for the server order.
+    type: string
+    example: '3'
+  ips:
+    description: IPs configuration ID for the server order.
+    type: string
+    example: '9'
+  os:
+    description: Operating System configuration ID for the server order.
+    type: string
+    example: '5'
+  cp:
+    description: Control Panel configuration ID for the server order.
+    type: integer
+    example: 5
+  raid:
+    description: RAID configuration ID for the server order.
+    type: string
+    example: '0'
+  hd:
+    description: Hard Drives configuration ID for the server order.
+    type: string
+    example: '16'

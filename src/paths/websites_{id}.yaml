@@ -1,0 +1,47 @@
+get:
+  tags:
+    - Webhosting
+  parameters:
+    - name: id
+      description: The order ID number.
+      schema:
+        type: integer
+      in: path
+      required: true
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Website.yaml
+      description: Website details
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getWebsiteInfo
+  summary: Get Webite Order
+  description: ''
+post:
+  tags:
+    - Webhosting
+  parameters:
+    - name: id
+      description: The order ID number.
+      schema:
+        type: string
+      in: path
+      required: true
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: updateWebsiteInfo
+  summary: Update Website Order
+  description: ''
+parameters:
+  - name: id
+    description: Website ID number
+    schema:
+      type: integer
+    in: path
+    required: true

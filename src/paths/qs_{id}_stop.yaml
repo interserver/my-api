@@ -1,0 +1,25 @@
+get:
+  tags:
+    - QuickServers
+  parameters:
+    - name: id
+      description: The order ID number.
+      schema:
+        type: integer
+      in: path
+      required: true
+  responses:
+    '200':
+      $ref: ../components/responses/QueueResponse.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: doQsStop
+  summary: Stop QuickServer
+  description: ''
+parameters:
+  - name: id
+    description: QuickServer ID number
+    schema:
+      type: integer
+    in: path
+    required: true

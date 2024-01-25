@@ -1,0 +1,154 @@
+title: AccountInfoMaxMindResponse
+description: ''
+type: object
+properties:
+  distance:
+    type: string
+  countryMatch:
+    type: string
+  countryCode:
+    type: string
+  freeMail:
+    type: string
+  anonymousProxy:
+    type: string
+  score:
+    type: string
+  binMatch:
+    type: string
+  binCountry:
+    type: string
+  err:
+    type: string
+  proxyScore:
+    type: string
+  ip_region:
+    type: string
+  ip_city:
+    type: string
+  ip_latitude:
+    type: string
+  ip_longitude:
+    type: string
+  binName:
+    type: string
+  ip_isp:
+    type: string
+  ip_org:
+    type: string
+  binNameMatch:
+    type: string
+  binPhoneMatch:
+    type: string
+  binPhone:
+    type: string
+  custPhoneInBillingLoc:
+    type: string
+  highRiskCountry:
+    type: string
+  queriesRemaining:
+    type: string
+  cityPostalMatch:
+    type: string
+  shipCityPostalMatch:
+    type: string
+  maxmindID:
+    type: string
+  ip_asnum:
+    type: string
+  ip_userType:
+    type: string
+  ip_countryConf:
+    type: string
+  ip_regionConf:
+    type: string
+  ip_cityConf:
+    type: string
+  ip_postalCode:
+    type: string
+  ip_postalConf:
+    type: string
+  ip_accuracyRadius:
+    type: string
+  ip_netSpeedCell:
+    type: string
+  ip_metroCode:
+    type: string
+  ip_areaCode:
+    type: string
+  ip_timeZone:
+    type: string
+  ip_regionName:
+    type: string
+  ip_domain:
+    type: string
+  ip_countryName:
+    type: string
+  ip_continentCode:
+    type: string
+  ip_corporateProxy:
+    type: string
+  carderEmail:
+    type: string
+  highRiskUsername:
+    type: string
+  riskScore:
+    type: string
+  explanation:
+    type: string
+  female_name:
+    type: string
+example:
+  distance: '6146'
+  countryMatch: 'No'
+  countryCode: US
+  freeMail: 'No'
+  anonymousProxy: 'No'
+  score: '5.00'
+  binMatch: NotFound
+  binCountry: ''
+  err: CITY_NOT_FOUND
+  proxyScore: '0.00'
+  ip_region: PA
+  ip_city: Townsville
+  ip_latitude: '40.1767'
+  ip_longitude: '-76.4297'
+  binName: ''
+  ip_isp: PenTeleData
+  ip_org: PenTeleData
+  binNameMatch: NA
+  binPhoneMatch: NA
+  binPhone: ''
+  custPhoneInBillingLoc: ''
+  highRiskCountry: 'No'
+  queriesRemaining: '171'
+  cityPostalMatch: ''
+  shipCityPostalMatch: ''
+  maxmindID: HMOCUJP7
+  ip_asnum: AS3737 PenTeleData Inc.
+  ip_userType: residential
+  ip_countryConf: '99'
+  ip_regionConf: '97'
+  ip_cityConf: '30'
+  ip_postalCode: '11122'
+  ip_postalConf: '30'
+  ip_accuracyRadius: '10'
+  ip_netSpeedCell: Dialup
+  ip_metroCode: '566'
+  ip_areaCode: '333'
+  ip_timeZone: America/New_York
+  ip_regionName: Pennsylvania
+  ip_domain: ptd.net
+  ip_countryName: United States
+  ip_continentCode: NA
+  ip_corporateProxy: 'No'
+  carderEmail: 'No'
+  highRiskUsername: 'No'
+  riskScore: '4.82'
+  explanation: >-
+    You should review this order carefully, as it is considered high risk. We
+    suggest you be very cautious about accepting this order. This order is
+    higher risk because the distance between the billing address and the user's
+    actual location is so great. The order is higher risk because the billing
+    country and the country in which the IP address is located don't match
+  female_name: 'no'

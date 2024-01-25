@@ -1,0 +1,54 @@
+required:
+  - service_offer_id
+  - service_id
+  - intro_cost
+  - renewal_cost
+  - intro_frequency
+  - renewal_frequency
+  - allow_coupon
+  - service_module
+  - created_at
+type: object
+properties:
+  service_offer_id:
+    description: The ID of the service offer.
+    type: string
+    example: '136'
+  service_id:
+    description: The ID of the associated service.
+    type: string
+    example: '1026'
+  intro_cost:
+    description: The introductory cost of the service offer.
+    type: string
+    example: '96.00'
+  renewal_cost:
+    description: The renewal cost of the service offer.
+    type: string
+    example: '96.00'
+  intro_frequency:
+    description: The introductory frequency of the service offer.
+    type: string
+    example: '12'
+  renewal_frequency:
+    description: The renewal frequency of the service offer.
+    type: string
+    example: '12'
+  allow_coupon:
+    description: Indicates if coupons are allowed (1 for yes, 0 for no).
+    type: string
+    example: '1'
+  service_module:
+    description: The module of the service offer.
+    type: string
+    example: webhosting
+  created_at:
+    description: The creation timestamp of the service offer.
+    type: string
+    example: '2023-01-25T14:50:55.000Z'
+  updated_at:
+    description: The update timestamp of the service offer.
+    type: string
+  deleted_at:
+    description: The deletion timestamp of the service offer.
+    type: string

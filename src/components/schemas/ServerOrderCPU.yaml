@@ -1,0 +1,97 @@
+type: object
+properties:
+  id:
+    description: CPU ID.
+    type: string
+    example: '254'
+  price:
+    description: CPU price.
+    type: integer
+    example: 0
+  img:
+    description: CPU image.
+    type: string
+    example: ryzen.png
+  short_desc:
+    description: Short description of the CPU.
+    type: string
+    example: AMD RYZEN 7900X
+  long_desc:
+    description: Long description of the CPU.
+    type: string
+    example: High core and thread count...
+  location:
+    description: Location of the CPU.
+    type: string
+    example: New York
+  fsb:
+    description: Front Side Bus information.
+    type: string
+  manu:
+    description: Manufacturer information.
+    type: string
+  type:
+    description: CPU type.
+    type: string
+    example: AMD
+  speed:
+    description: CPU speed.
+    type: string
+    example: '4.7'
+  cache:
+    description: Cache information.
+    type: string
+  active:
+    description: Active status.
+    type: string
+    example: '1'
+  num_cores:
+    description: Number of cores.
+    type: string
+    example: '12'
+  num_cpus:
+    description: Number of CPUs.
+    type: string
+    example: '1'
+  benchmark:
+    description: CPU benchmark.
+    type: string
+    example: '121148'
+  monthly_price:
+    description: Monthly price.
+    type: integer
+    example: 75
+  max_ram:
+    description: Maximum RAM supported.
+    type: string
+    example: '128'
+  min_ram:
+    description: Minimum RAM required.
+    type: string
+    example: '128'
+  max_lff:
+    description: Maximum LFF (Large Form Factor) supported.
+    type: string
+    example: '4'
+  max_sff:
+    description: Maximum SFF (Small Form Factor) supported.
+    type: string
+    example: '4'
+  max_nve:
+    description: Maximum NVMe drives supported.
+    type: string
+    example: '2'
+  visible:
+    description: Visibility status.
+    type: string
+    example: 'yes'
+  hd_ids:
+    description: Hard drive IDs.
+  price_display:
+    description: Display of CPU price.
+    type: string
+    example: $0.00
+  monthly_price_display:
+    description: Display of monthly CPU price.
+    type: string
+    example: $75.00

@@ -1,0 +1,15 @@
+title: AccountInfoCountryCurrencies
+description: ''
+type: object
+additionalProperties:
+  type: array
+  items:
+    type: string
+example:
+  CN:
+    - USD
+  BR:
+    - USD
+    - BRL
+  RU:
+    - USD

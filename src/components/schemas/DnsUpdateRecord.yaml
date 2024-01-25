@@ -1,0 +1,29 @@
+title: DnsUpdateRecord
+description: The request data to update a dns record.
+type: object
+properties:
+  name:
+    type: string
+  type:
+    type: string
+  content:
+    type: string
+  ttl:
+    type: string
+  prio:
+    type: string
+  disabled:
+    type: string
+  ordername:
+    type: string
+  auth:
+    type: string
+example:
+  name: mydomain.com
+  type: NS
+  content: cdns1.interserver.net
+  ttl: '86400'
+  prio: '0'
+  disabled: '0'
+  ordername: ''
+  auth: '1'

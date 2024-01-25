@@ -1,0 +1,32 @@
+allOf:
+  - $ref: ./InvoiceRow.yaml
+  - type: array
+    items:
+      $ref: ./PaymentInvoiceRows.yaml
+example:
+  - '22692427'
+  - '2023-09-06 04:10:34'
+  - '2722890'
+  - '(Repeat Invoice: 20477858) KVM Linux VPS Slice 1 Slices'
+  - '1'
+  - '0.00'
+  - '1'
+  - '2773'
+  - '20477858'
+  - vps
+  - '2023-09-20 04:10:34'
+  - '0'
+  - $
+  - - - '22692434'
+      - 6th Sep 2023
+      - '2722890'
+      - PayPal Payment
+      - '10'
+      - '0.00'
+      - '0'
+      - '2773'
+      - '22692427'
+      - vps
+      - '0000-00-00 00:00:00'
+      - '0'
+      - $

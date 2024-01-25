@@ -1,0 +1,11 @@
+title: LoginErrorResponse
+description: Error resposne during login indicating further action.
+type: object
+properties:
+  message:
+    type: string
+  field:
+    type: string
+example:
+  message: missing 2fa
+  field: 2fa

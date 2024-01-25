@@ -1,0 +1,11 @@
+get:
+  tags:
+    - Billing
+  responses:
+    '200':
+      $ref: ../components/responses/TextResponse.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getAffiliateSalesGraph
+  summary: Get Affiliate Sales Graph
+  description: Gets Sales Graph for Affiliates.

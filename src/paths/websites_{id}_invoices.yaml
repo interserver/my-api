@@ -1,0 +1,22 @@
+get:
+  tags:
+    - Webhosting
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ChargeInvoiceRows.yaml
+      description: Get Invoices response
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getWebsiteInvoices
+  summary: Get Website Invoices
+  description: ''
+parameters:
+  - name: id
+    description: Website ID number
+    schema:
+      type: integer
+    in: path
+    required: true

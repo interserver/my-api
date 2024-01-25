@@ -1,0 +1,96 @@
+type: object
+properties:
+  qs_id:
+    description: Quickserver ID
+    type: string
+    example: '24355'
+  qs_custid:
+    description: Customer ID
+    type: string
+    example: '771282'
+  qs_server:
+    description: Server information
+    type: string
+    example: '365'
+  qs_ip:
+    description: IP address
+    type: string
+    example: ''
+  qs_ipv6:
+    description: IPv6 address (null)
+  qs_vzid:
+    description: VZ ID
+    type: string
+    example: qs24355
+  qs_currency:
+    description: Currency
+    type: string
+    example: USD
+  qs_type:
+    description: Type
+    type: string
+    example: '700'
+  qs_order_date:
+    description: Order date
+    type: string
+    example: '2023-04-11T20:00:06.000Z'
+  qs_status:
+    description: Status
+    type: string
+    example: canceled
+  qs_invoice:
+    description: Invoice number
+    type: string
+    example: '20297531'
+  qs_coupon:
+    description: Coupon information
+    type: string
+    example: '0'
+  qs_extra:
+    description: Extra information
+    type: string
+    example: '{"platform":"kvm"}'
+  qs_hostname:
+    description: Hostname
+    type: string
+    example: qs24355
+  qs_server_status:
+    description: Server status
+    type: string
+    example: deleted
+  qs_comment:
+    description: Comment
+    type: string
+    example: ''
+  qs_slices:
+    description: Slices information
+    type: string
+    example: '0'
+  qs_vnc:
+    description: VNC information
+    type: string
+    example: 99.88.77.66
+  qs_vnc_port:
+    description: VNC port (null)
+  qs_rootpass:
+    description: Root password
+    type: string
+    example: ''
+  qs_mac:
+    description: MAC address
+    type: string
+    example: ''
+  qs_os:
+    description: Operating system
+    type: string
+    example: ubuntu-22.04
+  qs_version:
+    description: OS version
+    type: string
+    example: Ubuntu
+  qs_location:
+    description: Location
+    type: string
+    example: '1'
+  qs_platform:
+    description: Platform (null)

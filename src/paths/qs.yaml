@@ -1,0 +1,17 @@
+get:
+  tags:
+    - QuickServers
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/QuickserverRow.yaml
+      description: The listing of `Quickservers` services on your account.
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getQsList
+  summary: List QuickServers
+  description: ''

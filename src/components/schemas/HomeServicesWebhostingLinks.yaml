@@ -1,0 +1,14 @@
+type: object
+properties:
+  '376359':
+    description: Link to a website.
+    type: string
+    example: Doefamily.com
+  '376473':
+    description: Link to a website.
+    type: string
+    example: fancytush.com
+  '386218':
+    description: Link to a website.
+    type: string
+    example: admincoded.net

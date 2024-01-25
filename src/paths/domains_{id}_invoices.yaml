@@ -1,0 +1,22 @@
+get:
+  tags:
+    - Domains
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ChargeInvoiceRows.yaml
+      description: Get Invoices response
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getDomainInvoices
+  summary: Get Domain Invoices
+  description: ''
+parameters:
+  - name: id
+    description: Domain ID number
+    schema:
+      type: integer
+    in: path
+    required: true

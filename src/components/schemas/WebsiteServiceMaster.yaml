@@ -1,0 +1,57 @@
+type: object
+properties:
+  website_id:
+    description: Website ID for the service master
+    type: string
+    example: '543'
+  website_name:
+    description: Website name for the service master
+    type: string
+    example: vda4200.is.cc
+  website_ip:
+    description: IP address for the service master
+    type: string
+    example: 74.50.80.15
+  website_type:
+    description: Website type for the service master
+    type: string
+    example: '206'
+  website_available:
+    description: Availability status for the service master
+    type: string
+    example: '0'
+  website_hdsize:
+    description: Hard drive size for the service master
+    type: string
+    example: '2062'
+  website_hdfree:
+    description: Free hard drive space for the service master
+    type: string
+    example: '196'
+  website_load:
+    description: Load for the service master
+    type: string
+    example: '6.55'
+  website_last_update:
+    description: Last update date for the service master
+    type: string
+    example: '2023-08-17T23:01:02.000Z'
+  website_max_sites:
+    description: Maximum number of sites for the service master
+    type: string
+    example: '300'
+  website_order:
+    description: Order number for the service master
+    type: string
+    example: '58984'
+  website_partitions:
+    description: Partitions for the service master
+    type: string
+  website_dns1:
+    description: DNS server 1 for the service master
+    type: string
+    example: vda4200a.trouble-free.net
+  website_dns2:
+    description: DNS server 2 for the service master
+    type: string
+    example: vda4200b.trouble-free.net

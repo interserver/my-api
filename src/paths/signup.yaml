@@ -1,0 +1,30 @@
+post:
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/LoginSubmissionExample.yaml
+        examples:
+          LoginSubmissionExampleExample:
+            value:
+              login: user@domain.com
+              passwd: mypassword
+              remember: 'true'
+              g-recaptcha-response:
+                __v_isShallow: false
+                dep:
+                  w: 0
+                  'n': 0
+                __v_isRef: true
+                _rawValue: zzzzz
+                _value: zzzzz
+  tags:
+    - Public
+  responses:
+    '402':
+      $ref: ../components/responses/LoginResponseError.yaml
+  security:
+    - {}
+  operationId: submitSignup
+  summary: Submit Signup Information
+  description: Creates a new account in our system using the provided information.

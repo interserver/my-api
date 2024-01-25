@@ -1,0 +1,100 @@
+title: ModuleSettings
+description: The settings for a module.
+required:
+  - USE_REPEAT_INVOICE
+  - BILLING_DAYS_OFFSET
+  - DELETE_PENDING_DAYS
+  - EMAIL_FROM
+  - IMGNAME
+  - MENUNAME
+  - TBLNAME
+  - TABLE
+  - SUSPEND_WARNING_DAYS
+  - SUSPEND_DAYS
+  - SERVICE_ID_OFFSET
+  - REPEAT_BILLING_METHOD
+  - PREFIX
+  - TITLE
+  - TITLE_FIELD
+  - USE_PACKAGES
+type: object
+properties:
+  SERVICE_ID_OFFSET:
+    format: int32
+    type: integer
+    example: '0'
+  USE_REPEAT_INVOICE:
+    type: boolean
+    example: 'true'
+  USE_PACKAGES:
+    type: boolean
+    example: 'true'
+  BILLING_DAYS_OFFSET:
+    format: int32
+    type: integer
+    example: '0'
+  IMGNAME:
+    type: string
+    example: root-server.png
+  REPEAT_BILLING_METHOD:
+    format: int32
+    type: integer
+    example: '2'
+  DELETE_PENDING_DAYS:
+    format: int32
+    type: integer
+    example: '45'
+  SUSPEND_DAYS:
+    format: int32
+    type: integer
+    example: '14'
+  SUSPEND_WARNING_DAYS:
+    format: int32
+    type: integer
+    example: '7'
+  TITLE:
+    type: string
+    example: VPS
+  MENUNAME:
+    type: string
+    example: VPS
+  EMAIL_FROM:
+    type: string
+    example: support@interserver.net"
+  TBLNAME:
+    type: string
+    example: VPS
+  TABLE:
+    type: string
+    example: vps
+  TITLE_FIELD:
+    type: string
+    example: vps_hostname
+  TITLE_FIELD2:
+    type: string
+    example: vps_ip
+  TITLE_FIELD3:
+    type: string
+    example: vps_vzid
+  PREFIX:
+    type: string
+    example: vps
+example:
+  SERVICE_ID_OFFSET: 0
+  USE_REPEAT_INVOICE: true
+  USE_PACKAGES: true
+  BILLING_DAYS_OFFSET: 0
+  IMGNAME: root-server.png
+  REPEAT_BILLING_METHOD: 2
+  DELETE_PENDING_DAYS: 45
+  SUSPEND_DAYS: 14
+  SUSPEND_WARNING_DAYS: 7
+  TITLE: VPS
+  MENUNAME: VPS
+  EMAIL_FROM: support@interserver.net
+  TBLNAME: VPS
+  TABLE: vps
+  TITLE_FIELD: vps_hostname
+  TITLE_FIELD2: vps_ip
+  TITLE_FIELD3: vps_vzid
+  PREFIX: vps

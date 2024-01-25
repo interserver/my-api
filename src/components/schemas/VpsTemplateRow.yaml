@@ -1,0 +1,32 @@
+title: VpsTemplateRow
+description: A VPS OS Template.
+type: object
+properties:
+  template_id:
+    type: string
+  template_type:
+    type: string
+  template_os:
+    type: string
+  template_version:
+    type: string
+  template_bits:
+    type: string
+  template_file:
+    type: string
+  template_available:
+    type: string
+  template_name:
+    type: string
+  template_dir:
+    type: string
+example:
+  template_id: '1906'
+  template_type: '14'
+  template_os: ubuntu
+  template_version: '22.04'
+  template_bits: '64'
+  template_file: ubuntu-22.04
+  template_available: '1'
+  template_name: Ubuntu
+  template_dir: ''

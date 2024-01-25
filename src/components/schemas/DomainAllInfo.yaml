@@ -1,0 +1,52 @@
+type: object
+properties:
+  _OPS_version:
+    type: string
+  attributes:
+    type: object
+    properties:
+      contact_set:
+        type: object
+        properties:
+          owner:
+            $ref: ./DomainOwnerContact.yaml
+          admin:
+            $ref: ./DomainAdminContact.yaml
+          tech:
+            $ref: ./DomainTechContact.yaml
+      registry_createdate:
+        type: string
+      registry_expiredate:
+        type: string
+      tld_data:
+        type: string
+      let_expire:
+        type: string
+      auto_renew:
+        type: string
+      sponsoring_rsp:
+        type: string
+      gdpr_consent_status:
+        type: string
+      nameserver_list:
+        type: array
+        items:
+          $ref: ./DomainNameServer.yaml
+      registry_updatedate:
+        type: string
+      affiliate_id:
+        type: string
+      expiredate:
+        type: string
+  object:
+    type: string
+  protocol:
+    type: string
+  response_text:
+    type: string
+  response_code:
+    type: string
+  action:
+    type: string
+  is_success:
+    type: string

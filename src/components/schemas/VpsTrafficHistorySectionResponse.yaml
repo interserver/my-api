@@ -1,0 +1,33 @@
+title: VpsTrafficHistorySectionResponse
+description: VPS Traffic History Hour and Day Sections
+required:
+  - data
+  - times
+type: object
+properties:
+  data:
+    type: array
+    items:
+      $ref: ./VpsTrafficHistorySectionDataResponse.yaml
+  times:
+    type: array
+    items:
+      format: date-time
+      type: string
+example:
+  data:
+    - - '2023-09-11T12:00:00Z'
+      - 834424
+    - - '2023-09-11T23:00:00Z'
+      - 8247944
+    - - '2023-09-14T05:00:00Z'
+      - 19763064
+    - - '2023-09-14T06:00:00Z'
+      - 18892320
+    - - '2023-09-17T07:00:00Z'
+      - 16546448
+  times:
+    - '2023-09-12T02:00:00Z'
+    - '2023-09-17T05:00:00Z'
+    - '2023-09-17T06:00:00Z'
+    - '2023-09-17T07:00:00Z'

@@ -1,0 +1,69 @@
+summary: Sends an Email with Advanced Options
+description: >-
+  Sends An email through one of your mail orders allowing additional options
+  such as file attachments, cc, bcc, etc.
+post:
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/SendMailAdv.yaml
+        examples:
+          AdvSendExample:
+            value:
+              subject: Welcome
+              body: Hello
+              from:
+                email: user@domain.com
+              to:
+                - email: someone@client.com
+                  name: Mr Client
+              attachments:
+                - filename: message.txt
+                  data: base64_encoded_contents
+              id: 66
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/SendMailAdv.yaml
+        examples:
+          AdvSendExample:
+            value:
+              subject: Welcome
+              body: Hello
+              from:
+                email: user@domain.com
+              to:
+                - email: someone@client.com
+                  name: Mr Client
+              attachments:
+                - filename: message.txt
+                  data: base64_encoded_contents
+              id: 66
+    required: true
+  tags:
+    - Mail
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/GenericResponse.yaml
+      description: search results matching criteria
+    '400':
+      $ref: ../components/responses/BadInput.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '404':
+      $ref: ../components/responses/NotFound.yaml
+  operationId: sendAdvMail
+  summary: Sends an Email with Advanced Options
+  description: >-
+    Sends An email through one of your mail orders allowing additional options
+    such as file attachments, cc, bcc, etc.
+parameters:
+  - name: id
+    description: Mail ID number
+    schema:
+      type: integer
+    in: path
+    required: true

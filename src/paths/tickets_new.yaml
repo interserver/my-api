@@ -1,0 +1,22 @@
+get:
+  tags:
+    - Tickets
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: getNewTicket
+  summary: New Ticket Information
+  description: ''
+post:
+  tags:
+    - Tickets
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: addNewTicket
+  summary: Create New Ticket
+  description: ''

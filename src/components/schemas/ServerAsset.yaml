@@ -1,0 +1,221 @@
+required:
+  - id
+  - order_id
+  - hostname
+  - status
+  - primary_ipv4
+  - primary_ipv6
+  - datacenter
+  - type_id
+  - asset_tag
+  - rack
+  - row
+  - col
+  - unit_start
+  - unit_end
+  - unit_sub
+  - ipmi_mac
+  - ipmi_ip
+  - ipmi_working
+  - company
+  - comments
+  - make
+  - model
+  - description
+  - customer_id
+  - external_id
+  - billing_status
+  - overdue
+  - asset_id
+  - asset_name
+  - rack_id
+  - rack_name
+  - rack_location
+  - rack_size
+  - rack_x
+  - rack_y
+  - switchports
+  - vlans
+  - vlans6
+  - lease
+type: object
+properties:
+  id:
+    description: Unique identifier for the asset.
+    type: integer
+    example: 3497
+  order_id:
+    description: Order identifier for the asset.
+    type: string
+    example: '16058'
+  hostname:
+    description: Hostname associated with the asset.
+    type: string
+    example: myserver.host.com
+  status:
+    description: Status of the asset.
+    type: string
+    example: active
+  primary_ipv4:
+    description: Primary IPv4 address of the asset.
+    type: string
+    example: 1.2.3.250
+  primary_ipv6:
+    description: Primary IPv6 address of the asset.
+    type: string
+    example: ''
+  mac:
+    description: MAC address associated with the asset.
+  datacenter:
+    description: Datacenter identifier for the asset.
+    type: string
+    example: '2'
+  type_id:
+    description: Type identifier for the asset.
+    type: string
+    example: '1'
+  asset_tag:
+    description: Asset tag associated with the asset.
+    type: string
+    example: ''
+  rack:
+    description: Rack identifier for the asset.
+    type: string
+    example: '68'
+  row:
+    description: Row identifier for the asset.
+    type: string
+    example: '017'
+  col:
+    description: Column identifier for the asset.
+    type: string
+    example: '06'
+  unit_start:
+    description: Starting unit identifier for the asset.
+    type: string
+    example: '37'
+  unit_end:
+    description: Ending unit identifier for the asset.
+    type: string
+    example: '37'
+  unit_sub:
+    description: Subunit identifier for the asset.
+    type: string
+    example: '0'
+  ipmi_mac:
+    description: IPMI MAC address associated with the asset.
+    type: string
+    example: 0c:c4:7a:af:35:00
+  ipmi_ip:
+    description: IPMI IP address associated with the asset.
+    type: string
+    example: 10.8.69.7
+  ipmi_admin_username:
+    description: IPMI admin username associated with the asset.
+  ipmi_admin_password:
+    description: IPMI admin password associated with the asset.
+  ipmi_client_username:
+    description: IPMI client username associated with the asset.
+  ipmi_client_password:
+    description: IPMI client password associated with the asset.
+  ipmi_updated:
+    description: IPMI update status associated with the asset.
+  ipmi_working:
+    description: IPMI working status associated with the asset.
+    type: string
+    example: '0'
+  company:
+    description: Company associated with the asset.
+    type: string
+    example: int
+  comments:
+    description: Comments associated with the asset.
+    type: string
+    example: ''
+  make:
+    description: Make of the asset.
+    type: string
+    example: Supermicro
+  model:
+    description: Model of the asset.
+    type: string
+    example: SYS-6018R-TDW
+  description:
+    description: Description of the asset.
+    type: string
+    example: ''
+  customer_id:
+    description: Customer identifier for the asset.
+    type: string
+    example: int5377
+  external_id:
+    description: External identifier for the asset.
+    type: string
+    example: ''
+  billing_status:
+    description: Billing status of the asset.
+    type: string
+    example: active
+  overdue:
+    description: Overdue status of the asset.
+    type: string
+    example: '0'
+  create_timestamp:
+    description: Timestamp of asset creation.
+  update_timestamp:
+    description: Timestamp of asset update.
+  asset_id:
+    description: Asset identifier for the asset.
+    type: string
+    example: '1'
+  asset_name:
+    description: Name of the asset.
+    type: string
+    example: server
+  rack_id:
+    description: Rack identifier for the asset.
+    type: string
+    example: '68'
+  rack_name:
+    description: Rack name associated with the asset.
+    type: string
+    example: '112.16'
+  rack_location:
+    description: Location of the rack associated with the asset.
+    type: string
+    example: '2'
+  rack_size:
+    description: Size of the rack associated with the asset.
+    type: string
+    example: '44'
+  rack_x:
+    description: X-coordinate of the asset within the rack.
+    type: string
+    example: '25'
+  rack_y:
+    description: Y-coordinate of the asset within the rack.
+    type: string
+    example: '5'
+  comment:
+    description: Comment associated with the asset.
+  switchports:
+    description: List of switchports associated with the asset.
+    type: array
+    items:
+      type: integer
+    example:
+      - 10414
+  vlans:
+    description: List of VLANs associated with the asset.
+    type: array
+    items:
+      type: string
+    example: []
+  vlans6:
+    description: List of IPv6 VLANs associated with the asset.
+    type: array
+    items:
+      type: string
+    example: []
+  lease:
+    $ref: ./ServerLease.yaml

@@ -1,0 +1,33 @@
+get:
+  tags:
+    - Floating_IPs
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: getNewFloatingIp
+  summary: Get Floating IP Ordering Information
+  description: ''
+put:
+  tags:
+    - Floating_IPs
+  responses:
+    '200':
+      description: Validate Floating IPs order response
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: putFloating_ips
+  summary: Validate Floating IP Order
+  description: ''
+post:
+  tags:
+    - Floating_IPs
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: addFloatingIp
+  summary: Place Floating IP Order
+  description: ''

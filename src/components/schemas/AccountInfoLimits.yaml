@@ -1,0 +1,21 @@
+title: AccountInfoLimits
+description: ''
+type: array
+items:
+  type: object
+  properties:
+    start:
+      type: string
+    end:
+      type: string
+example:
+  - start: 8.7.6.5
+    end: 8.7.6.5
+  - start: 107.77.194.166
+    end: 107.77.194.166
+  - start: 2600:387:0:809::1b
+    end: 2600:387:0:809::1b
+  - start: 192.64.80.218
+    end: 192.64.80.218
+  - start: 66.45.235.102
+    end: 66.45.235.102

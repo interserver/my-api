@@ -1,0 +1,170 @@
+required:
+  - last_login_ip
+  - last_login
+  - currency
+  - amount
+  - invoice_list
+  - balance
+  - full_name
+  - email
+  - tickets
+  - ticketStatus
+  - ticketStatusView
+  - details
+  - services
+  - AFFILIATE_AMOUNT
+type: object
+properties:
+  last_login_ip:
+    description: Last login IP.
+    type: string
+    example: 99.88.77.66
+  last_login:
+    description: Last login time.
+    type: string
+    example: 14:58:pm - 17 Aug, 2023
+  currency:
+    description: Currency symbol.
+    type: string
+    example: $
+  amount:
+    description: Amount with currency.
+    type: string
+    example: $23.50
+  invoice_list:
+    description: Number of invoices.
+    type: integer
+    example: 5
+  balance:
+    description: Balance with currency.
+    type: string
+    example: $0.60
+  full_name:
+    description: Users full name.
+    type: string
+    example: John
+  email:
+    description: User email address.
+    type: string
+    example: user@domain.com
+  tickets:
+    description: List of tickets.
+    type: array
+    items:
+      type: string
+  ticketStatus:
+    description: Ticket statuses.
+    type: object
+    properties:
+      Open:
+        description: Count of open tickets.
+        type: integer
+        example: 4
+      On Hold:
+        description: Count of tickets on hold.
+        type: integer
+        example: 5
+  ticketStatusView:
+    description: Ticket statuses with view numbers.
+    type: object
+    properties:
+      '4':
+        description: Status corresponding to view number 4.
+        type: string
+        example: Open
+      '5':
+        description: Status corresponding to view number 5.
+        type: string
+        example: On Hold
+      '6':
+        description: Status corresponding to view number 6.
+        type: string
+        example: Closed
+  details:
+    description: Users details.
+    type: array
+    items:
+      type: string
+    properties:
+      modules:
+        type: object
+        properties:
+          domains:
+            $ref: ./HomeDetailsModulesDomains.yaml
+          webhosting:
+            $ref: ./HomeDetailsModulesWebhosting.yaml
+          vps:
+            $ref: ./HomeDetailsModulesVps.yaml
+          licenses:
+            $ref: ./HomeDetailsModulesLicenses.yaml
+          backups:
+            $ref: ./HomeDetailsModulesBackups.yaml
+          servers:
+            $ref: ./HomeDetailsModulesServers.yaml
+          quickservers:
+            $ref: ./HomeDetailsModulesQuickservers.yaml
+  services:
+    description: Users services.
+    type: object
+    properties:
+      domains:
+        type: object
+        properties:
+          links:
+            $ref: ./HomeServicesDomainsLinks.yaml
+          count:
+            description: Number of domains.
+            type: integer
+            example: 5
+      webhosting:
+        type: object
+        properties:
+          links:
+            $ref: ./HomeServicesWebhostingLinks.yaml
+          count:
+            description: Number of web hosting services.
+            type: integer
+            example: 8
+      vps:
+        type: object
+        properties:
+          links:
+            $ref: ./HomeServicesVpsLinks.yaml
+          count:
+            description: Number of VPS services.
+            type: integer
+            example: 20
+      licenses:
+        type: object
+        properties:
+          links:
+            $ref: ./HomeServicesLicensesLinks.yaml
+          count:
+            description: Number of licenses.
+            type: integer
+            example: 1
+      servers:
+        type: object
+        properties:
+          links:
+            $ref: ./HomeServicesServersLinks.yaml
+          count:
+            description: Number of servers.
+            type: integer
+            example: 1
+      backups:
+        type: object
+        properties:
+          links:
+            description: List of backup links.
+            type: array
+            items:
+              type: string
+          count:
+            description: Number of backups.
+            type: integer
+            example: 0
+  AFFILIATE_AMOUNT:
+    description: Affiliate amount with currency.
+    type: string
+    example: '100'

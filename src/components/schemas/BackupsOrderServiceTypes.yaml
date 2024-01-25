@@ -1,0 +1,49 @@
+required:
+  - services_id
+  - services_name
+  - services_cost
+  - services_category
+  - services_buyable
+  - services_type
+  - services_field1
+  - services_field2
+  - services_module
+type: object
+properties:
+  services_id:
+    description: The ID of the service.
+    type: string
+    example: '11006'
+  services_name:
+    description: The name of the service.
+    type: string
+    example: Storage ST 700
+  services_cost:
+    description: The cost of the service.
+    type: string
+    example: '84.00'
+  services_category:
+    description: The category of the service.
+    type: string
+    example: '702'
+  services_buyable:
+    description: Indicates if the service is buyable.
+    type: string
+    example: '1'
+  services_type:
+    description: The type of the service.
+    type: string
+    example: '703'
+  services_field1:
+    description: Field 1 of the service.
+    type: string
+    example: ''
+  services_field2:
+    description: Field 2 of the service.
+    type: string
+    example: >-
+      bandwidth=40000000,quota=40000000,inode=100,uinode=ON,vdomains=2,nsubdomains=5,nemails=0,nemailf=0,nemailml=0,nemailr=0,mysql=5,domainptr=5,ftp=100,aftp=OFF,cgi=ON,php=ON,spam=OFF,cron=OFF,catchall=OFF,ssl=ON,ssh=ON,sysinfo=ON,login_keys=ON,dnscontrol=OFF,suspend_at_limit=ON
+  services_module:
+    description: The module of the service.
+    type: string
+    example: backups

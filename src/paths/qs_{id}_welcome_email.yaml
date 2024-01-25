@@ -1,0 +1,21 @@
+get:
+  tags:
+    - QuickServers
+  responses:
+    '200':
+      $ref: ../components/responses/TextResponse.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getQsWelcomeEmail
+  summary: Resend QuickServer welcome email
+  description: Resends the welcome email for the order.
+parameters:
+  - examples:
+      websiteIdExample:
+        value: '133123'
+    name: id
+    description: Quickserver ID
+    schema:
+      type: integer
+    in: path
+    required: true

@@ -1,0 +1,43 @@
+required:
+  - serviceInfo
+  - extraInfoTables
+  - networkInfo
+  - ipmiAuth
+  - client_links
+  - billingDetails
+  - custCurrency
+  - custCurrencySymbol
+  - package
+  - serviceExtra
+  - locations
+type: object
+properties:
+  ipmiAuth:
+    type: boolean
+  client_links:
+    type: array
+    items:
+      $ref: ./ServerClientLink.yaml
+  billingDetails:
+    $ref: ./ServerBillingDetails.yaml
+  custCurrency:
+    type: string
+  custCurrencySymbol:
+    type: string
+  package:
+    type: string
+  serviceExtra:
+    type: array
+    items:
+      type: string
+  locations:
+    type: object
+    properties:
+      '1':
+        $ref: ./ServerLocation1.yaml
+  networkInfo:
+    $ref: ./ServerNetworkInfo.yaml
+  extraInfoTables:
+    $ref: ./ServerExtraInfoTables.yaml
+  serviceInfo:
+    $ref: ./ServerServiceInfo.yaml

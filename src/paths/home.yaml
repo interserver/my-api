@@ -1,0 +1,17 @@
+get:
+  tags:
+    - Account
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Home.yaml
+      description: Genreal information for use on the home page.
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getHome
+  summary: Get Home Data
+  description: >-
+    Retrieves a general assortment of information useful for displaying a home
+    page / dashboard overview.

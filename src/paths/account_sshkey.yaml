@@ -1,0 +1,20 @@
+post:
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/AccountSshKey.yaml
+      multipart/form-data:
+        schema:
+          $ref: ../components/schemas/AccountSshKey.yaml
+    required: true
+  tags:
+    - Account
+  responses:
+    '200':
+      $ref: ../components/responses/SuccessTextResponse.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: updateAccountSshKey
+  summary: Update SSH Keys
+  description: ''

@@ -1,0 +1,17 @@
+title: EmailAddressName
+description: An email contact.
+required:
+  - email
+type: object
+properties:
+  email:
+    description: The email address.
+    type: string
+    example: user@domain.com
+  name:
+    description: Name to use for the sending contact.
+    type: string
+    example: John Smith
+example:
+  email: user@domain.com
+  name: John Smith

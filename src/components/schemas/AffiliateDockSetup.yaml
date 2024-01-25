@@ -1,0 +1,16 @@
+title: Root Type for AffiliateDockSetup
+description: Affiliate Landing Page information.
+type: object
+properties:
+  affiliate_dock_title:
+    type: string
+  affiliate_dock_description:
+    type: string
+  referrer_coupon:
+    type: string
+example:
+  affiliate_dock_title: Exclusive offer to viewers
+  affiliate_dock_description: >-
+    Use this coupon when placing an order to get the first month of hosting for
+    only 1 penny.
+  referrer_coupon: exclusiveoffer

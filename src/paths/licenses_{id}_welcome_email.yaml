@@ -1,0 +1,18 @@
+get:
+  tags:
+    - Licenses
+  responses:
+    '200':
+      $ref: ../components/responses/SuccessTextResponse.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getLicensesWelcomeEmail
+  summary: Resend License Welcome Email
+  description: Resends the welcome email for the order.
+parameters:
+  - name: id
+    description: License ID number
+    schema:
+      type: integer
+    in: path
+    required: true

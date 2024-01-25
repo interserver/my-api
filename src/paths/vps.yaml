@@ -1,0 +1,17 @@
+get:
+  tags:
+    - VPS
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/VpsRow.yaml
+      description: The listing of `Vps` services on your account.
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getVpsList
+  summary: List VPS Orders
+  description: ''

@@ -1,0 +1,266 @@
+title: VpsTrafficResponse
+description: VPS Traffic Information
+required:
+  - history
+  - usage
+  - totals
+  - times
+  - target
+  - name
+  - last
+  - interval
+  - data
+type: object
+properties:
+  name:
+    type: string
+  target:
+    type: string
+  interval:
+    format: int32
+    type: integer
+  history:
+    $ref: ./VpsTrafficHistoryResponse.yaml
+    properties:
+      hour:
+        type: object
+        properties:
+          data:
+            type: array
+            items:
+              type: array
+              items:
+                format: date-time
+                type: string
+          times:
+            type: array
+            items:
+              format: date-time
+              type: string
+      day:
+        type: object
+        properties:
+          data:
+            type: array
+            items:
+              type: array
+              items:
+                format: date-time
+                type: string
+          times:
+            type: array
+            items:
+              format: date-time
+              type: string
+  last:
+    format: date-time
+    type: string
+  times:
+    type: array
+    items:
+      format: date-time
+      type: string
+  totals:
+    $ref: ./VpsTrafficTotalsResposne.yaml
+    properties:
+      day:
+        type: object
+        properties:
+          in:
+            format: int32
+            type: integer
+          out:
+            format: int32
+            type: integer
+      month:
+        type: object
+        properties:
+          in:
+            format: int32
+            type: integer
+          out:
+            format: int32
+            type: integer
+      year:
+        type: object
+        properties:
+          in:
+            format: int32
+            type: integer
+          out:
+            format: int32
+            type: integer
+      all:
+        type: object
+        properties:
+          in:
+            format: int32
+            type: integer
+          out:
+            format: int32
+            type: integer
+  usage:
+    $ref: ./VpsTrafficUsageResponse.yaml
+    properties:
+      current:
+        type: object
+        properties:
+          in:
+            format: int32
+            type: integer
+          out:
+            format: int32
+            type: integer
+      peak:
+        type: object
+        properties:
+          in:
+            format: int32
+            type: integer
+          out:
+            format: int32
+            type: integer
+      average:
+        type: object
+        properties:
+          in:
+            type: object
+            properties:
+              total:
+                format: int32
+                type: integer
+              count:
+                format: int32
+                type: integer
+              value:
+                format: int32
+                type: integer
+          out:
+            type: object
+            properties:
+              total:
+                format: int32
+                type: integer
+              count:
+                format: int32
+                type: integer
+              value:
+                format: int32
+                type: integer
+  data:
+    type: array
+    items:
+      $ref: ./VpsTrafficDataSectionResponse.yaml
+example:
+  name: vps2725349
+  target: '2725349'
+  interval: 30
+  history:
+    hour:
+      data:
+        - - '2023-09-11T12:00:00Z'
+          - 834424
+        - - '2023-09-11T23:00:00Z'
+          - 8247944
+        - - '2023-09-14T05:00:00Z'
+          - 19763064
+        - - '2023-09-14T06:00:00Z'
+          - 18892320
+        - - '2023-09-17T07:00:00Z'
+          - 16546448
+      times:
+        - '2023-09-12T02:00:00Z'
+        - '2023-09-17T05:00:00Z'
+        - '2023-09-17T06:00:00Z'
+        - '2023-09-17T07:00:00Z'
+    day:
+      data:
+        - - '2023-09-12T00:00:00Z'
+          - 1455497448
+        - - '2023-09-13T00:00:00Z'
+          - 182943992
+        - - '2023-09-14T00:00:00Z'
+          - 290416056
+        - - '2023-09-15T00:00:00Z'
+          - 440595840
+        - - '2023-09-16T00:00:00Z'
+          - 411255120
+        - - '2023-09-17T00:00:00Z'
+          - 346449520
+      times:
+        - '2023-09-12T00:00:00Z'
+        - '2023-09-13T00:00:00Z'
+        - '2023-09-14T00:00:00Z'
+        - '2023-09-15T00:00:00Z'
+        - '2023-09-16T00:00:00Z'
+        - '2023-09-17T00:00:00Z'
+  last: '2023-09-17T07:50:12Z'
+  times:
+    - '2023-09-17T03:30:30Z'
+    - '2023-09-17T03:31:30Z'
+    - '2023-09-17T03:32:31Z'
+    - '2023-09-17T03:33:31Z'
+    - '2023-09-17T04:12:30Z'
+    - '2023-09-17T04:13:31Z'
+    - '2023-09-17T04:14:30Z'
+    - '2023-09-17T04:15:30Z'
+    - '2023-09-17T04:16:31Z'
+    - '2023-09-17T04:17:30Z'
+    - '2023-09-17T04:18:31Z'
+    - '2023-09-17T04:19:30Z'
+    - '2023-09-17T04:20:30Z'
+    - '2023-09-17T04:21:30Z'
+    - '2023-09-17T04:22:31Z'
+    - '2023-09-17T07:50:12Z'
+  totals:
+    day:
+      in: 49719744
+      out: 11316104
+    month:
+      in: 2880512936
+      out: 380333384
+    year:
+      in: 2880512936
+      out: 380333384
+    all:
+      in: 2880512936
+      out: 380333384
+  usage:
+    current:
+      in: 5504
+      out: 1248
+    peak:
+      in: 9176
+      out: 3600
+    average:
+      in:
+        total: 949688
+        count: 261
+        value: 3639
+      out:
+        total: 200752
+        count: 261
+        value: 770
+  data:
+    - name: 74.50.91.46 In
+      data:
+        - - '2023-09-17T03:30:30Z'
+          - 3968
+        - - '2023-09-17T03:31:30Z'
+          - 840
+        - - '2023-09-17T03:32:31Z'
+          - 632
+        - - '2023-09-17T03:33:31Z'
+          - 1232
+        - - '2023-09-17T03:34:31Z'
+          - 2960
+        - - '2023-09-17T07:50:12Z'
+          - 5504
+    - name: 74.50.91.46 Out
+      data:
+        - - '2023-09-17T03:30:30Z'
+          - 456
+        - - '2023-09-17T03:31:30Z'
+          - 472
+        - - '2023-09-17T03:48:30Z'
+          - 592

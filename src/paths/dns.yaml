@@ -1,0 +1,61 @@
+summary: DNS Management
+description: View and manage your DNS domains and records
+get:
+  tags:
+    - DNS
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/DnsListItem.yaml
+          examples:
+            DnsListExample:
+              value:
+                - id: 68
+                  name: hussfamily.com
+                  content: 64.20.35.186
+                - id: 1658
+                  name: detain.interserver.net
+                  content: 66.45.228.74
+                - id: 1659
+                  name: creation.interserver.net
+                  content: 66.23.239.99
+      description: Listing of Dns Domains setup
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getDnsList
+  summary: List DNS Entries
+  description: Gets a list of the domains currently configured on the DNS servers
+post:
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/DnsNewDomain.yaml
+        examples:
+          DnsNewDomainExampleJson:
+            value:
+              domain: mydomain.com
+              ip: 1.2.3.4
+      multipart/form-data:
+        schema:
+          $ref: ../components/schemas/DnsNewDomain.yaml
+        examples:
+          DnsNewDomainExample:
+            value:
+              domain: mydomain.com
+              ip: 1.2.3.4
+    required: true
+  tags:
+    - DNS
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: addDnsDomain
+  summary: Add DNS Entry
+  description: ''

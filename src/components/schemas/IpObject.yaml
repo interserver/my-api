@@ -1,0 +1,11 @@
+title: IpObject
+description: IP Address
+required:
+  - ip
+type: object
+properties:
+  ip:
+    description: IP Address
+    type: string
+example:
+  ip: 1.2.3.4

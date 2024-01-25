@@ -1,0 +1,8 @@
+type: object
+properties:
+  links:
+    $ref: ./WebsiteTable.yaml
+  preview:
+    $ref: ./WebsiteTable.yaml
+  dns:
+    $ref: ./WebsiteTable.yaml

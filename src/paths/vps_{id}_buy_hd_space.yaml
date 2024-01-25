@@ -1,0 +1,29 @@
+get:
+  tags:
+    - VPS
+  responses:
+    '200':
+      description: Get VPS Buy HD Space information
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getVpsBuyHdSpace
+  summary: HD Space Addon Info
+  description: ''
+post:
+  tags:
+    - VPS
+  responses:
+    '200':
+      description: Post Buy HD Space for VPS response
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: postVpsBuyHdSpace
+  summary: Purchase HD Space Addon
+  description: ''
+parameters:
+  - name: id
+    description: VPS ID number
+    schema:
+      type: integer
+    in: path
+    required: true

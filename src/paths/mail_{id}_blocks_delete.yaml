@@ -1,0 +1,44 @@
+post:
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/EmailAddress.yaml
+        examples:
+          BlocksDeleteExample:
+            value:
+              email: client@domain.com
+      multipart/form-data:
+        schema:
+          $ref: ../components/schemas/EmailAddress.yaml
+        examples:
+          BlocksDeleteExampleForm:
+            value:
+              email: client@domain.com
+    required: true
+  tags:
+    - Mail
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/GenericResponse.yaml
+      description: search results matching criteria
+    '400':
+      $ref: ../components/responses/BadInput.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '404':
+      $ref: ../components/responses/NotFound.yaml
+  operationId: delistBlock
+  summary: Removes an email address from the blocked list
+  description: |
+    Removes an email address from the various block lists.
+parameters:
+  - name: id
+    description: Mail ID number
+    schema:
+      type: integer
+    in: path
+    required: true

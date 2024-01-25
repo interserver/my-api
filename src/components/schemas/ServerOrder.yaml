@@ -1,0 +1,67 @@
+description: Object representing a server order.
+type: object
+properties:
+  form_values:
+    $ref: ./ServerOrderFormValues.yaml
+    description: Form values for the server order.
+  config_ids:
+    $ref: ./ServerOrderConfigIds.yaml
+    description: Configuration IDs for the server order.
+  cpu:
+    description: Number of CPUs for the server order.
+    type: integer
+    example: 184
+  field_label:
+    $ref: ./ServerOrderFieldLabels.yaml
+    description: Field labels for the server order.
+  cpu_li:
+    description: CPU options for the server order.
+    type: object
+    properties:
+      '254':
+        $ref: ./ServerOrderCPU.yaml
+        description: CPU option with ID 254.
+  memory_li:
+    description: Memory options for the server order.
+    type: object
+    properties:
+      '254':
+        type: object
+        properties:
+          '65':
+            $ref: ./ServerOrderMemory.yaml
+            description: Memory option with ID 65.
+  bandwidth_li:
+    description: Bandwidth options for the server order.
+    type: object
+    properties:
+      '15':
+        $ref: ./ServerOrderBandwidth.yaml
+        description: Bandwidth option with ID 15.
+  ips_li:
+    description: IP options for the server order.
+    type: object
+    properties:
+      '9':
+        $ref: ./ServerOrderIP.yaml
+        description: IP option with ID 9.
+  os_li:
+    description: Operating System options for the server order.
+    type: object
+    properties:
+      '51':
+        $ref: ./ServerOrderOS.yaml
+        description: Operating System option with ID 51.
+  cp_li:
+    description: Control Panel options for the server order.
+    type: object
+    properties:
+      '9':
+        $ref: ./ServerOrderControlPanel.yaml
+        description: Control Panel option with ID 9.
+  raid_li:
+    description: RAID options for the server order.
+    type: array
+    items:
+      $ref: ./ServerOrderRAID.yaml
+      description: Array of RAID options.

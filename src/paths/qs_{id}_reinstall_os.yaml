@@ -1,0 +1,33 @@
+get:
+  tags:
+    - QuickServers
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/VpsTemplatesList.yaml
+      description: QuickServer Reinstall OS info response
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getQsReinstallOs
+  summary: QuickServer Reinstall OS Options
+  description: ''
+post:
+  tags:
+    - QuickServers
+  responses:
+    '200':
+      $ref: ../components/responses/QueueResponse.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: postQsReinstallOs
+  summary: Reinstall QuickServer OS
+  description: ''
+parameters:
+  - name: id
+    description: QuickServer ID number
+    schema:
+      type: integer
+    in: path
+    required: true

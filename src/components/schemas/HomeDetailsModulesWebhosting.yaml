@@ -1,0 +1,22 @@
+type: object
+properties:
+  icon:
+    description: The icon for web hosting.
+    type: string
+    example: window-maximize
+  view_link:
+    description: Link to view website.
+    type: string
+    example: view_website
+  heading:
+    description: Heading for web hosting.
+    type: string
+    example: Web Hosting
+  buy_link:
+    description: Link to order website.
+    type: string
+    example: order_website
+  list_link:
+    description: Link to view websites list.
+    type: string
+    example: view_websites_list

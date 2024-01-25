@@ -1,0 +1,12 @@
+type: object
+properties:
+  desc:
+    description: The description of the tutorials table row.
+    type: string
+    example: cPanel Tutorial
+  value:
+    description: The value of the tutorials table row.
+    type: string
+    example: >-
+      <a class="link" href="https://mail.baby/cpanel/" target="_blank">Click
+      Here</a>

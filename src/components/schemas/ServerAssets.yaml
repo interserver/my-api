@@ -1,0 +1,55 @@
+required:
+  - title
+  - size
+  - type
+  - header
+  - rows
+type: object
+properties:
+  title:
+    description: The title of the assets.
+    type: string
+    example: Assets
+  size:
+    description: The size of the assets.
+    type: integer
+    example: 2
+  type:
+    description: The type of the assets.
+    type: string
+    example: table
+  header:
+    description: The header of the assets table.
+    type: array
+    items:
+      type: string
+  rows:
+    description: The rows of the assets table.
+    type: array
+    items:
+      type: array
+      items:
+        type: string
+example:
+  assets:
+    title: Assets
+    size: 2
+    type: table
+    header:
+      - Id
+      - Hostname
+      - Description
+      - Location Name
+      - Rack Name
+      - Status
+      - Primary Ipv4
+      - Comments
+    rows:
+      - - '3497'
+        - myserver.host.com
+        - "CPU:..............2x Intel Xeon E5-2620v4 @2.10GHz\r\nMemory:...........128GB DDR3 1600MHz\r\nHard Drive 1:.....Crucial 500 GB SSD\r\nHard Drive 2:.....Crucial 500 GB SSD\r\nRAID:.............none\r\nOS:...............Ubuntu 20\r\nControl Panel:....none\r\nNetwork...........10G Card\r\nIP(s):............Vlan 3497\r\nBandwidth:........10Tb @ 10gb port"
+        - TEB2
+        - '112.16'
+        - active
+        - 1.2.3.250
+        - ''

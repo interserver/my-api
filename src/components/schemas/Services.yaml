@@ -1,0 +1,40 @@
+description: The list of service packages.
+type: object
+additionalProperties:
+  type: array
+  items:
+    $ref: ./Service.yaml
+example:
+  '31':
+    services_id: 31
+    services_name: OpenVZ VPS Slice
+    services_cost: 6
+    services_currency: USD
+    services_category: 1
+    services_buyable: true
+    services_type: 6
+    services_field1: slice
+    services_field2: ''
+    services_module: vps
+  '32':
+    services_id: 32
+    services_name: KVM Windows VPS Slice
+    services_cost: 10
+    services_currency: USD
+    services_category: 2
+    services_buyable: true
+    services_type: 1
+    services_field1: slice
+    services_field2: ''
+    services_module: vps
+  '33':
+    services_id: 33
+    services_name: KVM Linux VPS Slice
+    services_cost: 6
+    services_currency: USD
+    services_category: 2
+    services_buyable: true
+    services_type: 2
+    services_field1: slice
+    services_field2: ''
+    services_module: vps

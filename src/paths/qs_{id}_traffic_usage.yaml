@@ -1,0 +1,29 @@
+get:
+  tags:
+    - QuickServers
+  responses:
+    '200':
+      description: Get QuickServer Traffic usage
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getQsTrafficUsage
+  summary: Get Traffic Usage
+  description: ''
+post:
+  tags:
+    - QuickServers
+  responses:
+    '200':
+      description: Submit QuickServer Traffic Usage
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: postQsTrafficUsage
+  summary: Search Traffic Usage
+  description: ''
+parameters:
+  - name: id
+    description: QuickServer ID number
+    schema:
+      type: integer
+    in: path
+    required: true

@@ -1,0 +1,5 @@
+description: VPS Traffic Hisotrty Data Row of Hour/Day Section
+type: array
+items:
+  format: date-time
+  type: string

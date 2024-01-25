@@ -1,0 +1,29 @@
+get:
+  tags:
+    - VPS
+  responses:
+    '200':
+      description: Get VPS View Desktop Information
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getVpsViewDesktop
+  summary: Get View Desktop Info
+  description: ''
+post:
+  tags:
+    - VPS
+  responses:
+    '200':
+      description: Submit VPS View Desktop Information
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: postVpsViewDesktop
+  summary: Update View Desktop
+  description: ''
+parameters:
+  - name: id
+    description: VPS ID number
+    schema:
+      type: integer
+    in: path
+    required: true

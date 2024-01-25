@@ -1,0 +1,31 @@
+description: Form values for the server order.
+type: object
+properties:
+  memory:
+    description: Memory value for the server order.
+    type: integer
+    example: 22
+  bandwidth:
+    description: Bandwidth value for the server order.
+    type: string
+    example: '3'
+  ips:
+    description: IPs value for the server order.
+    type: string
+    example: '9'
+  os:
+    description: Operating System value for the server order.
+    type: string
+    example: '5'
+  cp:
+    description: Control Panel value for the server order.
+    type: integer
+    example: 5
+  raid:
+    description: RAID value for the server order.
+    type: string
+    example: '0'
+  hd:
+    description: Hard Drives value for the server order.
+    type: string
+    example: '16'

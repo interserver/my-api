@@ -1,0 +1,22 @@
+type: object
+properties:
+  icon:
+    description: The icon for quick servers.
+    type: string
+    example: database
+  view_link:
+    description: Link to view quick servers.
+    type: string
+    example: view_qs
+  heading:
+    description: Heading for quick servers.
+    type: string
+    example: Quick Servers
+  buy_link:
+    description: Link to order quick server.
+    type: string
+    example: order_quickserver
+  list_link:
+    description: Link to view quick servers list.
+    type: string
+    example: view_quickservers_list

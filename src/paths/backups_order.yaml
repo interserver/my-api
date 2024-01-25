@@ -1,0 +1,65 @@
+get:
+  tags:
+    - Backups
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BackupsOrder.yaml
+      description: Information needed to generate an order form.
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getNewBackup
+  summary: Get Backup Ordering Information
+  description: ''
+put:
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/BackupOrderPutRequest.yaml
+      multipart/form-data:
+        schema:
+          $ref: ../components/schemas/BackupOrderPutRequest.yaml
+    required: true
+  tags:
+    - Backups
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BackupOrderPutResponse.yaml
+      description: Validate Backup Order Response
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: putBackups
+  summary: Validate Backup Order
+  description: ''
+post:
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/BackupOrderPutRequest.yaml
+      multipart/form-data:
+        schema:
+          $ref: ../components/schemas/BackupOrderPutRequest.yaml
+    required: true
+  tags:
+    - Backups
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BackupOrderPostResponse.yaml
+      description: Response from the backup order call
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: addBackup
+  summary: Place Backup Order
+  description: ''

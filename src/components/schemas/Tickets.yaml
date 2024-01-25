@@ -1,0 +1,84 @@
+title: Tickets
+description: A listing of support tickets.
+required:
+  - tickets
+  - viewText
+  - view
+  - sortdir
+  - sortcol
+  - pages
+  - limit
+  - rowsOffset
+  - rowsTotal
+  - inboxCount
+  - ima
+  - custid
+  - currentPage
+  - countArray
+type: object
+properties:
+  ima:
+    type: string
+  custid:
+    type: string
+  view:
+    type: string
+  currentPage:
+    format: int32
+    type: integer
+  limit:
+    format: int32
+    type: integer
+  sortcol:
+    format: int32
+    type: integer
+  sortdir:
+    format: int32
+    type: integer
+  rowsOffset:
+    format: int32
+    type: integer
+  tickets:
+    type: array
+    items:
+      $ref: ./TicketsRow.yaml
+  pages:
+    format: int32
+    type: integer
+  rowsTotal:
+    format: int32
+    type: integer
+  inboxCount:
+    format: int32
+    type: integer
+  countArray:
+    properties:
+      Open:
+        format: int32
+        type: integer
+      On Hold:
+        format: int32
+        type: integer
+      Closed:
+        format: int32
+        type: integer
+  viewText:
+    type: string
+example:
+  ima: client
+  custid: '223513'
+  view: Open
+  currentPage: 1
+  limit: 50
+  sortcol: 6
+  sortdir: 1
+  rowsOffset: 0
+  tickets: []
+  pages: 7
+  rowsTotal: 311
+  inboxCount: 311
+  countArray:
+    Open: 3
+    On Hold: 3
+    Closed: 305
+  viewText: Inbox

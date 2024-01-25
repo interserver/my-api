@@ -1,27 +1,499 @@
-openapi: "3.0.0"
+openapi: 3.0.3
 info:
-  version: 1.0.0
-  title: Swagger Petstore
-  description: Multi-file boilerplate for OpenAPI Specification.
-  license:
-    name: MIT
+  title: InterServer Management API
+  version: 0.9.0
+  description: >+
+    **Introducing the InterServers myadmin Host Management API – Your Gateway to
+    Seamless Service Management**
+
+
+    # Overview
+
+
+    InterServers is thrilled to present the myadmin Host Management API, a
+    cutting-edge solution designed to simplify and streamline the management of
+    our comprehensive range of services. Whether you're in need of [dedicated
+    server hosting](), [web hosting](), [VPS hosting](), [backups](), [domain
+    registrations](), [Mail Delivery services](), or our innovative hybrid
+    VPS-bare metal product [Rapid Deploy Servers](), our API offers a
+    user-friendly and efficient approach to managing your services.
+
+
+    With the myadmin Host Management API, you can now harness the power of
+    modern [REST]() and [WebSocket]() interfaces to effortlessly maintain and
+    control your InterServers services. Say goodbye to complex and
+    time-consuming manual configurations – our API empowers you to execute a
+    wide range of operations with simple, easy-to-use calls, ensuring that
+    service management becomes a hassle-free experience.
+
+
+    One of the standout features of the myadmin Host Management API is its
+    extensive language support. We have [code samples]() available in every
+    modern programming language, allowing developers to quickly integrate our
+    API into their existing systems. Whether you prefer [Python](),
+    [JavaScript](), [Ruby](), [PHP](), or any other language, we have you
+    covered. Our goal is to ensure that you can seamlessly integrate and
+    automate your InterServers services, regardless of your preferred
+    programming language.
+
+
+    To further enhance the user xperience, we offer interactive
+    [documentation]() that makes it a breeze to navigate and understand the
+    myadmin Host Management API. Our comprehensive documentation provides
+    detailed explanations, along with interactive code examples, giving you a
+    hands-on approach to learning and implementing the API's functionalities.
+    Whether you're a seasoned developer or just starting your journey, our
+    user-friendly documentation will be your go-to resource for all your service
+    management needs.
+
+
+    # Authentication
+
+
+    In order to use most of the API calls you must pass credentials from the
+    [my.interserver.net](https://my.interserver.net/) site.
+
+
+    We support several different authentication methods but the preferred method
+    is to use the **API Key** which you can get from the [Account
+    Security](https://my.interserver.net/account_security) page.
+
+
+    ## Using SessionId with Login
+
+
+    ### Logging in
+
+
+    ### Passing Session ID
+
+
+    ## Using API Key
+
+  termsOfService: https://www.interserver.net/terms-of-service.html
   contact:
-    name: API Support
-    url: http://www.example.com/support
-    email: support@example.com
+    name: InterServer Support Staff
+    url: https://www.interserver.net/contact-us.html
+    email: support@interserver.net
+  license:
+    name: MIT License
+    url: https://opensource.org/licenses/MIT
 servers:
-  - url: http://petstore.swagger.io/v1
-tags:
-  - name: pets
+  - url: https://my.interserver.net/apiv2
+    description: Live API Endpoint
 paths:
-  /pets:
-    $ref: "./resources/pets.yaml"
-  /pets/{petId}:
-    $ref: "./resources/pet.yaml"
+  /account:
+    $ref: paths/account.yaml
+  /account/2fa:
+    $ref: paths/account_2fa.yaml
+  /account/apikey:
+    $ref: paths/account_apikey.yaml
+  /account/creditcards:
+    $ref: paths/account_creditcards.yaml
+  /account/creditcards/{id}:
+    $ref: paths/account_creditcards_{id}.yaml
+  /account/features:
+    $ref: paths/account_features.yaml
+  /account/iplimits:
+    $ref: paths/account_iplimits.yaml
+  /account/oauth/{name}:
+    $ref: paths/account_oauth_{name}.yaml
+  /account/oauth/{name}/logout:
+    $ref: paths/account_oauth_{name}_logout.yaml
+  /account/password:
+    $ref: paths/account_password.yaml
+  /account/sshkey:
+    $ref: paths/account_sshkey.yaml
+  /account/username:
+    $ref: paths/account_username.yaml
+  /affiliate/banners:
+    $ref: paths/affiliate_banners.yaml
+  /affiliate/landing_pg:
+    $ref: paths/affiliate_landing_pg.yaml
+  /affiliate/payment_setup:
+    $ref: paths/affiliate_payment_setup.yaml
+  /affiliate/rich_report:
+    $ref: paths/affiliate_rich_report.yaml
+  /affiliate/sales_graph:
+    $ref: paths/affiliate_sales_graph.yaml
+  /affiliate/sales_report:
+    $ref: paths/affiliate_sales_report.yaml
+  /affiliate/traffic_graph:
+    $ref: paths/affiliate_traffic_graph.yaml
+  /affiliate/web_traffic:
+    $ref: paths/affiliate_web_traffic.yaml
+  /backups:
+    $ref: paths/backups.yaml
+  /backups/order:
+    $ref: paths/backups_order.yaml
+  /backups/{id}:
+    $ref: paths/backups_{id}.yaml
+  /backups/{id}/cancel:
+    $ref: paths/backups_{id}_cancel.yaml
+  /backups/{id}/invoices:
+    $ref: paths/backups_{id}_invoices.yaml
+  /backups/{id}/welcome_email:
+    $ref: paths/backups_{id}_welcome_email.yaml
+  /billing/cart:
+    $ref: paths/billing_cart.yaml
+  /billing/prepays:
+    $ref: paths/billing_prepays.yaml
+  /captcha:
+    $ref: paths/captcha.yaml
+  /dns:
+    $ref: paths/dns.yaml
+  /dns/{id}:
+    $ref: paths/dns_{id}.yaml
+  /dns/{id}/{recordId}:
+    $ref: paths/dns_{id}_{recordId}.yaml
+  /domains:
+    $ref: paths/domains.yaml
+  /domains/order:
+    $ref: paths/domains_order.yaml
+  /domains/order/{domain}:
+    $ref: paths/domains_order_{domain}.yaml
+  /domains/order/{domain}/{regType}:
+    $ref: paths/domains_order_{domain}_{regType}.yaml
+  /domains/{id}:
+    $ref: paths/domains_{id}.yaml
+  /domains/{id}/cancel:
+    $ref: paths/domains_{id}_cancel.yaml
+  /domains/{id}/contact:
+    $ref: paths/domains_{id}_contact.yaml
+  /domains/{id}/dnssec:
+    $ref: paths/domains_{id}_dnssec.yaml
+  /domains/{id}/invoices:
+    $ref: paths/domains_{id}_invoices.yaml
+  /domains/{id}/nameservers:
+    $ref: paths/domains_{id}_nameservers.yaml
+  /domains/{id}/renew:
+    $ref: paths/domains_{id}_renew.yaml
+  /domains/{id}/transfer:
+    $ref: paths/domains_{id}_transfer.yaml
+  /domains/{id}/welcome_email:
+    $ref: paths/domains_{id}_welcome_email.yaml
+  /domains/{id}/whois:
+    $ref: paths/domains_{id}_whois.yaml
+  /floating_ips:
+    $ref: paths/floating_ips.yaml
+  /floating_ips/order:
+    $ref: paths/floating_ips_order.yaml
+  /floating_ips/{id}:
+    $ref: paths/floating_ips_{id}.yaml
+  /floating_ips/{id}/cancel:
+    $ref: paths/floating_ips_{id}_cancel.yaml
+  /floating_ips/{id}/change_ip:
+    $ref: paths/floating_ips_{id}_change_ip.yaml
+  /floating_ips/{id}/invoices:
+    $ref: paths/floating_ips_{id}_invoices.yaml
+  /floating_ips/{id}/welcome_email:
+    $ref: paths/floating_ips_{id}_welcome_email.yaml
+  /home:
+    $ref: paths/home.yaml
+  /info:
+    $ref: paths/info.yaml
+  /invoices:
+    $ref: paths/invoices.yaml
+  /licenses:
+    $ref: paths/licenses.yaml
+  /licenses/order:
+    $ref: paths/licenses_order.yaml
+  /licenses/order/{catTag}:
+    $ref: paths/licenses_order_{catTag}.yaml
+  /licenses/{id}:
+    $ref: paths/licenses_{id}.yaml
+  /licenses/{id}/cancel:
+    $ref: paths/licenses_{id}_cancel.yaml
+  /licenses/{id}/change_ip:
+    $ref: paths/licenses_{id}_change_ip.yaml
+  /licenses/{id}/change_os:
+    $ref: paths/licenses_{id}_change_os.yaml
+  /licenses/{id}/invoices:
+    $ref: paths/licenses_{id}_invoices.yaml
+  /licenses/{id}/welcome_email:
+    $ref: paths/licenses_{id}_welcome_email.yaml
+  /login:
+    $ref: paths/login.yaml
+  /logout:
+    $ref: paths/logout.yaml
+  /mail:
+    $ref: paths/mail.yaml
+  /mail/order:
+    $ref: paths/mail_order.yaml
+  /mail/{id}:
+    $ref: paths/mail_{id}.yaml
+  /mail/{id}/blocks:
+    $ref: paths/mail_{id}_blocks.yaml
+  /mail/{id}/alerts:
+    $ref: paths/mail_{id}_alerts.yaml
+  /mail/{id}/cancel:
+    $ref: paths/mail_{id}_cancel.yaml
+  /mail/{id}/deny_rules:
+    $ref: paths/mail_{id}_deny_rules.yaml
+  /mail/{id}/invoices:
+    $ref: paths/mail_{id}_invoices.yaml
+  /mail/{id}/welcome_email:
+    $ref: paths/mail_{id}_welcome_email.yaml
+  /pay/{method}/{invoices}:
+    $ref: paths/pay_{method}_{invoices}.yaml
+  /ping:
+    $ref: paths/ping.yaml
+  /qs:
+    $ref: paths/qs.yaml
+  /qs/order:
+    $ref: paths/qs_order.yaml
+  /qs/{id}:
+    $ref: paths/qs_{id}.yaml
+  /qs/{id}/backup:
+    $ref: paths/qs_{id}_backup.yaml
+  /qs/{id}/backups:
+    $ref: paths/qs_{id}_backups.yaml
+  /qs/{id}/block_smtp:
+    $ref: paths/qs_{id}_block_smtp.yaml
+  /qs/{id}/cancel:
+    $ref: paths/qs_{id}_cancel.yaml
+  /qs/{id}/change_hostname:
+    $ref: paths/qs_{id}_change_hostname.yaml
+  /qs/{id}/change_root_password:
+    $ref: paths/qs_{id}_change_root_password.yaml
+  /qs/{id}/change_timezone:
+    $ref: paths/qs_{id}_change_timezone.yaml
+  /qs/{id}/change_webuzo_password:
+    $ref: paths/qs_{id}_change_webuzo_password.yaml
+  /qs/{id}/disable_cd:
+    $ref: paths/qs_{id}_disable_cd.yaml
+  /qs/{id}/disable_quota:
+    $ref: paths/qs_{id}_disable_quota.yaml
+  /qs/{id}/eject_cd:
+    $ref: paths/qs_{id}_eject_cd.yaml
+  /qs/{id}/enable_quota:
+    $ref: paths/qs_{id}_enable_quota.yaml
+  /qs/{id}/insert_cd:
+    $ref: paths/qs_{id}_insert_cd.yaml
+  /qs/{id}/invoices:
+    $ref: paths/qs_{id}_invoices.yaml
+  /qs/{id}/reinstall_os:
+    $ref: paths/qs_{id}_reinstall_os.yaml
+  /qs/{id}/reset_password:
+    $ref: paths/qs_{id}_reset_password.yaml
+  /qs/{id}/restart:
+    $ref: paths/qs_{id}_restart.yaml
+  /qs/{id}/restore:
+    $ref: paths/qs_{id}_restore.yaml
+  /qs/{id}/reverse_dns:
+    $ref: paths/qs_{id}_reverse_dns.yaml
+  /qs/{id}/setup_vnc:
+    $ref: paths/qs_{id}_setup_vnc.yaml
+  /qs/{id}/start:
+    $ref: paths/qs_{id}_start.yaml
+  /qs/{id}/stop:
+    $ref: paths/qs_{id}_stop.yaml
+  /qs/{id}/traffic_usage:
+    $ref: paths/qs_{id}_traffic_usage.yaml
+  /qs/{id}/view_desktop:
+    $ref: paths/qs_{id}_view_desktop.yaml
+  /servers:
+    $ref: paths/servers.yaml
+  /servers/order:
+    $ref: paths/servers_order.yaml
+  /servers/{id}:
+    $ref: paths/servers_{id}.yaml
+  /servers/{id}/bandwidth_graph:
+    $ref: paths/servers_{id}_bandwidth_graph.yaml
+  /servers/{id}/cancel:
+    $ref: paths/servers_{id}_cancel.yaml
+  /servers/{id}/invoices:
+    $ref: paths/servers_{id}_invoices.yaml
+  /servers/{id}/ipmi_live:
+    $ref: paths/servers_{id}_ipmi_live.yaml
+  /servers/{id}/reverse_dns:
+    $ref: paths/servers_{id}_reverse_dns.yaml
+  /servers/{id}/welcome_email:
+    $ref: paths/servers_{id}_welcome_email.yaml
+  /signup:
+    $ref: paths/signup.yaml
+  /ssl:
+    $ref: paths/ssl.yaml
+  /ssl/order:
+    $ref: paths/ssl_order.yaml
+  /ssl/{id}:
+    $ref: paths/ssl_{id}.yaml
+  /ssl/{id}/cancel:
+    $ref: paths/ssl_{id}_cancel.yaml
+  /ssl/{id}/change_approver_email:
+    $ref: paths/ssl_{id}_change_approver_email.yaml
+  /ssl/{id}/invoices:
+    $ref: paths/ssl_{id}_invoices.yaml
+  /ssl/{id}/resend_approver_email:
+    $ref: paths/ssl_{id}_resend_approver_email.yaml
+  /ssl/{id}/welcome_email:
+    $ref: paths/ssl_{id}_welcome_email.yaml
+  /tickets:
+    $ref: paths/tickets.yaml
+  /tickets/new:
+    $ref: paths/tickets_new.yaml
+  /tickets/{id}:
+    $ref: paths/tickets_{id}.yaml
+  /vps:
+    $ref: paths/vps.yaml
+  /vps/order:
+    $ref: paths/vps_order.yaml
+  /vps/{id}:
+    $ref: paths/vps_{id}.yaml
+  /vps/{id}/backup:
+    $ref: paths/vps_{id}_backup.yaml
+  /vps/{id}/backups:
+    $ref: paths/vps_{id}_backups.yaml
+  /vps/{id}/block_smtp:
+    $ref: paths/vps_{id}_block_smtp.yaml
+  /vps/{id}/buy_hd_space:
+    $ref: paths/vps_{id}_buy_hd_space.yaml
+  /vps/{id}/buy_ip:
+    $ref: paths/vps_{id}_buy_ip.yaml
+  /vps/{id}/cancel:
+    $ref: paths/vps_{id}_cancel.yaml
+  /vps/{id}/change_hostname:
+    $ref: paths/vps_{id}_change_hostname.yaml
+  /vps/{id}/change_root_password:
+    $ref: paths/vps_{id}_change_root_password.yaml
+  /vps/{id}/change_timezone:
+    $ref: paths/vps_{id}_change_timezone.yaml
+  /vps/{id}/change_webuzo_password:
+    $ref: paths/vps_{id}_change_webuzo_password.yaml
+  /vps/{id}/disable_cd:
+    $ref: paths/vps_{id}_disable_cd.yaml
+  /vps/{id}/disable_quota:
+    $ref: paths/vps_{id}_disable_quota.yaml
+  /vps/{id}/eject_cd:
+    $ref: paths/vps_{id}_eject_cd.yaml
+  /vps/{id}/enable_quota:
+    $ref: paths/vps_{id}_enable_quota.yaml
+  /vps/{id}/insert_cd:
+    $ref: paths/vps_{id}_insert_cd.yaml
+  /vps/{id}/invoices:
+    $ref: paths/vps_{id}_invoices.yaml
+  /vps/{id}/reinstall_os:
+    $ref: paths/vps_{id}_reinstall_os.yaml
+  /vps/{id}/reset_password:
+    $ref: paths/vps_{id}_reset_password.yaml
+  /vps/{id}/restart:
+    $ref: paths/vps_{id}_restart.yaml
+  /vps/{id}/restore:
+    $ref: paths/vps_{id}_restore.yaml
+  /vps/{id}/reverse_dns:
+    $ref: paths/vps_{id}_reverse_dns.yaml
+  /vps/{id}/setup_vnc:
+    $ref: paths/vps_{id}_setup_vnc.yaml
+  /vps/{id}/slices:
+    $ref: paths/vps_{id}_slices.yaml
+  /vps/{id}/start:
+    $ref: paths/vps_{id}_start.yaml
+  /vps/{id}/stop:
+    $ref: paths/vps_{id}_stop.yaml
+  /vps/{id}/traffic_usage:
+    $ref: paths/vps_{id}_traffic_usage.yaml
+  /vps/{id}/view_desktop:
+    $ref: paths/vps_{id}_view_desktop.yaml
+  /websites:
+    $ref: paths/websites.yaml
+  /websites/order:
+    $ref: paths/websites_order.yaml
+  /websites/{id}:
+    $ref: paths/websites_{id}.yaml
+  /websites/{id}/buy_ip:
+    $ref: paths/websites_{id}_buy_ip.yaml
+  /websites/{id}/cancel:
+    $ref: paths/websites_{id}_cancel.yaml
+  /websites/{id}/download_backups:
+    $ref: paths/websites_{id}_download_backups.yaml
+  /websites/{id}/invoices:
+    $ref: paths/websites_{id}_invoices.yaml
+  /websites/{id}/login:
+    $ref: paths/websites_{id}_login.yaml
+  /websites/{id}/migration:
+    $ref: paths/websites_{id}_migration.yaml
+  /websites/{id}/reverse_dns:
+    $ref: paths/websites_{id}_reverse_dns.yaml
+  /websites/{id}/welcome_email:
+    $ref: paths/websites_{id}_welcome_email.yaml
+  /mail/{id}/advsend:
+    $ref: paths/mail_{id}_advsend.yaml
+  /mail/{id}/blocks/delete:
+    $ref: paths/mail_{id}_blocks_delete.yaml
+  /mail/{id}/log:
+    $ref: paths/mail_{id}_log.yaml
+  /mail/{id}/rules:
+    $ref: paths/mail_{id}_rules.yaml
+  /mail/{id}/rules/{ruleId}:
+    $ref: paths/mail_{id}_rules_{ruleId}.yaml
+  /mail/{id}/send:
+    $ref: paths/mail_{id}_send.yaml
+  /mail/{id}/stats:
+    $ref: paths/mail_{id}_stats.yaml
+  /account/countries:
+    $ref: paths/account_countries.yaml
+  /servers/{id}/ipmi_power:
+    $ref: paths/servers_{id}_ipmi_power.yaml
+  /qs/{id}/welcome_email:
+    $ref: paths/qs_{id}_welcome_email.yaml
+  /vps/{id}/welcome_email:
+    $ref: paths/vps_{id}_welcome_email.yaml
 components:
-  parameters:
-    $ref: "./parameters/_index.yaml"
-  schemas:
-    $ref: "./schemas/_index.yaml"
-  responses:
-    $ref: "./responses/_index.yaml"
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      description: >-
+        Authentication using your accounts API Key passed in the HTTP header as
+        `X-API-KEY`.
+      name: X-API-KEY
+      in: header
+    sessionIdHeaderAuth:
+      type: apiKey
+      description: >-
+        Authentication using a Session ID passed in the HTTP header as
+        `sessionid`.
+      name: sessionid
+      in: header
+    sessionIdCookieAuth:
+      type: apiKey
+      description: Authentication using a Session ID passed as a Cookie named `sessionid`.
+      name: sessionid
+      in: cookie
+security:
+  - apiKeyAuth: []
+  - sessionIdHeaderAuth: []
+  - sessionIdCookieAuth: []
+tags:
+  - name: Public
+    description: Commands usable without an active session or api credentials.
+  - name: Account
+    description: Account related items
+  - name: Billing
+    description: Billing related items
+  - name: Backups
+    description: Backup related services
+  - name: DNS
+    description: DNS related items
+  - name: Domains
+    description: Domain Registration related services
+  - name: Floating_IPs
+    description: Floating IP related items
+  - name: Licenses
+    description: Licensing related services
+  - name: Mail
+    description: Mail related items
+  - name: QuickServers
+    description: Rapid Deploy Servers related services
+  - name: Servers
+    description: Dedicated Servers related services
+  - name: SSL-Certificates
+    description: SSL Certificates related services
+  - name: VPS
+    description: VPS related services
+  - name: Webhosting
+    description: Webhosting related services
+  - name: Tickets
+    description: Support Request System
+externalDocs:
+  description: Tips
+  url: https://www.interserver.net/tips/

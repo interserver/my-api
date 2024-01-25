@@ -1,0 +1,15 @@
+get:
+  tags:
+    - Floating_IPs
+  responses:
+    '200':
+      content:
+        application/json: {}
+      description: The listing of `Floating IPs` services on your account.
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: getFloatingIpsList
+  summary: List Floating IPs
+  description: ''

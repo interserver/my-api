@@ -1,0 +1,25 @@
+title: DenyRuleRecord
+description: The data for a email deny rule record.
+type: object
+allOf:
+  - required:
+      - id
+      - created
+    type: object
+    properties:
+      id:
+        description: The deny rule Id number.
+        type: integer
+        example: '41124'
+      created:
+        format: date-time
+        description: the date the rule was created.
+        type: string
+        example: '2022-03-22 19:16:35'
+  - $ref: ./DenyRuleNew.yaml
+example:
+  id: 14
+  user: mb20682
+  type: email
+  data: domeinwo@server.guesshost.net
+  created: '2022-03-22 19:16:35'

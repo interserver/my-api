@@ -1,0 +1,67 @@
+required:
+  - mail_id
+  - mail_type
+  - mail_currency
+  - mail_order_date
+  - mail_custid
+  - mail_quota
+  - mail_status
+  - mail_invoice
+type: object
+properties:
+  mail_id:
+    description: The ID of the mail service.
+    type: string
+    example: '43171'
+  mail_username:
+    description: The username associated with the mail service.
+    type: string
+    example: ''
+  mail_type:
+    description: The type of mail service.
+    type: string
+    example: '10880'
+  mail_currency:
+    description: The currency of the mail service.
+    type: string
+    example: USD
+  mail_order_date:
+    description: The order date of the mail service.
+    type: string
+    example: '2023-07-16T00:55:05.000Z'
+  mail_custid:
+    description: The customer ID associated with the mail service.
+    type: string
+    example: '771282'
+  mail_quota:
+    description: The mail quota for the service.
+    type: string
+    example: '0'
+  mail_ip:
+    description: The IP address associated with the mail service.
+    type: string
+    example: ''
+  mail_status:
+    description: The status of the mail service.
+    type: string
+    example: expired
+  mail_invoice:
+    description: The invoice ID of the mail service.
+    type: string
+    example: '20410322'
+  mail_coupon:
+    description: The coupon associated with the mail service.
+    type: string
+    example: '0'
+  mail_extra:
+    description: Additional information for the mail service.
+    type: string
+    example: '[]'
+  mail_server_status:
+    description: The server status of the mail service.
+    type: string
+    example: ''
+  mail_comment:
+    description: Additional comments for the mail service.
+    type: string
+    example: ''

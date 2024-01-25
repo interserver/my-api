@@ -1,0 +1,9 @@
+description: Schema for the jsonServices field in WebsitesOrder
+required:
+  - '11447'
+type: object
+properties:
+  '11447':
+    description: JSON services description
+    type: string
+    example: '5.00'

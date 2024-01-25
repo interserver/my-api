@@ -1,0 +1,43 @@
+post:
+  tags:
+    - Billing
+  parameters:
+    - name: id
+      description: The order ID number.
+      schema:
+        type: integer
+      in: path
+      required: true
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: updateAccountCreditCard
+  summary: Update CreditCard
+  description: ''
+delete:
+  tags:
+    - Billing
+  parameters:
+    - name: id
+      description: The order ID number.
+      schema:
+        type: string
+      in: path
+      required: true
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: deleteAccountCreditCard
+  summary: Delete CreditCard
+  description: ''
+parameters:
+  - name: id
+    description: CreditCard ID number
+    schema:
+      type: integer
+    in: path
+    required: true

@@ -1,0 +1,58 @@
+title: VpsTrafficTotalsResposne
+description: VPS Traffic Totals Section
+required:
+  - month
+  - day
+  - all
+  - year
+type: object
+properties:
+  day:
+    $ref: ./VpsTrafficTotalsSectionResponse.yaml
+    properties:
+      in:
+        format: int32
+        type: integer
+      out:
+        format: int32
+        type: integer
+  month:
+    $ref: ./VpsTrafficTotalsSectionResponse.yaml
+    properties:
+      in:
+        format: int32
+        type: integer
+      out:
+        format: int32
+        type: integer
+  year:
+    $ref: ./VpsTrafficTotalsSectionResponse.yaml
+    properties:
+      in:
+        format: int32
+        type: integer
+      out:
+        format: int32
+        type: integer
+  all:
+    $ref: ./VpsTrafficTotalsSectionResponse.yaml
+    properties:
+      in:
+        format: int32
+        type: integer
+      out:
+        format: int32
+        type: integer
+example:
+  day:
+    in: 49719744
+    out: 11316104
+  month:
+    in: 2880512936
+    out: 380333384
+  year:
+    in: 2880512936
+    out: 380333384
+  all:
+    in: 2880512936
+    out: 380333384

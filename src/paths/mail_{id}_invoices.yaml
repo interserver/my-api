@@ -1,0 +1,22 @@
+get:
+  tags:
+    - Mail
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ChargeInvoiceRows.yaml
+      description: Get Invoices response
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getMailInvoices
+  summary: Get Mail Invoices
+  description: ''
+parameters:
+  - name: id
+    description: Mail ID number
+    schema:
+      type: integer
+    in: path
+    required: true

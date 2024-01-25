@@ -1,0 +1,47 @@
+type: object
+properties:
+  id:
+    description: Memory ID.
+    type: string
+    example: '65'
+  price:
+    description: Memory price.
+    type: string
+    example: '0'
+  img:
+    description: Memory image.
+    type: string
+    example: hd.jpg
+  short_desc:
+    description: Short description of the memory.
+    type: string
+    example: 20TB SATA
+  long_desc:
+    description: Long description of the memory.
+    type: string
+  manu:
+    description: Manufacturer information.
+    type: string
+  size:
+    description: Memory size.
+    type: string
+    example: '3000'
+  type:
+    description: Memory type.
+    type: string
+  hidden:
+    description: Hidden status.
+    type: string
+    example: '0'
+  monthly_price:
+    description: Monthly price.
+    type: integer
+    example: 50
+  drive_type:
+    description: Drive type.
+    type: string
+    example: lff
+  monthly_price_display:
+    description: Display of monthly memory price.
+    type: string
+    example: $50.00

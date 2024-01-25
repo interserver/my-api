@@ -1,0 +1,22 @@
+type: object
+properties:
+  icon:
+    description: The icon for storages.
+    type: string
+    example: warehouse
+  view_link:
+    description: Link to view backup.
+    type: string
+    example: view_backup
+  heading:
+    description: Heading for storages.
+    type: string
+    example: Storages
+  buy_link:
+    description: Link to order storage.
+    type: string
+    example: order_storage
+  list_link:
+    description: Link to view backups list.
+    type: string
+    example: view_backups_list

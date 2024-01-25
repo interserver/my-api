@@ -1,0 +1,36 @@
+title: LoginInfo
+description: Basic information useful for rendering a login page.
+required:
+  - captcha
+  - counts
+type: object
+properties:
+  logo:
+    description: A logo image url.
+    type: string
+    example: //my.interserver.net/images/logos/mystaging.png
+  captcha:
+    description: A base64 encoded image to use for rendering the alternateive captcha.
+    type: string
+    example: data:image/jpeg;base64,/9j/
+  language:
+    description: The desired langauge to render the site with.
+    type: string
+    example: en-US
+  counts:
+    $ref: ./LoginServiceCounts.yaml
+    description: Active service counts.
+    example: |-
+      {
+              "vps": 290201,
+              "websites": 205172,
+              "servers": 27940
+          }
+example:
+  logo: //my.interserver.net/images/logos/mystaging.png
+  captcha: data:image/jpeg;base64,/9j/
+  language: en-US
+  counts:
+    vps: 290201
+    websites: 205172
+    servers: 27940

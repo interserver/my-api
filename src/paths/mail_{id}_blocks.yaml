@@ -1,0 +1,50 @@
+get:
+  tags:
+    - Mail
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/MailBlocks.yaml
+          examples:
+            MailBlocksExample:
+              value:
+                local:
+                  - date: '2023-08-07'
+                    from: user@domain.com
+                    messageId: pFaRqFUEWkucjhTuIzYuoAgWU@domain.com
+                    subject: Test Email
+                    to: '[''client@site.com'']'
+                mbtrap:
+                  - date: '2023-08-07'
+                    from: user@domain.com
+                    messageId: pFaRqFUEWkucjhTuIzYuoAgWU@domain.com
+                    subject: Test Email
+                    to: '[''client@site.com'']'
+                subject:
+                  - from: user@domain.com
+                    subject: Test Email
+      links:
+        delistBlockLink:
+          operationId: delistBlock
+          parameters:
+            email: $response.body#/local/0/from
+          description: >-
+            The `from` value returned in the response can be used as the `email`
+            parameter in `DELETE /mail/{id}/blocks`.
+      description: OK
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '404':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getMailBlocks
+  summary: List Blocked Email Addresses
+  description: Displays a listing of the blocked email addresses
+parameters:
+  - name: id
+    description: Mail ID number
+    schema:
+      type: integer
+    in: path
+    required: true

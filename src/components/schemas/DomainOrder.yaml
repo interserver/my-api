@@ -1,0 +1,12 @@
+type: object
+properties:
+  whoisPrivacyCost:
+    description: Cost of Whois Privacy
+    type: string
+    example: '5'
+  services:
+    description: Available services
+    type: object
+    properties:
+      DomainOrderServices10001:
+        $ref: ./DomainOrderServices10001.yaml

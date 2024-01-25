@@ -1,0 +1,42 @@
+title: QuickserverRow
+description: A result row from the `Quickservers` `GET` request.
+required:
+  - qs_status
+  - qs_id
+  - qs_comment
+  - cost
+  - qs_hostname
+  - qs_name
+type: object
+properties:
+  qs_id:
+    description: The id of the qs.
+    type: string
+    example: '19504'
+  qs_name:
+    description: The name of the qs.
+    type: string
+    example: Quickserver199
+  cost:
+    description: The cost of the qs.
+    type: string
+    example: '65.00'
+  qs_hostname:
+    description: The hostname of the qs.
+    type: string
+    example: qs19504
+  qs_status:
+    description: The status of the qs.
+    type: string
+    example: canceled
+  qs_comment:
+    description: The comment of the qs.
+    type: string
+    example: ''
+example:
+  qs_id: '19504'
+  qs_name: Quickserver199
+  cost: '65.00'
+  qs_hostname: qs19504
+  qs_status: canceled
+  qs_comment: ''

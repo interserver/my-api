@@ -1,0 +1,6 @@
+type: object
+properties:
+  platform:
+    description: Platform information
+    type: string
+    example: kvm

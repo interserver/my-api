@@ -1,0 +1,37 @@
+get:
+  tags:
+    - Servers
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ServerOrder.yaml
+      description: Server Ordering details
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getNewServer
+  summary: Server Ordering Information
+  description: ''
+put:
+  tags:
+    - Servers
+  responses:
+    '200':
+      description: Validate Server order response
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: putServers
+  summary: Validate Server Order
+  description: ''
+post:
+  tags:
+    - Servers
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: addServer
+  summary: Place Server Order
+  description: ''

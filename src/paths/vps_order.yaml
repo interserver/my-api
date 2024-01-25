@@ -1,0 +1,37 @@
+get:
+  tags:
+    - VPS
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/VpsOrder.yaml
+      description: VPS Order information
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getNewVps
+  summary: VPS Ordering Information
+  description: ''
+put:
+  tags:
+    - VPS
+  responses:
+    '200':
+      description: Validate VPS order response.
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: putVps
+  summary: Validate VPS Order
+  description: ''
+post:
+  tags:
+    - VPS
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: addVps
+  summary: Place VPS Order
+  description: ''

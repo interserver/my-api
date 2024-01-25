@@ -1,0 +1,30 @@
+type: object
+properties:
+  qs_id:
+    description: Quickserver ID.
+    type: string
+    example: '221'
+  server_details:
+    description: Server details.
+    type: object
+    properties:
+      '381':
+        $ref: ./QuickserverOrderServerDetails381.yaml
+  templates:
+    description: Templates details.
+    type: object
+    properties:
+      Ubuntu:
+        $ref: ./QuickserverOrderTemplatesUbuntu64.yaml
+  version:
+    description: Version details.
+    type: object
+    properties:
+      centosstream-8:
+        $ref: ./QuickserverOrderVersionCentosstream8.yaml
+  distro_sel:
+    description: Distribution selection.
+    type: object
+    properties:
+      Ubuntu:
+        $ref: ./QuickserverOrderDistroSelUbuntu.yaml

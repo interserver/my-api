@@ -1,0 +1,15 @@
+title: Root Type for BackupOrderPutRequest
+description: Parameters to submit to validate your backup order
+type: object
+properties:
+  validateOnly:
+    type: boolean
+  serviceType:
+    format: int32
+    type: integer
+  coupon:
+    type: string
+example:
+  validateOnly: true
+  serviceType: 10831
+  coupon: ''

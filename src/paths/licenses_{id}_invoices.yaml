@@ -1,0 +1,22 @@
+get:
+  tags:
+    - Licenses
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ChargeInvoiceRows.yaml
+      description: Get Invoices response
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getLicenseInvoices
+  summary: Get License Invoices
+  description: ''
+parameters:
+  - name: id
+    description: License ID number
+    schema:
+      type: integer
+    in: path
+    required: true

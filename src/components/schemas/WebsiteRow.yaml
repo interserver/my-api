@@ -1,0 +1,42 @@
+title: WebsiteRow
+description: A result row from the `Webhosting` `GET` request.
+required:
+  - website_status
+  - website_id
+  - website_hostname
+  - website_comment
+  - services_name
+  - repeat_invoices_cost
+type: object
+properties:
+  website_id:
+    description: The id of the website.
+    type: string
+    example: '376359'
+  website_hostname:
+    description: The hostname of the website.
+    type: string
+    example: hussfamily.com
+  repeat_invoices_cost:
+    description: The repeat invoices cost of the website.
+    type: string
+    example: '5.99'
+  website_status:
+    description: The status of the website.
+    type: string
+    example: active
+  services_name:
+    description: The services name of the website.
+    type: string
+    example: Standard Web Hosting
+  website_comment:
+    description: The comment of the website.
+    type: string
+    example: website for manhattan project.
+example:
+  website_id: '376359'
+  website_hostname: hussfamily.com
+  repeat_invoices_cost: '5.99'
+  website_status: active
+  services_name: Standard Web Hosting
+  website_comment: ''

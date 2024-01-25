@@ -1,0 +1,29 @@
+get:
+  tags:
+    - QuickServers
+  responses:
+    '200':
+      description: QuickServer Insert CD info response
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getQsInsertCd
+  summary: Insert CD Information
+  description: ''
+post:
+  tags:
+    - QuickServers
+  responses:
+    '200':
+      $ref: ../components/responses/QueueResponse.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: postQsInsertCd
+  summary: Insert CD in QuickServer
+  description: ''
+parameters:
+  - name: id
+    description: QuickServer ID number
+    schema:
+      type: integer
+    in: path
+    required: true

@@ -1,0 +1,29 @@
+get:
+  tags:
+    - QuickServers
+  responses:
+    '200':
+      description: QuickServer Change Hostname info response
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getQsChangeHostname
+  summary: Get QuickServer Hostname
+  description: ''
+post:
+  tags:
+    - QuickServers
+  responses:
+    '200':
+      $ref: ../components/responses/QueueResponse.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: postQsChangeHostname
+  summary: Update QuickServer Hostname
+  description: ''
+parameters:
+  - name: id
+    description: QuickServer ID number
+    schema:
+      type: integer
+    in: path
+    required: true

@@ -1,0 +1,27 @@
+title: MailBlockClickHouse
+description: A block entry from the clickhouse mailblocks server.
+required:
+  - date
+  - to
+  - subject
+  - messageId
+  - from
+type: object
+properties:
+  date:
+    format: date
+    type: string
+  from:
+    type: string
+  messageId:
+    type: string
+  subject:
+    type: string
+  to:
+    type: string
+example:
+  date: '2023-08-07'
+  from: user@domain.com
+  messageId: pFaRqFUEWkucjhTuIzYuoAgWU@domain.com
+  subject: Test Email
+  to: '[''client@site.com'']'

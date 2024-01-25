@@ -1,0 +1,18 @@
+title: VpsTrafficDataDataResponse
+description: VPS Traffic Data section Data subsection response
+type: array
+items:
+  $ref: ./VPSTrafficDataDataSectionResponse.yaml
+example:
+  - - '2023-09-17T03:30:30Z'
+    - 3968
+  - - '2023-09-17T03:31:30Z'
+    - 840
+  - - '2023-09-17T03:32:31Z'
+    - 632
+  - - '2023-09-17T03:33:31Z'
+    - 1232
+  - - '2023-09-17T03:34:31Z'
+    - 2960
+  - - '2023-09-17T07:50:12Z'
+    - 5504

@@ -1,0 +1,14 @@
+type: object
+properties:
+  '465503':
+    description: Link to a VPS.
+    type: string
+    example: vps465503
+  '2500081':
+    description: Link to a VPS.
+    type: string
+    example: vps2500081
+  '2578866':
+    description: Link to a VPS.
+    type: string
+    example: vps2578866

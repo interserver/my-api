@@ -1,0 +1,69 @@
+title: VpsTrafficUsageResponse
+description: VPS Traffic Usage Section
+required:
+  - average
+  - current
+  - peak
+type: object
+properties:
+  current:
+    $ref: ./VpsTrafficTotalsSectionResponse.yaml
+    properties:
+      in:
+        format: int32
+        type: integer
+      out:
+        format: int32
+        type: integer
+  peak:
+    $ref: ./VpsTrafficTotalsSectionResponse.yaml
+    properties:
+      in:
+        format: int32
+        type: integer
+      out:
+        format: int32
+        type: integer
+  average:
+    $ref: ./VpsTrafficUsageAverageResponse.yaml
+    properties:
+      in:
+        type: object
+        properties:
+          total:
+            format: int32
+            type: integer
+          count:
+            format: int32
+            type: integer
+          value:
+            format: int32
+            type: integer
+      out:
+        type: object
+        properties:
+          total:
+            format: int32
+            type: integer
+          count:
+            format: int32
+            type: integer
+          value:
+            format: int32
+            type: integer
+example:
+  current:
+    in: 5504
+    out: 1248
+  peak:
+    in: 9176
+    out: 3600
+  average:
+    in:
+      total: 949688
+      count: 261
+      value: 3639
+    out:
+      total: 200752
+      count: 261
+      value: 770

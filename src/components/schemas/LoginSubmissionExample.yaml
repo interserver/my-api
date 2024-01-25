@@ -1,0 +1,48 @@
+title: LoginSubmissionExample
+description: The data to submit in the login request.
+required:
+  - login
+  - passwd
+type: object
+properties:
+  login:
+    type: string
+  passwd:
+    type: string
+  remember:
+    type: string
+  g-recaptcha-response:
+    type: object
+    properties:
+      __v_isShallow:
+        type: boolean
+      dep:
+        type: object
+        properties:
+          w:
+            format: int32
+            type: integer
+          'n':
+            format: int32
+            type: integer
+      __v_isRef:
+        type: boolean
+      _rawValue:
+        type: string
+      _value:
+        type: string
+  tfa:
+    description: Two Factor Authentication Response.
+    type: string
+example:
+  login: user@domain.com
+  passwd: mypassword
+  remember: 'true'
+  g-recaptcha-response:
+    __v_isShallow: false
+    dep:
+      w: 0
+      'n': 0
+    __v_isRef: true
+    _rawValue: zzzzz
+    _value: zzzzz

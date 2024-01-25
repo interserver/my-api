@@ -1,0 +1,35 @@
+get:
+  tags:
+    - Tickets
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Tickets.yaml
+          examples:
+            TicketsExample:
+              value:
+                ima: client
+                custid: '223513'
+                view: Open
+                currentPage: 1
+                limit: 50
+                sortcol: 6
+                sortdir: 1
+                rowsOffset: 0
+                tickets: []
+                pages: 7
+                rowsTotal: 311
+                inboxCount: 311
+                countArray:
+                  Open: 3
+                  On Hold: 3
+                  Closed: 305
+                viewText: Inbox
+      description: The listing of support tickets.
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getTicketsList
+  summary: List Support Tickets
+  description: ''

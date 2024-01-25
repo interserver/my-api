@@ -1,0 +1,47 @@
+get:
+  tags:
+    - VPS
+  parameters:
+    - name: id
+      description: VPS ID number
+      schema:
+        type: integer
+      in: path
+      required: true
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Vps.yaml
+      description: The VPS Information
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getVpsInfo
+  summary: Get VPS Order
+  description: ''
+post:
+  tags:
+    - VPS
+  parameters:
+    - name: id
+      description: The order ID number.
+      schema:
+        type: string
+      in: path
+      required: true
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: updateVpsInfo
+  summary: Update VPS Order
+  description: ''
+parameters:
+  - name: id
+    description: VPS ID number
+    schema:
+      type: integer
+    in: path
+    required: true

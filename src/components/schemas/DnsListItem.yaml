@@ -1,0 +1,15 @@
+title: DnsListItem
+description: ''
+type: object
+properties:
+  id:
+    type: integer
+  name:
+    type: string
+  content:
+    type: string
+additionalProperties: false
+example:
+  id: '68'
+  name: hussfamily.com
+  content: 64.20.35.186

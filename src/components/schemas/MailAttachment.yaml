@@ -1,0 +1,20 @@
+title: MailAttachment
+description: >-
+  (optional) File attachments to include in the email.  The file contents must
+  be base64
+required:
+  - data
+  - filename
+type: object
+properties:
+  filename:
+    description: The filename of the attached file.
+    type: string
+    example: message.txt
+  data:
+    description: The file contents base64 encoded
+    type: string
+    example: aGVsbG8gdGhlcmUK
+example:
+  filename: file.txt
+  data: base64_encoded_file_contents

@@ -1,0 +1,30 @@
+title: MailRow
+description: A result row from the `Mail` `GET` request.
+type: object
+properties:
+  mail_id:
+    description: The id of the mail.
+    type: string
+    example: '5652'
+  repeat_invoices_cost:
+    description: The repeat invoices cost of the mail.
+    type: string
+    example: '5.99'
+  mail_username:
+    description: The username of the mail.
+    type: string
+    example: mb5652
+  mail_status:
+    description: The status of the mail.
+    type: string
+    example: expired
+  services_name:
+    description: The services name of the mail.
+    type: string
+    example: MailBaby Mail
+example:
+  mail_id: '5652'
+  repeat_invoices_cost: '5.99'
+  mail_username: mb5652
+  mail_status: expired
+  services_name: MailBaby Mail

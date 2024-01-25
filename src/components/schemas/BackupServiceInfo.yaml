@@ -1,0 +1,61 @@
+type: object
+properties:
+  backup_id:
+    description: Backup ID.
+    type: string
+    example: '21163'
+  backup_server:
+    description: Backup server ID.
+    type: string
+    example: '38'
+  backup_username:
+    description: Backup username.
+    type: string
+    example: st21163
+  backup_type:
+    description: Backup type.
+    type: string
+    example: '10831'
+  backup_currency:
+    description: Backup currency.
+    type: string
+    example: USD
+  backup_order_date:
+    description: Backup order date.
+    type: string
+    example: '2021-12-29T14:09:57.000Z'
+  backup_custid:
+    description: Backup customer ID.
+    type: string
+    example: '2773'
+  backup_quota:
+    description: Backup quota.
+    type: string
+    example: '0'
+  backup_ip:
+    description: Backup IP address.
+    type: string
+    example: 64.20.55.234
+  backup_status:
+    description: Backup status.
+    type: string
+    example: canceled
+  backup_invoice:
+    description: Backup invoice.
+    type: string
+    example: '19591007'
+  backup_coupon:
+    description: Backup coupon.
+    type: string
+    example: '0'
+  backup_extra:
+    description: Backup extra information.
+    type: string
+    example: '[]'
+  backup_server_status:
+    description: Backup server status.
+    type: string
+    example: deleted
+  backup_comment:
+    description: Backup comment.
+    type: string

@@ -1,0 +1,6 @@
+type: object
+properties:
+  Ubuntu:
+    description: Selected distribution for Ubuntu.
+    type: string
+    example: Ubuntu

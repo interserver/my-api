@@ -1,0 +1,25 @@
+get:
+  tags:
+    - Public
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            type: object
+          examples:
+            AccountCountriesExample:
+              value:
+                AF: Afghanistan
+                US: United States
+                ZW: Zimbabwe
+      description: >-
+        The list of countries with both 2 letter abbreviations and the country
+        names.
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  security:
+    - {}
+  operationId: getCountries
+  summary: Get Countries
+  description: ''

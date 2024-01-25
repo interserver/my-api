@@ -1,0 +1,18 @@
+type: object
+properties:
+  .asia:
+    description: Service ID for .asia TLD
+    type: integer
+    example: 10001
+  .be:
+    description: Service ID for .be TLD
+    type: integer
+    example: 10002
+  .biz:
+    description: Service ID for .biz TLD
+    type: integer
+    example: 10003
+  .ca:
+    description: Service ID for .ca TLD
+    type: integer
+    example: 10004

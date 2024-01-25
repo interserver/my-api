@@ -1,0 +1,30 @@
+title: ServerRow
+description: A result row from the `Servers` `GET` request.
+required:
+  - server_status
+  - server_id
+  - server_hostname
+  - account_lid
+type: object
+properties:
+  server_id:
+    description: The id of the server.
+    type: string
+    example: '8404'
+  account_lid:
+    description: The account lid of the server.
+    type: string
+    example: detain@interserver.net
+  server_hostname:
+    description: The hostname of the server.
+    type: string
+    example: testsignup.is.net
+  server_status:
+    description: The status of the server.
+    type: string
+    example: deleted
+example:
+  server_id: '8404'
+  account_lid: detain@interserver.net
+  server_hostname: testsignup.is.net
+  server_status: deleted

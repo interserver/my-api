@@ -1,0 +1,10 @@
+type: object
+properties:
+  desc:
+    description: Description
+    type: string
+    example: Netmask
+  value:
+    description: Value
+    type: string
+    example: ''

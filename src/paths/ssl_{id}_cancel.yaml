@@ -1,0 +1,18 @@
+get:
+  tags:
+    - SSL-Certificates
+  responses:
+    '200':
+      $ref: ../components/responses/TextResponse.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: sslCancelGet
+  summary: Cancel a service
+  description: Cancels a service in our system.
+parameters:
+  - name: id
+    description: SSL Cert ID number
+    schema:
+      type: integer
+    in: path
+    required: true

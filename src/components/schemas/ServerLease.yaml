@@ -1,0 +1,18 @@
+required:
+  - mac
+  - authenticated
+  - group
+type: object
+properties:
+  mac:
+    description: MAC address associated with the lease.
+    type: string
+    example: 0c:c4:7a:af:35:00
+  authenticated:
+    description: Indicates if the lease is authenticated.
+    type: boolean
+    example: false
+  group:
+    description: Group identifier for the lease.
+    type: string
+    example: '1'

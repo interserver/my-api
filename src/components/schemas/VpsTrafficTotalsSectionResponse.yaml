@@ -1,0 +1,16 @@
+title: VpsTrafficTotalsSectionResponse
+description: VPS Traffic Totals Secttions Data
+required:
+  - out
+  - in
+type: object
+properties:
+  in:
+    format: int32
+    type: integer
+  out:
+    format: int32
+    type: integer
+example:
+  in: 49719744
+  out: 11316104

@@ -1,0 +1,53 @@
+required:
+  - serviceInfo
+  - client_links
+  - billingDetails
+  - custCurrency
+  - custCurrencySymbol
+  - package
+  - serviceExtra
+  - extraInfoTables
+  - service_overview_extra
+  - serviceType
+  - license_key
+type: object
+properties:
+  serviceInfo:
+    $ref: ./LicenseServiceInfo.yaml
+  client_links:
+    type: array
+    items:
+      $ref: ./LicenseClientLink.yaml
+  billingDetails:
+    $ref: ./LicenseBillingDetails.yaml
+  custCurrency:
+    description: Customer's currency
+    type: string
+    example: USD
+  custCurrencySymbol:
+    description: Currency symbol for customer
+    type: string
+    example: $
+  package:
+    description: Package name
+    type: string
+    example: KernelCare License
+  serviceExtra:
+    description: Extra service information
+    type: array
+    items:
+      type: string
+  extraInfoTables:
+    type: object
+    properties:
+      ip_info:
+        $ref: ./LicenseIpInfo.yaml
+  service_overview_extra:
+    description: Extra service overview information
+    type: string
+  serviceType:
+    $ref: ./LicenseServiceType.yaml
+  license_key:
+    description: License key
+    type: string
+    example: ''

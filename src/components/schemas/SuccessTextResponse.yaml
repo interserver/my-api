@@ -1,0 +1,18 @@
+title: SuccessTextResponse
+description: Resposne with success flag and text description.
+required:
+  - success
+type: object
+properties:
+  success:
+    description: Indicates whether or not the command was successful or not.
+    type: boolean
+  text:
+    description: Text associated with the response.
+    type: string
+  action:
+    description: Optional Action relating to the response.
+    type: string
+example:
+  success: true
+  text: Ok

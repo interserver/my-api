@@ -1,0 +1,66 @@
+title: Root Type for BackupOrderPostResponse
+description: Backup Order Placement Response
+type: object
+properties:
+  continue:
+    type: boolean
+  errors:
+    type: array
+    items: {}
+  total_cost:
+    type: string
+  iid:
+    type: string
+  iids:
+    type: array
+    items:
+      type: string
+  real_iids:
+    type: array
+    items:
+      type: string
+  serviceId:
+    format: int32
+    type: integer
+  invoice_description:
+    type: string
+  cj_params:
+    type: object
+    properties:
+      containerTagId:
+        type: string
+      CID:
+        type: string
+      OID:
+        type: string
+      TYPE:
+        type: string
+      ITEM1:
+        type: string
+      AMT1:
+        type: string
+      QTY1:
+        format: int32
+        type: integer
+      CURRENCY:
+        type: string
+example:
+  continue: true
+  errors: []
+  total_cost: '3.00'
+  iid: '25296597'
+  iids:
+    - SERVICEbackups40464
+  real_iids:
+    - '25296597'
+  serviceId: 40464
+  invoice_description: Storage ST 100
+  cj_params:
+    containerTagId: '1684'
+    CID: '1525038'
+    OID: backups40464
+    TYPE: '355669'
+    ITEM1: backups10831
+    AMT1: '3.00'
+    QTY1: 1
+    CURRENCY: USD

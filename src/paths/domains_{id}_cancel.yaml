@@ -1,0 +1,18 @@
+get:
+  tags:
+    - Domains
+  responses:
+    '200':
+      $ref: ../components/responses/TextResponse.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: domainsCancelGet
+  summary: Cancel Domain
+  description: Cancels a service in our system.
+parameters:
+  - name: id
+    description: Domain ID number
+    schema:
+      type: integer
+    in: path
+    required: true

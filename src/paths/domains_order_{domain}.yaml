@@ -1,0 +1,15 @@
+get:
+  tags:
+    - Domains
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getDomainOrderSearchResults
+  summary: Get Domain Order Search Results
+  description: Gets the order data for the given hostname
+parameters:
+  - name: domain
+    schema:
+      type: string
+    in: path
+    required: true

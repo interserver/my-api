@@ -1,0 +1,43 @@
+get:
+  tags:
+    - SSL-Certificates
+  parameters:
+    - name: id
+      description: The order ID number.
+      schema:
+        type: integer
+      in: path
+      required: true
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: getSslInfo
+  summary: Get SSL Cert Info
+  description: ''
+post:
+  tags:
+    - SSL-Certificates
+  parameters:
+    - name: id
+      description: The order ID number.
+      schema:
+        type: string
+      in: path
+      required: true
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: updateSslInfo
+  summary: Update SSL Cert Order
+  description: ''
+parameters:
+  - name: id
+    description: SSL Cert ID number
+    schema:
+      type: integer
+    in: path
+    required: true

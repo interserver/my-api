@@ -1,0 +1,6 @@
+type: object
+properties:
+  '386522':
+    description: Link to a license.
+    type: string
+    example: 1.2.3.4

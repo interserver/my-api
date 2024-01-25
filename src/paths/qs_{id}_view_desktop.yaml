@@ -1,0 +1,29 @@
+get:
+  tags:
+    - QuickServers
+  responses:
+    '200':
+      description: Get QuickServer View Desktop Information
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getQsViewDesktop
+  summary: Get View Desktop Info
+  description: ''
+post:
+  tags:
+    - QuickServers
+  responses:
+    '200':
+      description: Submit QuickServer View Desktop Information
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: postQsViewDesktop
+  summary: Update View Desktop
+  description: ''
+parameters:
+  - name: id
+    description: QuickServer ID number
+    schema:
+      type: integer
+    in: path
+    required: true

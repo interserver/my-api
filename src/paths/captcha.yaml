@@ -1,0 +1,23 @@
+get:
+  tags:
+    - Public
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/CaptchaResponse.yaml
+          examples:
+            CaptchaResponseExample:
+              value:
+                captcha: data:image/jpeg;base64,/9j/4AAQ
+      description: >-
+        An array containing a `captcha` field containing a string with a base64
+        encoded captcha image.
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  security:
+    - {}
+  operationId: getCaptcha
+  summary: Get Captcha Image
+  description: Retrieves the information so you can render a captcha check

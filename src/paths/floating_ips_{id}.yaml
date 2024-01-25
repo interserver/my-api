@@ -1,0 +1,43 @@
+get:
+  tags:
+    - Floating_IPs
+  parameters:
+    - name: id
+      description: The order ID number.
+      schema:
+        type: integer
+      in: path
+      required: true
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: getFloatingIpInfo
+  summary: View Floating IP
+  description: ''
+post:
+  tags:
+    - Floating_IPs
+  parameters:
+    - name: id
+      description: The order ID number.
+      schema:
+        type: string
+      in: path
+      required: true
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: updateFloatingIpInfo
+  summary: Update Floating IP
+  description: ''
+parameters:
+  - name: id
+    description: Floating IPs ID number
+    schema:
+      type: integer
+    in: path
+    required: true

@@ -1,0 +1,40 @@
+post:
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/SendMail.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/SendMail.yaml
+    required: true
+  tags:
+    - Mail
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/GenericResponse.yaml
+      description: search results matching criteria
+    '400':
+      $ref: ../components/responses/BadInput.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '404':
+      $ref: ../components/responses/NotFound.yaml
+  operationId: sendMail
+  summary: Sends an Email
+  description: >
+    Sends an email through one of your mail orders.
+
+
+    *Note*: If you want to send to multiple recipients or use file attachments
+    use the advsend (Advanced Send) call instead.
+parameters:
+  - name: id
+    description: Mail ID number
+    schema:
+      type: integer
+    in: path
+    required: true

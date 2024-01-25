@@ -1,0 +1,22 @@
+type: object
+properties:
+  cpu:
+    description: CPU details of the server.
+    type: string
+    example: AMD Ryzen 9 5900X 12-Core Processor
+  ram:
+    description: RAM capacity of the server.
+    type: string
+    example: 119GB
+  hd:
+    description: Hard disk capacity of the server.
+    type: string
+    example: 1760GB
+  cores:
+    description: Number of CPU cores.
+    type: string
+    example: 24
+  cost:
+    description: Cost of the server.
+    type: string
+    example: $140.00

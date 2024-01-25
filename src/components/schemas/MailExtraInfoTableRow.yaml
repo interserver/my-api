@@ -1,0 +1,10 @@
+type: object
+properties:
+  desc:
+    description: The description of the extra info table row.
+    type: string
+    example: SMTP Server
+  value:
+    description: The value of the extra info table row.
+    type: string
+    example: relay.mailbaby.net

@@ -1,0 +1,14 @@
+title: GenericResponse
+description: Generic Response
+required:
+  - text
+  - status
+type: object
+properties:
+  status:
+    type: string
+  text:
+    type: string
+example:
+  status: ok
+  text: The command completed successfully.

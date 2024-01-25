@@ -1,0 +1,15 @@
+get:
+  tags:
+    - Licenses
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getLicenseOrderCatTagInfo
+  summary: Get License Order Information for Category
+  description: Get License Order data for the given license category.
+parameters:
+  - name: catTag
+    schema:
+      type: string
+    in: path
+    required: true

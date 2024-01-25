@@ -1,0 +1,37 @@
+type: object
+properties:
+  service_last_invoice_date:
+    description: Last invoice date for the service
+    type: string
+  service_payment_status:
+    description: Payment status for the service
+    type: string
+  service_frequency:
+    description: Frequency of the service
+    type: string
+  next_date:
+    description: Next date for the service
+    type: string
+  service_next_invoice_date:
+    description: Next invoice date for the service
+    type: string
+  service_currency:
+    description: Currency for the service
+    type: string
+    example: USD
+  service_currency_symbol:
+    description: Currency symbol for the service
+    type: string
+    example: $
+  service_coupon:
+    description: Coupon for the service
+    type: string
+  service_cost_info:
+    description: Cost information for the service
+    type: string
+  service_extra:
+    $ref: ./WebsiteServiceExtra.yaml
+    description: Extra information for the service
+  service_extra_json:
+    description: Extra information in JSON format for the service
+    type: string

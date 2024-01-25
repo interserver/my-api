@@ -1,0 +1,27 @@
+title: ServiceCategory
+description: A Category of Services.  This is the broadest grouping within a module.
+required:
+  - category_tag
+  - category_name
+  - category_module
+  - category_id
+type: object
+properties:
+  category_id:
+    format: int32
+    type: integer
+    example: '1'
+  category_name:
+    type: string
+    example: OpenVZ Virtual Servers
+  category_tag:
+    type: string
+    example: openvz
+  category_module:
+    type: string
+    example: vps
+example:
+  category_id: 505
+  category_name: KSplice
+  category_tag: ksplice
+  category_module: licenses

@@ -1,0 +1,42 @@
+get:
+  tags:
+    - QuickServers
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ReverseDnsEntries.yaml
+      description: QuickServer Reverse DNS info response
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getQsReverseDns
+  summary: Reverse DNS Info
+  description: ''
+post:
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/ReverseDnsEntries.yaml
+      multipart/form-data:
+        schema:
+          $ref: ../components/schemas/ReverseDnsEntries.yaml
+    required: true
+  tags:
+    - QuickServers
+  responses:
+    '200':
+      description: Update QuickServer Reverse DNS response
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: postQsReverseDns
+  summary: Update Reverse DNS
+  description: ''
+parameters:
+  - name: id
+    description: QuickServer ID number
+    schema:
+      type: integer
+    in: path
+    required: true

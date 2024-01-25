@@ -1,0 +1,11 @@
+type: object
+properties:
+  title:
+    description: The title of the extra info table.
+    type: string
+    example: Connection Information
+  rows:
+    description: The rows of the extra info table.
+    type: array
+    items:
+      $ref: ./MailExtraInfoTableRow.yaml

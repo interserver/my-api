@@ -1,0 +1,22 @@
+type: object
+properties:
+  serviceCategories:
+    description: License service categories
+    type: object
+    properties:
+      LicensesOrderServiceCategories509:
+        $ref: ./LicensesOrderServiceCategories509.yaml
+  packageCosts:
+    description: Costs of license packages
+    type: object
+    properties:
+      LicensesOrderPackageCosts11468:
+        description: Cost of package with ID 11468
+        type: number
+        example: 3.75
+  serviceTypes:
+    description: Types of license services
+    type: object
+    properties:
+      LicensesOrderServiceTypes11482:
+        $ref: ./LicensesOrderServiceTypes11482.yaml

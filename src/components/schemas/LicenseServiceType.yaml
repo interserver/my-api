@@ -1,0 +1,38 @@
+type: object
+properties:
+  services_id:
+    description: Service ID
+    type: string
+    example: '5034'
+  services_name:
+    description: Service name
+    type: string
+    example: KernelCare License
+  services_cost:
+    description: Service cost
+    type: string
+    example: '2.95'
+  services_category:
+    description: Service category
+    type: string
+    example: '508'
+  services_buyable:
+    description: Buyable status
+    type: string
+    example: '1'
+  services_type:
+    description: Service type
+    type: string
+    example: '508'
+  services_field1:
+    description: Service field 1
+    type: string
+    example: '16'
+  services_field2:
+    description: Service field 2
+    type: string
+    example: ''
+  services_module:
+    description: Service module
+    type: string
+    example: licenses

@@ -1,0 +1,20 @@
+type: object
+properties:
+  services_id:
+    type: string
+  services_name:
+    type: string
+  services_cost:
+    type: string
+  services_category:
+    type: string
+  services_buyable:
+    type: string
+  services_type:
+    type: string
+  services_field1:
+    type: string
+  services_field2:
+    type: string
+  services_module:
+    type: string

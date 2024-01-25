@@ -1,0 +1,5 @@
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/QueueResponse.yaml
+description: Response message from sending a service queue.

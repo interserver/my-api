@@ -1,0 +1,18 @@
+get:
+  tags:
+    - Licenses
+  responses:
+    '200':
+      $ref: ../components/responses/TextResponse.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: licensesCancelGet
+  summary: Cancel License
+  description: Cancels a service in our system.
+parameters:
+  - name: id
+    description: License ID number
+    schema:
+      type: integer
+    in: path
+    required: true

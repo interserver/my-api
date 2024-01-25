@@ -1,0 +1,38 @@
+type: object
+properties:
+  services_id:
+    description: The ID of the service type.
+    type: string
+    example: '10880'
+  services_name:
+    description: The name of the service type.
+    type: string
+    example: MailBaby Mail
+  services_cost:
+    description: The cost of the service type.
+    type: string
+    example: '1.00'
+  services_category:
+    description: The category of the service type.
+    type: string
+    example: '800'
+  services_buyable:
+    description: Whether the service type is buyable.
+    type: string
+    example: '1'
+  services_type:
+    description: The type of the service type.
+    type: string
+    example: '800'
+  services_field1:
+    description: Additional field for the service type.
+    type: string
+    example: ''
+  services_field2:
+    description: Additional field for the service type.
+    type: string
+    example: ''
+  services_module:
+    description: The module of the service type.
+    type: string
+    example: mail

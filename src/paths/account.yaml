@@ -1,0 +1,46 @@
+summary: User Account Information and Management
+description: >
+  This endpoint allows you to manage various user details, including contact
+  information and account security.
+
+
+  - Use the `GET` method to retrieve your account information.
+
+  - Use the `POST` method to update your stored contact and billing information.
+get:
+  tags:
+    - Account
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/AccountInfo.yaml
+      description: Your account information.
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getAccountInfo
+  summary: Get Account Information
+  description: Retrieves your account information.
+post:
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/AccountInfoPost.yaml
+      multipart/form-data:
+        schema:
+          $ref: ../components/schemas/AccountInfoPost.yaml
+    required: true
+  tags:
+    - Account
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: updateAccountInfo
+  summary: Update Account Information
+  description: >-
+    Updates the stored contact and billing information we have in our system
+    with the provided data.

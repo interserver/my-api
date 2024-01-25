@@ -1,0 +1,10 @@
+type: object
+properties:
+  spice:
+    description: Spice
+    type: integer
+    example: 5903
+  snapshots:
+    type: array
+    items:
+      $ref: ./VpsSnapshot.yaml

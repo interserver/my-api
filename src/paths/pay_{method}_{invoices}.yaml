@@ -1,0 +1,11 @@
+parameters:
+  - name: method
+    schema:
+      type: string
+    in: path
+    required: true
+  - name: invoices
+    schema:
+      type: string
+    in: path
+    required: true

@@ -1,0 +1,130 @@
+type: object
+properties:
+  qs_id:
+    description: Quickserver ID
+    type: string
+    example: '365'
+  qs_name:
+    description: Quickserver name
+    type: string
+    example: Qs365
+  qs_ip:
+    description: IP address
+    type: string
+    example: ''
+  qs_type:
+    description: Type
+    type: string
+    example: '14'
+  qs_hdsize:
+    description: HDD size
+    type: string
+    example: '1760'
+  qs_hdfree:
+    description: Free HDD space
+    type: string
+    example: '1192'
+  qs_bits:
+    description: Bits
+    type: string
+    example: '64'
+  qs_load:
+    description: Load
+    type: string
+    example: '3.45'
+  qs_ram:
+    description: RAM information
+    type: string
+    example: '29550679'
+  qs_cpu_model:
+    description: CPU model
+    type: string
+    example: Intel(R) Xeon(R) CPU E3-1271 v3 @ 3.60GHz
+  qs_cpu_mhz:
+    description: CPU frequency
+    type: string
+    example: '2900'
+  qs_location:
+    description: Location
+    type: string
+    example: '1'
+  qs_available:
+    description: Available information
+    type: string
+    example: '0'
+  qs_cost:
+    description: Cost
+    type: string
+    example: '49'
+  qs_last_update:
+    description: Last update date
+    type: string
+    example: '2023-08-17T23:52:02.000Z'
+  qs_cores:
+    description: Number of cores
+    type: string
+    example: '8'
+  qs_iowait:
+    description: I/O wait
+    type: string
+    example: '6.89'
+  qs_raid_status:
+    description: RAID status
+    type: string
+    example: 'OK: zfs:all pools are healthy'
+  qs_drive_type:
+    description: Drive type
+    type: string
+    example: SSD
+  qs_order:
+    description: Order number
+    type: string
+    example: '92263'
+  qs_raid_building:
+    description: RAID building information
+    type: string
+    example: '0'
+  qs_kernel:
+    description: Kernel version
+    type: string
+    example: 5.15.0-69-generic
+  qs_ioping:
+    description: IOPing information
+    type: string
+    example: '330707348'
+  qs_speed:
+    description: Speed information
+    type: string
+    example: '1000'
+  qs_distro:
+    description: Distribution name
+    type: string
+    example: Ubuntu
+  qs_distro_version:
+    description: Distribution version
+    type: string
+    example: '22.04'
+  qs_bytes_sec_in:
+    description: Bytes/sec in
+    type: string
+    example: '0'
+  qs_bytes_sec_out:
+    description: Bytes/sec out
+    type: string
+    example: '0'
+  qs_packets_sec_in:
+    description: Packets/sec in
+    type: string
+    example: '0'
+  qs_packets_sec_out:
+    description: Packets/sec out
+    type: string
+    example: '0'
+  qs_last_install_time:
+    description: Last install time (null)
+  qs_partitions:
+    description: Partitions information (null)
+  qs_cpu_flags:
+    description: CPU flags
+    type: string
+    example: ''

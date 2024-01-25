@@ -1,0 +1,54 @@
+get:
+  tags:
+    - Mail
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              required:
+                - id
+                - status
+                - username
+              type: object
+              properties:
+                id:
+                  type: integer
+                  example: 1234
+                status:
+                  type: string
+                  example: active
+                username:
+                  type: string
+                  example: mb1234
+                password:
+                  type: string
+                  example: guest123
+                comment:
+                  type: string
+                  example: main mail account
+      links:
+        delistBlockLink:
+          operationId: delistBlock
+          parameters:
+            id: $response.body#/0/id
+          description: >-
+            The `id` value returned in the response can be used as the `id`
+            parameter in `GET /mail/{id}/advsend`.
+      description: OK
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '404':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getStats
+  summary: Account usage statistics.
+  description: Returns information about the usage on your mail accounts.
+parameters:
+  - name: id
+    description: Mail ID number
+    schema:
+      type: integer
+    in: path
+    required: true

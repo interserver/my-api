@@ -1,0 +1,10 @@
+type: object
+properties:
+  title:
+    description: Table title
+    type: string
+    example: IP Information
+  rows:
+    type: array
+    items:
+      $ref: ./QuickserverIpTableRow.yaml

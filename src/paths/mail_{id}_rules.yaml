@@ -1,0 +1,95 @@
+summary: Deny Rules
+description: >-
+  The deny rules allow you to setup assorted types of rules which will
+  automatically deny the email from being sent through our system when  the
+  citeria match.
+get:
+  tags:
+    - Mail
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/DenyRuleRecord.yaml
+          examples:
+            ExampleMailRulesList:
+              value:
+                - id: 14
+                  user: mb20682
+                  type: email
+                  data: domeinwo@server.guesshost.net
+                  created: '2022-03-22 19:16:35'
+                - id: 15
+                  user: mb20682
+                  type: email
+                  data: mamediieva@thedigital.gov.ua
+                  created: '2022-03-22 19:18:01'
+      links:
+        delistBlockLink:
+          operationId: delistBlock
+          parameters:
+            id: $response.body#/0/id
+          description: >-
+            The `id` value returned in the response can be used as the `id`
+            parameter in `GET /mail/{id}/advsend`.
+      description: OK
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '404':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getRules
+  summary: Displays a listing of deny email rules.
+  description: Returns a listing of all the deny block rules you have configured.
+post:
+  requestBody:
+    description: These are the fields needed to create a new email deny rule.
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/DenyRuleNew.yaml
+        examples:
+          DenyRuleNewJsonExample:
+            value:
+              user: mb20682
+              type: email
+              data: domeinwo@server.guesshost.net
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/DenyRuleNew.yaml
+        examples:
+          DenyRuleNewFormExample:
+            value:
+              user: mb20682
+              type: email
+              data: domeinwo@server.guesshost.net
+    required: true
+  tags:
+    - Mail
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/GenericResponse.yaml
+      description: search results matching criteria
+    '400':
+      $ref: ../components/responses/BadInput.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '404':
+      $ref: ../components/responses/NotFound.yaml
+  operationId: addRule
+  summary: Creates a new email deny rule.
+  description: >-
+    Adds a new email deny rule into the system to block new emails that match
+    the given criteria
+parameters:
+  - name: id
+    description: Mail ID number
+    schema:
+      type: integer
+    in: path
+    required: true

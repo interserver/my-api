@@ -1,0 +1,89 @@
+title: Account Information Update Request
+description: Request to update account information.
+required:
+  - name
+  - address
+  - city
+  - country
+  - phone
+  - state
+  - zip
+type: object
+properties:
+  name:
+    description: Your name.
+    type: string
+    example: John Doe
+  company:
+    description: Your company name.
+    type: string
+    example: My Company
+  address:
+    description: Your address.
+    type: string
+    example: 124 My St
+  address2:
+    description: Additional address information.
+    type: string
+  city:
+    description: Your city.
+    type: string
+    example: My Town
+  state:
+    description: Your state.
+    type: string
+    example: PA
+  zip:
+    description: Your ZIP code.
+    type: string
+    example: '17522'
+  country:
+    description: Your country.
+    type: string
+    example: US
+  phone:
+    description: Your phone number.
+    type: string
+    example: '8675309'
+  locale:
+    description: Your preferred locale.
+    type: string
+  email_invoices:
+    description: Your email for invoice notifications.
+    type: string
+  email_abuse:
+    description: Your email for abuse notifications.
+    type: string
+  disable_reset:
+    description: Set to `true` to disable account resets, or `false` to enable them.
+    type: boolean
+  disable_reinstall:
+    description: Set to `true` to disable server reinstalls, or `false` to enable them.
+    type: boolean
+  disable_server_notifications:
+    description: Set to `true` to disable server notifications, or `false` to enable them.
+    type: boolean
+  disable_email_notifications:
+    description: Set to `true` to disable email notifications, or `false` to enable them.
+    type: boolean
+  gstin:
+    description: Your GST identification number (if applicable).
+    type: string
+example:
+  name: John Doe
+  company: My Company
+  address: 124 My St
+  address2: ''
+  city: My Town
+  state: PA
+  zip: '17522'
+  country: US
+  phone: '8675309'
+  locale: ''
+  email_invoices: ''
+  email_abuse: ''
+  disable_reset: false
+  disable_reinstall: false
+  disable_server_notifications: false
+  disable_email_notifications: false
+  gstin: ''

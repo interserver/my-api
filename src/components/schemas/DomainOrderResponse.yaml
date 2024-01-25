@@ -1,0 +1,23 @@
+type: object
+properties:
+  _OPS_version:
+    type: string
+  protocol:
+    type: string
+  is_success:
+    type: string
+  action:
+    type: string
+  attributes:
+    type: object
+    properties:
+      id:
+        type: string
+      admin_email:
+        type: string
+  response_text:
+    type: string
+  object:
+    type: string
+  response_code:
+    type: string

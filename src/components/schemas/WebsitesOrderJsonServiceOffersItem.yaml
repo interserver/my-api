@@ -1,0 +1,48 @@
+type: object
+properties:
+  service_offer_id:
+    description: Service offer ID
+    type: string
+    example: '136'
+  service_id:
+    description: Service ID
+    type: string
+    example: '1026'
+  intro_cost:
+    description: Introductory cost
+    type: integer
+    example: 96
+  renewal_cost:
+    description: Renewal cost
+    type: integer
+    example: 96
+  intro_frequency:
+    description: Introductory frequency
+    type: string
+    example: '12'
+  renewal_frequency:
+    description: Renewal frequency
+    type: string
+    example: '12'
+  allow_coupon:
+    description: Allow coupon
+    type: string
+    example: '1'
+  service_module:
+    description: Service module
+    type: string
+    example: webhosting
+  created_at:
+    description: Creation date
+    type: string
+    example: '2023-01-25T14:50:55.000Z'
+  updated_at:
+    description: Update date
+    type: string
+  deleted_at:
+    description: Deletion date
+    type: string
+  currencySymbol:
+    description: Currency symbol
+    type: string
+    example: $

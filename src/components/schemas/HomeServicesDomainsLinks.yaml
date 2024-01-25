@@ -1,0 +1,14 @@
+type: object
+properties:
+  '376114':
+    description: Link to a domain.
+    type: string
+    example: pimpmy.website
+  '376503':
+    description: Link to a domain.
+    type: string
+    example: hostingenuity.com
+  '592337':
+    description: Link to a domain.
+    type: string
+    example: detain.dev

@@ -1,0 +1,11 @@
+get:
+  tags:
+    - Billing
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: getBillingPrePays
+  summary: List PrePays
+  description: ''

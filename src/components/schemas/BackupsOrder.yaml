@@ -1,0 +1,12 @@
+required:
+  - packageCosts
+  - serviceTypes
+type: object
+properties:
+  packageCosts:
+    $ref: ./BackupsOrderPackageCosts.yaml
+  serviceTypes:
+    type: object
+    properties:
+      '11006':
+        $ref: ./BackupsOrderServiceTypes.yaml

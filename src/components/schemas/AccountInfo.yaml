@@ -1,0 +1,911 @@
+title: AccountInfo
+description: ''
+type: object
+properties:
+  custid:
+    type: string
+  ima:
+    type: string
+  data:
+    $ref: ./AccountInfoData.yaml
+    properties:
+      group:
+        type: string
+      address:
+        type: string
+      city:
+        type: string
+      country:
+        type: string
+      disable_cc:
+        type: string
+      fraudrecord_score:
+        type: string
+      ima:
+        type: string
+      maxmind_riskscore:
+        type: string
+      name:
+        type: string
+      payment_method:
+        type: string
+      phone:
+        type: string
+      pin:
+        type: string
+      state:
+        type: string
+      status:
+        type: string
+      zip:
+        type: string
+      account_id:
+        type: string
+      account_lid:
+        type: string
+      address2:
+        type: string
+      affiliate_dock_description:
+        type: string
+      affiliate_dock_title:
+        type: string
+      affiliate_payment_method:
+        type: string
+      affiliate_paypal:
+        type: string
+      cc:
+        type: string
+      cc_auto:
+        type: string
+      cc_exp:
+        type: string
+      cc_type:
+        type: string
+      cc_whitelist:
+        type: string
+      ccs:
+        type: object
+        properties:
+          '1':
+            type: object
+            properties:
+              cc:
+                type: string
+              cc_exp:
+                type: string
+              name:
+                type: string
+              country:
+                type: string
+              verified:
+                type: boolean
+          '5':
+            type: object
+            properties:
+              cc:
+                type: string
+              cc_exp:
+                type: string
+              name:
+                type: string
+              address:
+                type: string
+              city:
+                type: string
+              state:
+                type: string
+              zip:
+                type: string
+              country:
+                type: string
+              maxmind_riskscore:
+                type: string
+              maxmind:
+                type: object
+                properties:
+                  distance:
+                    type: string
+                  countryMatch:
+                    type: string
+                  countryCode:
+                    type: string
+                  freeMail:
+                    type: string
+                  anonymousProxy:
+                    type: string
+                  binMatch:
+                    type: string
+                  binCountry:
+                    type: string
+                  err:
+                    type: string
+                  proxyScore:
+                    type: string
+                  ip_region:
+                    type: string
+                  ip_city:
+                    type: string
+                  ip_latitude:
+                    type: string
+                  ip_longitude:
+                    type: string
+                  binName:
+                    type: string
+                  ip_isp:
+                    type: string
+                  ip_org:
+                    type: string
+                  binNameMatch:
+                    type: string
+                  binPhoneMatch:
+                    type: string
+                  binPhone:
+                    type: string
+                  custPhoneInBillingLoc:
+                    type: string
+                  highRiskCountry:
+                    type: string
+                  queriesRemaining:
+                    type: string
+                  cityPostalMatch:
+                    type: string
+                  shipCityPostalMatch:
+                    type: string
+                  maxmindID:
+                    type: string
+                  ip_asnum:
+                    type: string
+                  ip_userType:
+                    type: string
+                  ip_countryConf:
+                    type: string
+                  ip_regionConf:
+                    type: string
+                  ip_cityConf:
+                    type: string
+                  ip_postalCode:
+                    type: string
+                  ip_postalConf:
+                    type: string
+                  ip_accuracyRadius:
+                    type: string
+                  ip_netSpeedCell:
+                    type: string
+                  ip_metroCode:
+                    type: string
+                  ip_areaCode:
+                    type: string
+                  ip_timeZone:
+                    type: string
+                  ip_regionName:
+                    type: string
+                  ip_domain:
+                    type: string
+                  ip_countryName:
+                    type: string
+                  ip_continentCode:
+                    type: string
+                  ip_corporateProxy:
+                    type: string
+                  isTransProxy:
+                    type: string
+                  carderEmail:
+                    type: string
+                  highRiskUsername:
+                    type: string
+                  highRiskPassword:
+                    type: string
+                  riskScore:
+                    format: double
+                    type: number
+                  prepaid:
+                    type: string
+                  minfraud_version:
+                    type: string
+                  service_level:
+                    type: string
+                  female_name:
+                    type: string
+              verified:
+                type: boolean
+          '6':
+            type: object
+            properties:
+              cc:
+                type: string
+              cc_exp:
+                type: string
+              name:
+                type: string
+              city:
+                type: string
+              state:
+                type: string
+              zip:
+                type: string
+              country:
+                type: string
+              maxmind_riskscore:
+                type: string
+              maxmind:
+                type: object
+                properties:
+                  distance:
+                    type: string
+                  countryMatch:
+                    type: string
+                  countryCode:
+                    type: string
+                  freeMail:
+                    type: string
+                  anonymousProxy:
+                    type: string
+                  binMatch:
+                    type: string
+                  binCountry:
+                    type: string
+                  err:
+                    type: string
+                  proxyScore:
+                    type: string
+                  ip_region:
+                    type: string
+                  ip_city:
+                    type: string
+                  ip_latitude:
+                    type: string
+                  ip_longitude:
+                    type: string
+                  binName:
+                    type: string
+                  ip_isp:
+                    type: string
+                  ip_org:
+                    type: string
+                  binNameMatch:
+                    type: string
+                  binPhoneMatch:
+                    type: string
+                  binPhone:
+                    type: string
+                  custPhoneInBillingLoc:
+                    type: string
+                  highRiskCountry:
+                    type: string
+                  queriesRemaining:
+                    type: string
+                  cityPostalMatch:
+                    type: string
+                  shipCityPostalMatch:
+                    type: string
+                  maxmindID:
+                    type: string
+                  ip_asnum:
+                    type: string
+                  ip_userType:
+                    type: string
+                  ip_countryConf:
+                    type: string
+                  ip_regionConf:
+                    type: string
+                  ip_cityConf:
+                    type: string
+                  ip_postalCode:
+                    type: string
+                  ip_postalConf:
+                    type: string
+                  ip_accuracyRadius:
+                    type: string
+                  ip_netSpeedCell:
+                    type: string
+                  ip_metroCode:
+                    type: string
+                  ip_areaCode:
+                    type: string
+                  ip_timeZone:
+                    type: string
+                  ip_regionName:
+                    type: string
+                  ip_domain:
+                    type: string
+                  ip_countryName:
+                    type: string
+                  ip_continentCode:
+                    type: string
+                  ip_corporateProxy:
+                    type: string
+                  isTransProxy:
+                    type: string
+                  carderEmail:
+                    type: string
+                  highRiskUsername:
+                    type: string
+                  highRiskPassword:
+                    type: string
+                  riskScore:
+                    format: double
+                    type: number
+                  prepaid:
+                    type: string
+                  minfraud_version:
+                    type: string
+                  service_level:
+                    type: string
+                  female_name:
+                    type: string
+              verified:
+                type: boolean
+      ccs_added:
+        type: string
+      company:
+        type: string
+      currency:
+        type: string
+      disable_reinstall:
+        type: string
+      disable_reset:
+        type: string
+      email:
+        type: string
+      email_abuse:
+        type: string
+      email_settings:
+        type: object
+        properties:
+          admin/cc_bad_response:
+            type: string
+          admin/mass_communications.tpl:
+            type: string
+      extra:
+        type: object
+        properties:
+          private_whois:
+            type: string
+      facebook_id:
+        format: date-time
+        type: string
+      facebook_url:
+        type: string
+      firstname:
+        type: string
+      fraudrecord:
+        type: object
+        properties:
+          score:
+            type: string
+          count:
+            type: string
+          reliability:
+            type: string
+          code:
+            type: string
+      github_id:
+        type: string
+      github_url:
+        type: string
+      google_id:
+        type: string
+      google_url:
+        type: string
+      innertell_id:
+        type: string
+      lastname:
+        type: string
+      locale:
+        type: string
+      maxmind:
+        type: object
+        properties:
+          distance:
+            type: string
+          countryMatch:
+            type: string
+          countryCode:
+            type: string
+          freeMail:
+            type: string
+          anonymousProxy:
+            type: string
+          score:
+            type: string
+          binMatch:
+            type: string
+          binCountry:
+            type: string
+          err:
+            type: string
+          proxyScore:
+            type: string
+          ip_region:
+            type: string
+          ip_city:
+            type: string
+          ip_latitude:
+            type: string
+          ip_longitude:
+            type: string
+          binName:
+            type: string
+          ip_isp:
+            type: string
+          ip_org:
+            type: string
+          binNameMatch:
+            type: string
+          binPhoneMatch:
+            type: string
+          binPhone:
+            type: string
+          custPhoneInBillingLoc:
+            type: string
+          highRiskCountry:
+            type: string
+          queriesRemaining:
+            type: string
+          cityPostalMatch:
+            type: string
+          shipCityPostalMatch:
+            type: string
+          maxmindID:
+            type: string
+          ip_asnum:
+            type: string
+          ip_userType:
+            type: string
+          ip_countryConf:
+            type: string
+          ip_regionConf:
+            type: string
+          ip_cityConf:
+            type: string
+          ip_postalCode:
+            type: string
+          ip_postalConf:
+            type: string
+          ip_accuracyRadius:
+            type: string
+          ip_netSpeedCell:
+            type: string
+          ip_metroCode:
+            type: string
+          ip_areaCode:
+            type: string
+          ip_timeZone:
+            type: string
+          ip_regionName:
+            type: string
+          ip_domain:
+            type: string
+          ip_countryName:
+            type: string
+          ip_continentCode:
+            type: string
+          ip_corporateProxy:
+            type: string
+          carderEmail:
+            type: string
+          highRiskUsername:
+            type: string
+          riskScore:
+            type: string
+          explanation:
+            type: string
+          female_name:
+            type: string
+      maxmind_score:
+        type: string
+      mb_id:
+        type: string
+      modernbill_id:
+        type: string
+      picture:
+        type: string
+      referrer_coupon:
+        type: string
+      reseller_markup:
+        type: string
+      username:
+        type: string
+      ssh_key:
+        type: string
+      ssh_key_wrapped:
+        type: string
+      api_key:
+        type: string
+      api_key_wrapped:
+        type: string
+      2fa_google_key:
+        type: string
+      2fa_google_enabled:
+        type: boolean
+      2fa_google:
+        format: int32
+        type: integer
+      2fa_google_split:
+        type: string
+      2fa_google_qr:
+        type: string
+  ip:
+    type: string
+  oauthproviders:
+    $ref: ./AccountInfoOauthConfigProviders.yaml
+  oauthconfig:
+    $ref: ./AccountInfoOauthConfig.yaml
+    properties:
+      callback:
+        type: string
+      providers:
+        type: object
+        properties:
+          Twitter:
+            type: object
+            properties:
+              enabled:
+                type: boolean
+              linked:
+                type: boolean
+          Facebook:
+            type: object
+            properties:
+              enabled:
+                type: boolean
+              account:
+                type: string
+              url:
+                type: string
+              linked:
+                type: boolean
+          Google:
+            type: object
+            properties:
+              enabled:
+                type: boolean
+              account:
+                type: string
+              url:
+                type: string
+              linked:
+                type: boolean
+          GitHub:
+            type: object
+            properties:
+              enabled:
+                type: boolean
+              account:
+                type: string
+              url:
+                type: string
+              linked:
+                type: boolean
+  oauthadapters:
+    type: array
+    items:
+      type: string
+  limits:
+    $ref: ./AccountInfoLimits.yaml
+  language:
+    type: string
+  countryCurrencies:
+    $ref: ./AccountInfoCountryCurrencies.yaml
+    properties:
+      CN:
+        type: array
+        items:
+          type: string
+      BR:
+        type: array
+        items:
+          type: string
+      RU:
+        type: array
+        items:
+          type: string
+  enableLocales:
+    type: boolean
+  enableCurrencies:
+    type: boolean
+  gravatar:
+    type: string
+example:
+  custid: '98651'
+  ima: client
+  data:
+    group: '0'
+    address: 112 Uber St.
+    city: Townsville
+    country: US
+    disable_cc: '0'
+    fraudrecord_score: '0'
+    ima: client
+    name: John Doe
+    payment_method: paypal
+    phone: '8675309'
+    pin: '000000'
+    state: PA
+    status: active
+    zip: '11111'
+    account_id: '98651'
+    account_lid: user@domain.com
+    address2: ''
+    affiliate_dock_description: >-
+      Use this coupon when placing an order to get the first month of hosting
+      for only 1 penny.
+    affiliate_dock_title: Exclusive offer to viewers
+    affiliate_payment_method: paypal
+    affiliate_paypal: user@domain.com
+    cc: '************1111'
+    cc_auto: '0'
+    cc_exp: 05/2019
+    cc_type: visa
+    cc_whitelist: '1'
+    ccs:
+      '1':
+        cc: '************1111'
+        cc_exp: 05/2019
+        name: John Doe
+        country: US
+        verified: true
+      '5':
+        cc: '************2222'
+        cc_exp: 05/2019
+        name: John Doe
+        address: 123 Uber St
+        city: Townsville
+        state: PA
+        zip: '11122'
+        country: US
+        maxmind_riskscore: '0.25'
+        maxmind:
+          distance: '0'
+          countryMatch: 'Yes'
+          countryCode: US
+          freeMail: 'No'
+          anonymousProxy: 'No'
+          binMatch: 'No'
+          binCountry: IN
+          err: ''
+          proxyScore: '0.00'
+          ip_region: PA
+          ip_city: Townsville
+          ip_latitude: '40.175'
+          ip_longitude: '-76.1817'
+          binName: state bank of india
+          ip_isp: PenTeleData
+          ip_org: PenTeleData
+          binNameMatch: NA
+          binPhoneMatch: NA
+          binPhone: ''
+          custPhoneInBillingLoc: NotFound
+          highRiskCountry: 'No'
+          queriesRemaining: '2764'
+          cityPostalMatch: 'Yes'
+          shipCityPostalMatch: ''
+          maxmindID: 7IVXKOVV
+          ip_asnum: AS3737 AS-PTD
+          ip_userType: residential
+          ip_countryConf: '99'
+          ip_regionConf: '99'
+          ip_cityConf: '30'
+          ip_postalCode: '11122'
+          ip_postalConf: '30'
+          ip_accuracyRadius: '20'
+          ip_netSpeedCell: Cable/DSL
+          ip_metroCode: '566'
+          ip_areaCode: ''
+          ip_timeZone: America/New_York
+          ip_regionName: Pennsylvania
+          ip_domain: ptd.net
+          ip_countryName: United States
+          ip_continentCode: NA
+          ip_corporateProxy: 'No'
+          isTransProxy: 'No'
+          carderEmail: 'No'
+          highRiskUsername: 'No'
+          highRiskPassword: 'No'
+          riskScore: 0.25
+          prepaid: 'No'
+          minfraud_version: '1.3'
+          service_level: premium
+          female_name: 'no'
+        verified: true
+      '6':
+        cc: '************1111'
+        cc_exp: 05/2021
+        name: John Doe
+        city: Townsville
+        state: PA
+        zip: '11122'
+        country: US
+        maxmind_riskscore: '0.48'
+        maxmind:
+          distance: '0'
+          countryMatch: 'Yes'
+          countryCode: US
+          freeMail: 'No'
+          anonymousProxy: 'No'
+          binMatch: 'Yes'
+          binCountry: US
+          err: ''
+          proxyScore: '0.00'
+          ip_region: PA
+          ip_city: Townsville
+          ip_latitude: '40.175'
+          ip_longitude: '-76.1817'
+          binName: Bank of No Hope
+          ip_isp: PenTeleData
+          ip_org: PenTeleData
+          binNameMatch: NA
+          binPhoneMatch: NA
+          binPhone: '1234561234'
+          custPhoneInBillingLoc: NotFound
+          highRiskCountry: 'No'
+          queriesRemaining: '2765'
+          cityPostalMatch: 'Yes'
+          shipCityPostalMatch: ''
+          maxmindID: AAAAAZZZZZ
+          ip_asnum: AS3737 AS-PTD
+          ip_userType: residential
+          ip_countryConf: '99'
+          ip_regionConf: '99'
+          ip_cityConf: '30'
+          ip_postalCode: '11122'
+          ip_postalConf: '30'
+          ip_accuracyRadius: '20'
+          ip_netSpeedCell: Cable/DSL
+          ip_metroCode: '566'
+          ip_areaCode: ''
+          ip_timeZone: America/New_York
+          ip_regionName: Pennsylvania
+          ip_domain: ptd.net
+          ip_countryName: United States
+          ip_continentCode: NA
+          ip_corporateProxy: 'No'
+          isTransProxy: 'No'
+          carderEmail: 'No'
+          highRiskUsername: 'No'
+          highRiskPassword: 'No'
+          riskScore: 0.48
+          prepaid: 'No'
+          minfraud_version: '1.3'
+          service_level: premium
+          female_name: 'no'
+        verified: true
+    ccs_added: '14'
+    company: InterServer, Inc.
+    currency: USD
+    disable_reinstall: '0'
+    disable_reset: '0'
+    email: user@domain.com
+    email_abuse: ''
+    email_settings:
+      admin/cc_bad_response: '1'
+      admin/mass_communications.tpl: '1'
+    extra:
+      private_whois: '0'
+    facebook_id: '111111111111111'
+    facebook_url: https://www.facebook.com/111111111111111
+    firstname: John
+    fraudrecord:
+      score: '0'
+      count: '0'
+      reliability: '0.0'
+      code: zxcvzxcvzxcv
+    github_id: '2222222'
+    github_url: https://github.com/user
+    google_id: '355431342512341234'
+    google_url: https://plus.google.com/+JohnDoe
+    innertell_id: '2222222'
+    lastname: Doe
+    locale: auto
+    maxmind:
+      distance: '6146'
+      countryMatch: 'No'
+      countryCode: US
+      freeMail: 'No'
+      anonymousProxy: 'No'
+      score: '5.00'
+      binMatch: NotFound
+      binCountry: ''
+      err: CITY_NOT_FOUND
+      proxyScore: '0.00'
+      ip_region: PA
+      ip_city: Townsville
+      ip_latitude: '40.1767'
+      ip_longitude: '-76.4297'
+      binName: ''
+      ip_isp: PenTeleData
+      ip_org: PenTeleData
+      binNameMatch: NA
+      binPhoneMatch: NA
+      binPhone: ''
+      custPhoneInBillingLoc: ''
+      highRiskCountry: 'No'
+      queriesRemaining: '171'
+      cityPostalMatch: ''
+      shipCityPostalMatch: ''
+      maxmindID: HMOCUJP7
+      ip_asnum: AS3737 PenTeleData Inc.
+      ip_userType: residential
+      ip_countryConf: '99'
+      ip_regionConf: '97'
+      ip_cityConf: '30'
+      ip_postalCode: '11122'
+      ip_postalConf: '30'
+      ip_accuracyRadius: '10'
+      ip_netSpeedCell: Dialup
+      ip_metroCode: '566'
+      ip_areaCode: '333'
+      ip_timeZone: America/New_York
+      ip_regionName: Pennsylvania
+      ip_domain: ptd.net
+      ip_countryName: United States
+      ip_continentCode: NA
+      ip_corporateProxy: 'No'
+      carderEmail: 'No'
+      highRiskUsername: 'No'
+      riskScore: '4.82'
+      explanation: >-
+        You should review this order carefully, as it is considered high risk.
+        We suggest you be very cautious about accepting this order. This order
+        is higher risk because the distance between the billing address and the
+        user's actual location is so great. The order is higher risk because the
+        billing country and the country in which the IP address is located don't
+        match
+      female_name: 'no'
+    maxmind_score: '0'
+    mb_id: '4769'
+    modernbill_id: '1234'
+    picture: https://avatars3.githubusercontent.com/u/1364504
+    referrer_coupon: detainaffiliatecoupon
+    reseller_markup: '10'
+    username: user@domain.com
+    ssh_key: zzzz
+    ssh_key_wrapped: zzzz
+    api_key: aaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbccccccccccccccccccc
+    api_key_wrapped: aaaaaaaaaaaaaaaaaaaaaaa<br>bbbbbbbbbbbbb<br>ccccccccccccccccccc
+    2fa_google_key: ssssssssssssssssssssssssss
+    2fa_google_enabled: true
+    2fa_google: 1
+    2fa_google_split: 'zzzz zzzz zzzz zzzz '
+    2fa_google_qr: data:image/png;base64,zzz
+  ip: 1.2.3.4
+  oauthproviders: []
+  oauthconfig:
+    callback: https://my.interserver.net/oauth/callback.php
+    providers:
+      Twitter:
+        enabled: false
+        linked: false
+      Facebook:
+        enabled: true
+        account: '111111111111111111111'
+        url: https://www.facebook.com/111111111111111111111
+        linked: true
+      Google:
+        enabled: true
+        account: '111111111111111111111'
+        url: https://plus.google.com/+UserName
+        linked: true
+      GitHub:
+        enabled: true
+        account: '111111111111111111111'
+        url: https://github.com/detain
+        linked: true
+  oauthadapters: []
+  limits:
+    - start: 1.1.1.1
+      end: 1.1.1.254
+    - start: 2600:387:0:809::1b
+      end: 2600:387:0:809::1b
+  language: en-US
+  countryCurrencies:
+    CN:
+      - USD
+    BR:
+      - USD
+      - BRL
+    RU:
+      - USD
+  enableLocales: true
+  enableCurrencies: false
+  gravatar: https://avatars3.githubusercontent.com/u/1364504

@@ -1,0 +1,27 @@
+description: The listing of service types
+type: object
+additionalProperties:
+  type: array
+  items:
+    $ref: ./ServiceType.yaml
+example:
+  '1':
+    st_id: 1
+    st_name: KVM Windows
+    st_category: 2
+    st_module: vps
+  '2':
+    st_id: 2
+    st_name: KVM Linux
+    st_category: 2
+    st_module: vps
+  '3':
+    st_id: 3
+    st_name: Cloud KVM Windows
+    st_category: 3
+    st_module: vps
+  '4':
+    st_id: 4
+    st_name: Cloud KVM Linux
+    st_category: 3
+    st_module: vps

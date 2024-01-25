@@ -1,0 +1,9 @@
+title: VPSTrafficDataDataSectionResponse
+description: VPS Traffic Data section Data subsection Row Response
+type: array
+items:
+  format: date-time
+  type: string
+example:
+  - '2023-09-17T03:30:30Z'
+  - 3968

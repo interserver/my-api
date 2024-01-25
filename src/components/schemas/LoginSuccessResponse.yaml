@@ -1,0 +1,21 @@
+title: LoginSuccessResponse
+description: The response from a successful login.
+type: object
+properties:
+  sessionId:
+    type: string
+  account_id:
+    format: int32
+    type: integer
+  account_lid:
+    type: string
+  ima:
+    type: string
+  gravatar:
+    type: string
+example:
+  sessionId: zzzzzzzzzzzzzz
+  account_id: 123
+  account_lid: my@user.com
+  ima: client
+  gravatar: https://gravatar.com/user/image.png

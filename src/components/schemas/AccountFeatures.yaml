@@ -1,0 +1,13 @@
+title: AccountFeatures
+description: Account Features data.
+type: object
+properties:
+  disable_reset:
+    format: int32
+    type: integer
+  disable_reinstall:
+    format: int32
+    type: integer
+example:
+  disable_reset: 1
+  disable_reinstall: 1

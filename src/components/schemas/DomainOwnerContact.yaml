@@ -1,0 +1,30 @@
+type: object
+properties:
+  postal_code:
+    type: string
+  org_name:
+    type: string
+  country:
+    type: string
+  status:
+    type: string
+  state:
+    type: string
+  first_name:
+    type: string
+  last_name:
+    type: string
+  address3:
+    type: string
+  fax:
+    type: string
+  address2:
+    type: string
+  email:
+    type: string
+  city:
+    type: string
+  phone:
+    type: string
+  address1:
+    type: string

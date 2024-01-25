@@ -1,0 +1,22 @@
+get:
+  tags:
+    - Webhosting
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/WebsiteLoginResponse.yaml
+      description: Get Website Login response
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getWebsitesLogin
+  summary: Hosting Panel Auto Login
+  description: ''
+parameters:
+  - name: id
+    description: Website ID number
+    schema:
+      type: integer
+    in: path
+    required: true

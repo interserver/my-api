@@ -1,0 +1,31 @@
+get:
+  tags:
+    - VPS
+  parameters:
+    - examples:
+        vpsIdExample:
+          value: '4813'
+      name: id
+      description: VPS ID
+      schema:
+        type: integer
+      in: path
+      required: true
+  responses:
+    '200':
+      $ref: ../components/responses/SuccessTextResponse.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getVpsWelcomeEmail
+  summary: Resend VPS Welcome Email
+  description: Resends the welcome email for the order.
+parameters:
+  - examples:
+      vpsIdExample:
+        value: '4142'
+    name: id
+    description: VPS ID
+    schema:
+      type: integer
+    in: path
+    required: true

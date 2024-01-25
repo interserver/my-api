@@ -1,0 +1,27 @@
+description: The listing of the categories for the services.
+type: object
+additionalProperties:
+  type: array
+  items:
+    $ref: ./ServiceCategory.yaml
+example:
+  '1':
+    category_id: 1
+    category_name: OpenVZ Virtual Servers
+    category_tag: openvz
+    category_module: vps
+  '2':
+    category_id: 2
+    category_name: KVM Virtual Servers
+    category_tag: kvm
+    category_module: vps
+  '3':
+    category_id: 3
+    category_name: Xen Virtual Servers
+    category_tag: xen
+    category_module: vps
+  '4':
+    category_id: 4
+    category_name: LXC Virtual Servers
+    category_tag: lxc
+    category_module: vps

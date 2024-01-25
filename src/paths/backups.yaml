@@ -1,0 +1,17 @@
+get:
+  tags:
+    - Backups
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/BackupRow.yaml
+      description: The listing of `Backups` services on your account.
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getBackupsList
+  summary: List Backups
+  description: ''

@@ -1,0 +1,52 @@
+get:
+  tags:
+    - VPS
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+          examples:
+            TimeZones:
+              value:
+                - America/New_York
+                - America/Nome
+                - America/Noronha
+                - America/North_Dakota/Beulah
+                - America/North_Dakota/Center
+      description: VPS Change Timezone info response
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getVpsChangeTimezone
+  summary: Get Timezone Info
+  description: ''
+post:
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/TimezoneUpdate.yaml
+      multipart/form-data:
+        schema:
+          $ref: ../components/schemas/TimezoneUpdate.yaml
+    required: true
+  tags:
+    - VPS
+  responses:
+    '200':
+      $ref: ../components/responses/QueueResponse.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: postVpsChangeTimezone
+  summary: Change VPS Timezone
+  description: ''
+parameters:
+  - name: id
+    description: VPS ID number
+    schema:
+      type: integer
+    in: path
+    required: true

@@ -1,0 +1,47 @@
+get:
+  tags:
+    - QuickServers
+  parameters:
+    - name: id
+      description: The order ID number.
+      schema:
+        type: integer
+      in: path
+      required: true
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Quickserver.yaml
+      description: Quickserver details
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getQsInfo
+  summary: Get QuickServer Order
+  description: ''
+post:
+  tags:
+    - QuickServers
+  parameters:
+    - name: id
+      description: The order ID number.
+      schema:
+        type: string
+      in: path
+      required: true
+  responses:
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    default:
+      description: Default response
+  operationId: updateQsInfo
+  summary: Update QuickServer Order
+  description: ''
+parameters:
+  - name: id
+    description: QuickServer ID number
+    schema:
+      type: integer
+    in: path
+    required: true

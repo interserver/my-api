@@ -1,0 +1,8 @@
+title: HostnameObject
+description: Request specifying the hostname.
+type: object
+properties:
+  hostname:
+    type: string
+example:
+  hostname: new.host.com

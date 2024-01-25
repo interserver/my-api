@@ -1,0 +1,25 @@
+title: SendMail
+description: Details for an Email
+required:
+  - to
+  - from
+  - subject
+  - body
+type: object
+properties:
+  to:
+    description: The Contact whom is the primary recipient of this email.
+    type: string
+    example: johndoe@company.com
+  from:
+    description: The contact whom is the this email is from.
+    type: string
+    example: janedoe@company.com
+  subject:
+    description: The subject or title of the email
+    type: string
+    example: Attention Client
+  body:
+    description: The main email contents.
+    type: string
+    example: This is an email to inform you that something noteworthy happened.

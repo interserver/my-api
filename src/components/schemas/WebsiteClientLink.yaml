@@ -1,0 +1,20 @@
+type: object
+properties:
+  label:
+    description: Label for the link
+    type: string
+  link:
+    description: Link URL
+    type: string
+  icon:
+    description: Icon for the link
+    type: string
+  icon_text:
+    description: Icon text for the link
+    type: string
+  help_text:
+    description: Help text for the link
+    type: string
+  other_attr:
+    description: Other attributes for the link
+    type: string

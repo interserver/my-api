@@ -1,0 +1,58 @@
+required:
+  - serviceInfo
+  - client_links
+  - billingDetails
+  - custCurrency
+  - custCurrencySymbol
+  - package
+  - extraInfoTables
+  - serviceType
+  - usage_count
+type: object
+properties:
+  serviceInfo:
+    $ref: ./MailServiceInfo.yaml
+    description: Information about the mail service.
+  client_links:
+    description: Links related to the mail service for clients.
+    type: array
+    items:
+      $ref: ./MailClientLink.yaml
+  billingDetails:
+    $ref: ./MailBillingDetails.yaml
+    description: Billing details for the mail service.
+  custCurrency:
+    description: The customer's currency.
+    type: string
+    example: USD
+  custCurrencySymbol:
+    description: The currency symbol for the customer.
+    type: string
+    example: $
+  package:
+    description: The package of the mail service.
+    type: string
+    example: MailBaby Mail
+  serviceExtra:
+    description: Extra information for the mail service.
+    type: array
+    items:
+      type: string
+    example: []
+  extraInfoTables:
+    description: Additional information tables for the mail service.
+    type: object
+    properties:
+      mail:
+        $ref: ./MailExtraInfoTable.yaml
+        description: Connection information table.
+      tutorials:
+        $ref: ./MailTutorialsTable.yaml
+        description: Tutorials table.
+  serviceType:
+    $ref: ./MailServiceType.yaml
+    description: The type of the mail service.
+  usage_count:
+    description: The usage count of the mail service.
+    type: string
+    example: '0'

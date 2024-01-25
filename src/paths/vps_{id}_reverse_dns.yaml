@@ -1,0 +1,42 @@
+get:
+  tags:
+    - VPS
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ReverseDnsEntries.yaml
+      description: VPS Reverse DNS info response
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getVpsReverseDns
+  summary: Reverse DNS Info
+  description: ''
+post:
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/ReverseDnsEntries.yaml
+      multipart/form-data:
+        schema:
+          $ref: ../components/schemas/ReverseDnsEntries.yaml
+    required: true
+  tags:
+    - VPS
+  responses:
+    '200':
+      description: Update VPS Reverse DNS response
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: postVpsReverseDns
+  summary: Update Reverse DNS
+  description: ''
+parameters:
+  - name: id
+    description: VPS ID number
+    schema:
+      type: integer
+    in: path
+    required: true

@@ -1,0 +1,36 @@
+title: MailBlocks
+description: The listing of blocked emails.
+required:
+  - local
+  - mbtrap
+  - subject
+type: object
+properties:
+  local:
+    type: array
+    items:
+      $ref: ./MailBlockClickHouse.yaml
+  mbtrap:
+    type: array
+    items:
+      $ref: ./MailBlockClickHouse.yaml
+  subject:
+    type: array
+    items:
+      $ref: ./MailBlockRspamd.yaml
+example:
+  local:
+    - date: '2023-08-07'
+      from: user@domain.com
+      messageId: pFaRqFUEWkucjhTuIzYuoAgWU@domain.com
+      subject: Test Email
+      to: '[''client@site.com'']'
+  mbtrap:
+    - date: '2023-08-07'
+      from: user@domain.com
+      messageId: pFaRqFUEWkucjhTuIzYuoAgWU@domain.com
+      subject: Test Email
+      to: '[''client@site.com'']'
+  subject:
+    - from: user@domain.com
+      subject: Test Email

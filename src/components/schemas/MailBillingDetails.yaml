@@ -1,0 +1,44 @@
+type: object
+properties:
+  service_last_invoice_date:
+    description: The last invoice date of the service.
+    type: string
+    example: July 16, 2023
+  service_payment_status:
+    description: The payment status of the service.
+    type: string
+    example: Unpaid
+  service_frequency:
+    description: The frequency of the service payment.
+    type: string
+    example: Monthly
+  next_date:
+    description: The next payment date of the service.
+    type: string
+    example: '2023-08-16T00:55:05.000Z'
+  service_next_invoice_date:
+    description: The next invoice date of the service.
+    type: string
+    example: August 16, 2023
+  service_currency:
+    description: The currency of the service.
+    type: string
+    example: USD
+  service_currency_symbol:
+    description: The currency symbol of the service.
+    type: string
+    example: $
+  service_cost_info:
+    description: The cost information of the service.
+    type: string
+    example: '1.00'
+  service_extra:
+    description: Extra information for the service.
+    type: array
+    items:
+      type: string
+    example: []
+  service_extra_json:
+    description: Extra JSON information for the service.
+    type: string
+    example: '[]'

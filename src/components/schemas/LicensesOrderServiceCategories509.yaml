@@ -1,0 +1,18 @@
+type: object
+properties:
+  category_id:
+    description: Category ID
+    type: string
+    example: '509'
+  category_name:
+    description: Category Name
+    type: string
+    example: Webuzo
+  category_tag:
+    description: Category Tag
+    type: string
+    example: webuzo
+  category_module:
+    description: Category Module
+    type: string
+    example: licenses

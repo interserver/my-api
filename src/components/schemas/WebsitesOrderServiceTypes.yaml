@@ -1,0 +1,57 @@
+required:
+  - services_id
+  - services_name
+  - services_cost
+  - services_category
+  - services_buyable
+  - services_type
+  - services_module
+  - services_hidden
+type: object
+properties:
+  services_id:
+    description: The ID of the service.
+    type: string
+    example: '11447'
+  services_name:
+    description: The name of the service.
+    type: string
+    example: Web Hosting Direct Admin (PriceLock)
+  services_cost:
+    description: The cost of the service.
+    type: string
+    example: '5.00'
+  services_category:
+    description: The category of the service.
+    type: string
+    example: '204'
+  services_buyable:
+    description: Indicates if the service is buyable (1 for yes, 0 for no).
+    type: string
+    example: '1'
+  services_type:
+    description: The type of the service.
+    type: string
+    example: '206'
+  services_field1:
+    description: Additional field 1 for the service.
+    type: string
+    example: ''
+  services_field2:
+    description: Additional field 2 for the service.
+    type: string
+    example: Standard
+  services_module:
+    description: The module of the service.
+    type: string
+    example: webhosting
+  services_html:
+    description: HTML content for the service.
+  services_description:
+    description: Description of the service.
+  services_moreinfo_url:
+    description: URL for more information about the service.
+  services_hidden:
+    description: Indicates if the service is hidden (1 for yes, 0 for no).
+    type: string
+    example: '1'

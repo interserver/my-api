@@ -1,0 +1,51 @@
+type: object
+properties:
+  id:
+    description: Control Panel ID.
+    type: string
+    example: '9'
+  price:
+    description: Control Panel price.
+    type: integer
+    example: 80
+  img:
+    description: Control Panel image.
+    type: string
+    example: cpanel.gif
+  short_desc:
+    description: Short description of the control panel.
+    type: string
+    example: cPanel ($45+)
+  long_desc:
+    description: Long description of the control panel.
+    type: string
+  os_type:
+    description: OS types compatible with the control panel.
+    type: string
+  monthly_price:
+    description: Monthly price.
+    type: integer
+    example: 0
+  types:
+    description: List of types.
+    type: array
+    items:
+      type: string
+    example:
+      - '1'
+      - '2'
+      - '4'
+      - '5'
+      - '8'
+      - '17'
+      - '23'
+      - '30'
+      - '51'
+  price_display:
+    description: Display of control panel price.
+    type: string
+    example: $80.00
+  monthly_price_display:
+    description: Display of monthly control panel price.
+    type: string
+    example: $0.00

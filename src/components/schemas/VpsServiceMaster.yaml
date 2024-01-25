@@ -1,0 +1,99 @@
+type: object
+properties:
+  vps_id:
+    description: VPS ID
+    type: string
+    example: '2439'
+  vps_name:
+    description: VPS name
+    type: string
+    example: Mystaging
+  vps_ip:
+    description: IP address of the VPS
+    type: string
+    example: 10.11.12.13
+  vps_type:
+    description: VPS type
+    type: string
+    example: '14'
+  vps_hdsize:
+    description: Hard drive size
+    type: string
+    example: '1856'
+  vps_hdfree:
+    description: Free hard drive space
+    type: string
+    example: '1559'
+  vps_bits:
+    description: Bits
+    type: string
+    example: '64'
+  vps_load:
+    description: CPU load
+    type: string
+    example: '0.17'
+  vps_ram:
+    description: RAM
+    type: string
+    example: '263998228'
+  vps_cpu_model:
+    description: CPU model
+    type: string
+    example: Intel(R) Xeon(R) CPU E5-2678 v3 @ 2.50GHz
+  vps_cpu_mhz:
+    description: CPU frequency in MHz
+    type: string
+    example: '1198.86'
+  vps_location:
+    description: Location of the VPS
+    type: string
+    example: '1'
+  vps_last_update:
+    description: Last update date
+    type: string
+    example: '2023-08-17T22:19:04.000Z'
+  vps_raid_building:
+    description: RAID building status
+    type: string
+    example: '0'
+  vps_kernel:
+    description: Kernel version
+    type: string
+    example: 5.4.0-121-generic
+  vps_available:
+    description: Available
+    type: string
+    example: '0'
+  vps_cores:
+    description: Number of CPU cores
+    type: string
+    example: '48'
+  vps_iowait:
+    description: I/O wait
+    type: string
+    example: '0.09'
+  vps_raid_status:
+    description: RAID status
+    type: string
+    example: 'OK: zfs:all pools are healthy'
+  vps_mounts:
+    description: Mounts
+    type: string
+    example: >-
+      udev:125:0:125:/dev,/dev/md1:91:53:38:/,securityfs:0:0:0:/sys/kernel/security,cgroup2:0:0:0:/sys/fs/cgroup/unified,pstore:0:0:0:/sys/fs/pstore,efivarfs:0:0:0:/sys/firmware/efi/efivars,systemd-1:0:0:0:/proc/sys/fs/binfmt_misc,hugetlbfs:0:0:0:/dev/hugepages
+  vps_server_max:
+    description: Maximum number of servers
+    type: string
+    example: '50'
+  vps_server_max_slices:
+    description: Maximum number of server slices
+    type: string
+    example: '80'
+  vps_drive_type:
+    description: Drive type
+    type: string
+    example: SSD
+  vps_order:
+    description: Order number
+    type: string
+    example: '36978'

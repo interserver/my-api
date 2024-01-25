@@ -1,0 +1,59 @@
+required:
+  - serviceInfo
+  - client_links
+  - billingDetails
+  - custCurrency
+  - custCurrencySymbol
+  - serviceMaster
+  - package
+  - serviceExtra
+  - extraInfoTables
+  - module
+  - token
+  - da_link
+  - sr_link
+  - cp_data
+  - da_data
+  - plesk12_data
+  - serviceAddons
+type: object
+properties:
+  serviceInfo:
+    $ref: ./VpsServiceInfo.yaml
+  client_links:
+    type: array
+    items:
+      $ref: ./VpsClientLink.yaml
+  billingDetails:
+    $ref: ./VpsBillingDetails.yaml
+  custCurrency:
+    type: string
+  custCurrencySymbol:
+    type: string
+  serviceMaster:
+    $ref: ./VpsServiceMaster.yaml
+  package:
+    type: string
+  os_template:
+    type: string
+  serviceExtra:
+    $ref: ./VpsServiceExtra.yaml
+  extraInfoTables:
+    $ref: ./VpsExtraInfoTables.yaml
+  cpu_graph_data: {}
+  module:
+    type: string
+  token:
+    type: string
+  da_link:
+    type: integer
+  sr_link:
+    type: integer
+  cp_data:
+    $ref: ./VpsCPData.yaml
+  da_data:
+    $ref: ./VpsDAData.yaml
+  plesk12_data:
+    $ref: ./VpsPlesk12Data.yaml
+  serviceAddons:
+    $ref: ./VpsServiceAddons.yaml

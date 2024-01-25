@@ -1,0 +1,22 @@
+get:
+  tags:
+    - Backups
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ChargeInvoiceRows.yaml
+      description: Get Invoices response
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getBackupInvoices
+  summary: Get Backup Order Invoices
+  description: ''
+parameters:
+  - name: id
+    description: Backup ID number
+    schema:
+      type: integer
+    in: path
+    required: true

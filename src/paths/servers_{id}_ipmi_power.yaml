@@ -1,0 +1,27 @@
+post:
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/ServerIpmiPowerRequest.yaml
+      multipart/form-data:
+        schema:
+          $ref: ../components/schemas/ServerIpmiPowerRequest.yaml
+    required: true
+  tags:
+    - Servers
+  responses:
+    '200':
+      $ref: ../components/responses/TextResponse.yaml
+    '400':
+      $ref: ../components/responses/BadInput.yaml
+  operationId: serverIpmiPowerPost
+  summary: Server IPMI Power
+  description: Uses the IPMI interface to set the Power status on the server.
+parameters:
+  - name: id
+    description: Server ID number
+    schema:
+      type: integer
+    in: path
+    required: true

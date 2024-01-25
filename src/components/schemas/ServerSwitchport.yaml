@@ -1,0 +1,55 @@
+required:
+  - switchport_id
+  - switch_id
+  - switch
+  - port
+  - blade
+  - justport
+  - graph_id
+  - asset_id
+type: object
+properties:
+  switchport_id:
+    description: Unique identifier for the switchport.
+    type: integer
+    example: 10414
+  switch_id:
+    description: Unique identifier for the switch associated with the switchport.
+    type: string
+    example: '118'
+  switch:
+    description: Name of the switch associated with the switchport.
+    type: string
+    example: edge1
+  port:
+    description: Port name on the switch.
+    type: string
+    example: Ethernet1/33
+  blade:
+    description: Blade name associated with the port.
+    type: string
+    example: Ethernet1
+  justport:
+    description: Port identifier.
+    type: string
+    example: '33'
+  graph_id:
+    description: Identifier for the graph associated with the switchport.
+    type: string
+    example: '12622'
+  vlans:
+    description: List of VLANs associated with the switchport.
+    type: array
+    items:
+      type: string
+    example: []
+  vlans6:
+    description: List of IPv6 VLANs associated with the switchport.
+    type: array
+    items:
+      type: string
+    example: []
+  asset_id:
+    description: Unique identifier of the asset associated with the switchport.
+    type: integer
+    example: 3497

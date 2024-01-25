@@ -1,0 +1,54 @@
+title: VpsRow
+description: A result row from the `Vps` `GET` request.
+required:
+  - vps_status
+  - vps_name
+  - vps_ip
+  - vps_id
+  - vps_hostname
+  - vps_comment
+  - services_name
+  - repeat_invoices_cost
+type: object
+properties:
+  vps_id:
+    description: The id of the vps.
+    type: string
+    example: '100'
+  vps_name:
+    description: The name of the vps.
+    type: string
+    example: Builder
+  repeat_invoices_cost:
+    description: The repeat invoices cost of the vps.
+    type: string
+    example: '10.00'
+  vps_hostname:
+    description: The hostname of the vps.
+    type: string
+    example: vps100
+  vps_ip:
+    description: The ip of the vps.
+    type: string
+    example: 64.20.46.220
+  vps_status:
+    description: The status of the vps.
+    type: string
+    example: active
+  services_name:
+    description: The services name of the vps.
+    type: string
+    example: KVM Windows VPS Slice
+  vps_comment:
+    description: The comment of the vps.
+    type: string
+    example: ''
+example:
+  vps_id: '100'
+  vps_name: Builder
+  repeat_invoices_cost: '10.00'
+  vps_hostname: vps100
+  vps_ip: 64.20.46.220
+  vps_status: active
+  services_name: KVM Windows VPS Slice
+  vps_comment: ''

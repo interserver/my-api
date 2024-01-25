@@ -1,0 +1,6 @@
+description: An invoice record
+type: object
+properties:
+  id:
+    format: int64
+    type: integer

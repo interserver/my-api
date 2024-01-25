@@ -1,0 +1,17 @@
+delete:
+  tags:
+    - Account
+  responses:
+    '200':
+      $ref: ../components/responses/SuccessTextResponse.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: deleteAccountOauthName
+  summary: Unlink OAuth Account
+  description: ''
+parameters:
+  - name: name
+    schema:
+      type: string
+    in: path
+    required: true

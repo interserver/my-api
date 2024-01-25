@@ -1,0 +1,15 @@
+required:
+  - label
+  - link
+type: object
+properties:
+  label:
+    type: string
+  link:
+    type: string
+  icon:
+    type: string
+  icon_text:
+    type: string
+  help_text:
+    type: string

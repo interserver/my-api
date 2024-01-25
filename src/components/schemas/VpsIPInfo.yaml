@@ -1,0 +1,10 @@
+type: object
+properties:
+  title:
+    description: Title of the table
+    type: string
+    example: IP Information
+  rows:
+    type: array
+    items:
+      $ref: ./VpsIPInfoRow.yaml

@@ -1,0 +1,38 @@
+get:
+  tags:
+    - Servers
+  responses:
+    '200':
+      $ref: ../components/responses/TextResponse.yaml
+    '404':
+      $ref: ../components/responses/NotFound.yaml
+  operationId: serverIpmiLiveGet
+  summary: Server IPMI Live Information
+  description: Get the currrent IPMI Live information.
+post:
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/ServerIpmiLiveRequest.yaml
+      multipart/form-data:
+        schema:
+          $ref: ../components/schemas/ServerIpmiLiveRequest.yaml
+    required: true
+  tags:
+    - Servers
+  responses:
+    '200':
+      $ref: ../components/responses/TextResponse.yaml
+    '404':
+      $ref: ../components/responses/NotFound.yaml
+  operationId: serverIpmiLivePost
+  summary: Server IPMI Live Setup
+  description: Setup the IPMI Live connection.
+parameters:
+  - name: id
+    description: Server ID number
+    schema:
+      type: integer
+    in: path
+    required: true

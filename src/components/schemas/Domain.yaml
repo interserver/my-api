@@ -1,0 +1,46 @@
+type: object
+properties:
+  serviceInfo:
+    $ref: ./DomainServiceInfo.yaml
+  serviceTypes:
+    type: object
+    additionalProperties:
+      $ref: ./DomainServiceType.yaml
+  client_links:
+    type: array
+    items:
+      $ref: ./DomainClientLink.yaml
+  billingDetails:
+    $ref: ./DomainBillingDetails.yaml
+  custCurrency:
+    type: string
+  custCurrencySymbol:
+    type: string
+  serviceExtra:
+    $ref: ./DomainBillingExtra.yaml
+  extraInfoTables:
+    $ref: ./BackupExtraInfoTables.yaml
+  serviceType:
+    $ref: ./DomainServiceType.yaml
+  contact_details:
+    $ref: ./DomainContactDetails.yaml
+  pwarning:
+    type: string
+  transfer_info:
+    type: string
+  errors:
+    type: boolean
+  domain_logs:
+    type: array
+    items:
+      type: string
+  allInfo:
+    $ref: ./DomainAllInfo.yaml
+  registrarStatus:
+    type: string
+  locked:
+    type: string
+  whoisPrivacy:
+    type: string
+  autoRenew:
+    type: string

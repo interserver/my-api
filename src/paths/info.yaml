@@ -1,0 +1,19 @@
+get:
+  tags:
+    - Public
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ServicesInfo.yaml
+      description: The modules and services information from the server.
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  security:
+    - {}
+  operationId: getInfo
+  summary: Get Server Info
+  description: >-
+    Retrieves information about the modules on the server, the service packages,
+    thier categories and types.

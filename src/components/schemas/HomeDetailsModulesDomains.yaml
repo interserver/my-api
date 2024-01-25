@@ -1,0 +1,22 @@
+type: object
+properties:
+  icon:
+    description: The icon for domains.
+    type: string
+    example: globe
+  view_link:
+    description: Link to view domain.
+    type: string
+    example: view_domain
+  heading:
+    description: Heading for domains.
+    type: string
+    example: Domains
+  buy_link:
+    description: Link to order domain.
+    type: string
+    example: domain_order
+  list_link:
+    description: Link to view domains list.
+    type: string
+    example: view_domains_list

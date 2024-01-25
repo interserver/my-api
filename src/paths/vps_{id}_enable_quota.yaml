@@ -1,0 +1,25 @@
+get:
+  tags:
+    - VPS
+  parameters:
+    - name: id
+      description: VPS ID number.
+      schema:
+        type: integer
+      in: path
+      required: true
+  responses:
+    '200':
+      $ref: ../components/responses/QueueResponse.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: doVpsEnableQuota
+  summary: Enable Quotas
+  description: ''
+parameters:
+  - name: id
+    description: VPS ID number
+    schema:
+      type: integer
+    in: path
+    required: true

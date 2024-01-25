@@ -1,0 +1,29 @@
+get:
+  tags:
+    - VPS
+  responses:
+    '200':
+      description: Get VPS Setup VNC Information
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: getVpsSetupVnc
+  summary: VNC Setup Info
+  description: ''
+post:
+  tags:
+    - VPS
+  responses:
+    '200':
+      $ref: ../components/responses/QueueResponse.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: postVpsSetupVnc
+  summary: Setup VNC
+  description: ''
+parameters:
+  - name: id
+    description: VPS ID number
+    schema:
+      type: integer
+    in: path
+    required: true

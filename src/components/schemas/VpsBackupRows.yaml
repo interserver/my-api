@@ -1,0 +1,21 @@
+title: VpsBackupRows
+description: The listing of the backups for your service.
+type: array
+items:
+  $ref: ./VpsBackupRow.yaml
+example:
+  - type: zfs
+    service: 2722890
+    name: first
+    size: 3229615
+    date: 1694082660
+  - type: swift
+    service: 100
+    name: reset_shot_vps100_20210928.jpg
+    size: 40621
+    date: 1632842251
+  - type: swift
+    service: 100
+    name: reset_shot_vps100_20210929.jpg
+    size: 36319
+    date: 1632968243

@@ -1,0 +1,17 @@
+get:
+  tags:
+    - Account
+  responses:
+    '200':
+      $ref: ../components/responses/SuccessTextResponse.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+  operationId: logoutAccountOauth
+  summary: Logout of OAuth
+  description: ''
+parameters:
+  - name: name
+    schema:
+      type: string
+    in: path
+    required: true

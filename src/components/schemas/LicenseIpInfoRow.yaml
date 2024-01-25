@@ -1,0 +1,10 @@
+type: object
+properties:
+  desc:
+    description: Row description
+    type: string
+    example: Netmask
+  value:
+    description: Row value
+    type: string
+    example: 255.255.255.248
